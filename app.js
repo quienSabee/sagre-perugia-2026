@@ -249,59 +249,104 @@ function initHeroParallax() {
     return;
   }
 
-  let ticking = false;
-  let mouseX = 0;
-  let mouseY = 0;
+  const state = {
+    targetScroll: 0,
+    currentScroll: 0,
 
-  function updateParallax() {
+    targetMouseX: 0,
+    targetMouseY: 0,
+    currentMouseX: 0,
+    currentMouseY: 0,
+
+    rafId: null,
+  };
+
+  const config = {
+    scrollEase: 0.07,
+    mouseEase: 0.045,
+    maxMouseX: 32,
+    maxMouseY: 20,
+  };
+
+  function clamp(value, min, max) {
+    return Math.min(max, Math.max(min, value));
+  }
+
+  function lerp(current, target, ease) {
+    return current + (target - current) * ease;
+  }
+
+  function updateTargets(event) {
     const rect = hero.getBoundingClientRect();
     const windowHeight = window.innerHeight || 1;
 
-    /*
-      progress:
-      0 circa quando l'hero è in posizione iniziale,
-      1 quando l'hero sta uscendo verso l'alto.
-    */
-    const progress = Math.min(
-      1,
-      Math.max(0, -rect.top / Math.max(1, rect.height - windowHeight * 0.25))
+    state.targetScroll = clamp(
+      -rect.top / Math.max(1, rect.height - windowHeight * 0.25),
+      0,
+      1
     );
 
-    hero.style.setProperty("--hero-scroll", progress.toFixed(4));
-    hero.style.setProperty("--mouse-x", `${mouseX.toFixed(2)}px`);
-    hero.style.setProperty("--mouse-y", `${mouseY.toFixed(2)}px`);
+    if (event && typeof event.clientX === "number") {
+      const viewportX = event.clientX / (window.innerWidth || 1) - 0.5;
+      const viewportY = event.clientY / (window.innerHeight || 1) - 0.5;
 
-    ticking = false;
-  }
-
-  function requestUpdate() {
-    if (!ticking) {
-      ticking = true;
-      requestAnimationFrame(updateParallax);
+      state.targetMouseX = viewportX * config.maxMouseX;
+      state.targetMouseY = viewportY * config.maxMouseY;
     }
   }
 
-  window.addEventListener("scroll", requestUpdate, { passive: true });
-  window.addEventListener("resize", requestUpdate);
+  function render() {
+    state.currentScroll = lerp(
+      state.currentScroll,
+      state.targetScroll,
+      config.scrollEase
+    );
 
-  hero.addEventListener("pointermove", (event) => {
-    const rect = hero.getBoundingClientRect();
-    const x = (event.clientX - rect.left) / rect.width - 0.5;
-    const y = (event.clientY - rect.top) / rect.height - 0.5;
+    state.currentMouseX = lerp(
+      state.currentMouseX,
+      state.targetMouseX,
+      config.mouseEase
+    );
 
-    mouseX = x * 28;
-    mouseY = y * 18;
+    state.currentMouseY = lerp(
+      state.currentMouseY,
+      state.targetMouseY,
+      config.mouseEase
+    );
 
-    requestUpdate();
-  });
+    hero.style.setProperty("--hero-scroll", state.currentScroll.toFixed(4));
+    hero.style.setProperty("--mouse-x", `${state.currentMouseX.toFixed(2)}px`);
+    hero.style.setProperty("--mouse-y", `${state.currentMouseY.toFixed(2)}px`);
 
-  hero.addEventListener("pointerleave", () => {
-    mouseX = 0;
-    mouseY = 0;
-    requestUpdate();
-  });
+    state.rafId = requestAnimationFrame(render);
+  }
 
-  updateParallax();
+  window.addEventListener(
+    "scroll",
+    () => {
+      updateTargets();
+    },
+    { passive: true }
+  );
+
+  window.addEventListener("resize", updateTargets);
+
+  /*
+    Importante:
+    usiamo window, non hero.
+    Così il movimento del mouse continua anche quando
+    il cursore esce dall'hero.
+  */
+  window.addEventListener(
+    "pointermove",
+    (event) => {
+      updateTargets(event);
+    },
+    { passive: true }
+  );
+
+  updateTargets();
+  render();
 }
 
 initHeroParallax();

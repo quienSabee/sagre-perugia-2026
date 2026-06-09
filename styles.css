@@ -199,15 +199,21 @@ a {
   pointer-events: none;
 }
 
-/* Tutti i layer hanno la stessa canvas 16:9 */
 .parallax-layer {
   position: absolute;
-  inset: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
   width: 100%;
   height: 100%;
+
   object-fit: cover;
   object-position: center top;
+
   will-change: transform;
+  transform-origin: center top;
+
   transform:
     translate3d(
       calc(var(--mouse-x, 0px) * var(--mouse-depth, 0)),
@@ -217,35 +223,31 @@ a {
     scale(var(--layer-scale, 1.04));
 }
 
-/* Background: si muove pochissimo */
 .parallax-bg {
-  --scroll-depth: -24px;
-  --mouse-depth: 0.15;
-  --layer-scale: 1.06;
+  --scroll-depth: 0px;
+  --mouse-depth: 0.08;
+  --layer-scale: 1.08;
   z-index: 1;
 }
 
-/* Bancarelle: movimento medio */
 .parallax-stalls {
-  --scroll-depth: -52px;
-  --mouse-depth: 0.35;
-  --layer-scale: 1.055;
+  --scroll-depth: 16px;
+  --mouse-depth: 0.18;
+  --layer-scale: 1.075;
   z-index: 2;
 }
 
-/* Grifo + ragazze */
 .parallax-grifo {
-  --scroll-depth: -82px;
-  --mouse-depth: 0.55;
-  --layer-scale: 1.045;
+  --scroll-depth: 30px;
+  --mouse-depth: 0.28;
+  --layer-scale: 1.06;
   z-index: 3;
 }
 
-/* Tavoli/vecchietti: primo piano, movimento più evidente */
 .parallax-table {
-  --scroll-depth: -120px;
-  --mouse-depth: 0.75;
-  --layer-scale: 1.035;
+  --scroll-depth: 44px;
+  --mouse-depth: 0.38;
+  --layer-scale: 1.055;
   z-index: 4;
 }
 
