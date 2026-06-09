@@ -5,6 +5,8 @@ const pastCount = document.querySelector("#past-count");
 const activeCount = document.querySelector("#active-count");
 const futureCount = document.querySelector("#future-count");
 const filterButtons = document.querySelectorAll(".filter-button");
+const topbar = document.querySelector(".topbar");
+const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
 
 let allEvents = [];
 const enabledStatuses = new Set(["active", "future"]);
@@ -111,12 +113,76 @@ function searchableText(event) {
     .toLocaleLowerCase("it-IT");
 }
 
-function sourceMarkup(event) {
-  if (!event.sourceUrl) {
-    return `<span class="source">${event.sourceLabel}</span>`;
-  }
+function escapeHtml(value) {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;");
+}
 
-  return `<a class="source" href="${event.sourceUrl}" target="_blank" rel="noreferrer">${event.sourceLabel}</a>`;
+function icon(name) {
+  const icons = {
+    source: `
+      <svg aria-hidden="true" viewBox="0 0 24 24">
+        <path d="M10 13a5 5 0 0 0 7.1 0l2.8-2.8a5 5 0 0 0-7.1-7.1l-1.6 1.6" />
+        <path d="M14 11a5 5 0 0 0-7.1 0l-2.8 2.8a5 5 0 0 0 7.1 7.1l1.6-1.6" />
+      </svg>
+    `,
+    map: `
+      <svg aria-hidden="true" viewBox="0 0 24 24">
+        <path d="M9 18l-6 3V6l6-3 6 3 6-3v15l-6 3-6-3z" />
+        <path d="M9 3v15" />
+        <path d="M15 6v15" />
+      </svg>
+    `,
+    menu: `
+      <svg aria-hidden="true" viewBox="0 0 24 24">
+        <path d="M4 4h16" />
+        <path d="M4 10h16" />
+        <path d="M4 16h10" />
+        <path d="M4 20h8" />
+      </svg>
+    `,
+  };
+
+  return icons[name];
+}
+
+function eventActionsMarkup(event, mapId) {
+  const sourceLabel = escapeHtml(event.sourceLabel);
+  const sourceUrl = escapeHtml(event.sourceUrl || "");
+  const menuUrl = escapeHtml(event.menuUrl || "");
+
+  const sourceButton = event.sourceUrl
+    ? `
+      <a class="action-button source-button" href="${sourceUrl}" target="_blank" rel="noreferrer" aria-label="Apri fonte: ${sourceLabel}" title="Fonte">
+        ${icon("source")}
+      </a>
+    `
+    : `
+      <span class="action-button source-button is-disabled" aria-label="${sourceLabel}" title="${sourceLabel}">
+        ${icon("source")}
+      </span>
+    `;
+
+  const menuButton = event.menuUrl
+    ? `
+      <a class="action-button menu-button" href="${menuUrl}" target="_blank" rel="noreferrer" aria-label="Apri menù" title="Menù">
+        ${icon("menu")}
+      </a>
+    `
+    : "";
+
+  return `
+    <div class="action-group" aria-label="Azioni evento">
+      ${sourceButton}
+      ${menuButton}
+      <button class="action-button map-toggle" type="button" aria-label="Mostra mappa" title="Mappa" aria-expanded="false" aria-controls="${mapId}">
+        ${icon("map")}
+      </button>
+    </div>
+  `;
 }
 
 function renderCard(event) {
@@ -124,6 +190,8 @@ function renderCard(event) {
   const ranges = event.ranges.map(formatDateRange).join(" / ");
   const mapId = `map-${event.id}`;
   const mapUrl = `https://www.google.com/maps?q=${encodeURIComponent(`${event.location}, Umbria, Italia`)}&output=embed`;
+  const escapedMapUrl = escapeHtml(mapUrl);
+  const escapedMapTitle = escapeHtml(`Mappa ${event.title}`);
   const unconfirmed = event.confirmed
     ? ""
     : `<span class="unconfirmed">Date da confermare</span>`;
@@ -140,26 +208,10 @@ function renderCard(event) {
       <p class="location">${event.location}</p>
       <p class="description">${event.description}</p>
       <div class="card-footer">
-        <div class="card-links">
-          ${sourceMarkup(event)}
-          ${unconfirmed}
-        </div>
-        <button class="map-toggle" type="button" aria-expanded="false" aria-controls="${mapId}">
-          <svg aria-hidden="true" viewBox="0 0 24 24">
-            <path d="M9 18l-6 3V6l6-3 6 3 6-3v15l-6 3-6-3z" />
-            <path d="M9 3v15" />
-            <path d="M15 6v15" />
-          </svg>
-          <span>Mappa</span>
-        </button>
+        ${unconfirmed}
+        ${eventActionsMarkup(event, mapId)}
       </div>
-      <div class="map-frame" id="${mapId}" hidden>
-        <iframe
-          title="Mappa ${event.title}"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          src="${mapUrl}">
-        </iframe>
+      <div class="map-frame" id="${mapId}" data-map-src="${escapedMapUrl}" data-map-title="${escapedMapTitle}" hidden>
       </div>
     </article>
   `;
@@ -228,8 +280,36 @@ eventsContainer.addEventListener("click", (event) => {
   const isOpen = button.getAttribute("aria-expanded") === "true";
 
   button.setAttribute("aria-expanded", String(!isOpen));
+  button.setAttribute("aria-label", isOpen ? "Mostra mappa" : "Nascondi mappa");
   map.hidden = isOpen;
+
+  if (!isOpen && map.childElementCount === 0) {
+    const iframe = document.createElement("iframe");
+    iframe.title = map.dataset.mapTitle;
+    iframe.loading = "lazy";
+    iframe.referrerPolicy = "no-referrer-when-downgrade";
+    iframe.src = map.dataset.mapSrc;
+    map.append(iframe);
+  }
 });
+
+if (mobileMenuToggle && topbar) {
+  mobileMenuToggle.addEventListener("click", () => {
+    const isOpen = topbar.classList.toggle("is-menu-open");
+    mobileMenuToggle.setAttribute("aria-expanded", String(isOpen));
+    mobileMenuToggle.setAttribute("aria-label", isOpen ? "Chiudi filtri" : "Apri filtri");
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape" || !topbar.classList.contains("is-menu-open")) {
+      return;
+    }
+
+    topbar.classList.remove("is-menu-open");
+    mobileMenuToggle.setAttribute("aria-expanded", "false");
+    mobileMenuToggle.setAttribute("aria-label", "Apri filtri");
+  });
+}
 
 init();
 
@@ -244,6 +324,7 @@ function initHeroParallax() {
   const prefersReducedMotion = window.matchMedia(
     "(prefers-reduced-motion: reduce)"
   ).matches;
+  const hasFinePointer = window.matchMedia("(pointer: fine)").matches;
 
   if (prefersReducedMotion) {
     return;
@@ -337,13 +418,15 @@ function initHeroParallax() {
     Così il movimento del mouse continua anche quando
     il cursore esce dall'hero.
   */
-  window.addEventListener(
-    "pointermove",
-    (event) => {
-      updateTargets(event);
-    },
-    { passive: true }
-  );
+  if (hasFinePointer) {
+    window.addEventListener(
+      "pointermove",
+      (event) => {
+        updateTargets(event);
+      },
+      { passive: true }
+    );
+  }
 
   updateTargets();
   render();
