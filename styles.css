@@ -182,43 +182,95 @@ a {
 .hero {
   position: relative;
   display: grid;
-  min-height: min(760px, 72vh);
+  min-height: min(820px, 82vh);
   padding: calc(var(--topbar-height) + 48px) clamp(18px, 5vw, 72px) 56px;
   align-items: end;
   overflow: hidden;
   color: #fffaf0;
-  background: #1f1510;
+  background: #120c09;
+  isolation: isolate;
 }
 
-.hero::before,
-.hero::after {
+.hero-parallax {
   position: absolute;
   inset: 0;
-  content: "";
+  z-index: 0;
+  overflow: hidden;
   pointer-events: none;
 }
 
-.hero::before {
-  background:
-    linear-gradient(rgba(22, 13, 9, 0.24), rgba(22, 13, 9, 0.24)),
-    url("assets/sagra-perugia.png") center top / cover no-repeat;
-  filter: blur(24px);
-  opacity: 0.68;
-  transform: scale(1.05);
+/* Tutti i layer hanno la stessa canvas 16:9 */
+.parallax-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  will-change: transform;
+  transform:
+    translate3d(
+      calc(var(--mouse-x, 0px) * var(--mouse-depth, 0)),
+      calc((var(--hero-scroll, 0) * var(--scroll-depth, 0)) + (var(--mouse-y, 0px) * var(--mouse-depth, 0))),
+      0
+    )
+    scale(var(--layer-scale, 1.04));
 }
 
-.hero::after {
-  background:
-    linear-gradient(90deg, rgba(22, 13, 9, 0.9), rgba(22, 13, 9, 0.56) 48%, rgba(22, 13, 9, 0.16)),
-    linear-gradient(0deg, rgba(22, 13, 9, 0.76), rgba(22, 13, 9, 0.04) 45%),
-    url("assets/sagra-perugia.png") center top / min(100vw, var(--hero-image-max)) auto no-repeat;
-  mask-image: linear-gradient(90deg, transparent 0, #000 11%, #000 89%, transparent 100%);
+/* Background: si muove pochissimo */
+.parallax-bg {
+  --scroll-depth: -24px;
+  --mouse-depth: 0.15;
+  --layer-scale: 1.06;
   z-index: 1;
+}
+
+/* Bancarelle: movimento medio */
+.parallax-stalls {
+  --scroll-depth: -52px;
+  --mouse-depth: 0.35;
+  --layer-scale: 1.055;
+  z-index: 2;
+}
+
+/* Grifo + ragazze */
+.parallax-grifo {
+  --scroll-depth: -82px;
+  --mouse-depth: 0.55;
+  --layer-scale: 1.045;
+  z-index: 3;
+}
+
+/* Tavoli/vecchietti: primo piano, movimento più evidente */
+.parallax-table {
+  --scroll-depth: -120px;
+  --mouse-depth: 0.75;
+  --layer-scale: 1.035;
+  z-index: 4;
+}
+
+.hero-shade {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(22, 13, 9, 0.9),
+      rgba(22, 13, 9, 0.58) 42%,
+      rgba(22, 13, 9, 0.18) 72%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(22, 13, 9, 0.78),
+      rgba(22, 13, 9, 0.06) 52%
+    );
 }
 
 .hero-content {
   position: relative;
-  z-index: 2;
+  z-index: 6;
   width: min(660px, 100%);
   min-width: 0;
 }

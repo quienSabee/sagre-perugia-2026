@@ -1,66 +1,69 @@
 <!doctype html>
 <html lang="it">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Sagre Perugia 2026</title>
-    <meta
-      name="description"
-      content="Sagre, feste popolari ed eventi paesani a Perugia e dintorni nel 2026."
-    />
-    <link rel="preload" href="assets/sagra-perugia.png" as="image" />
-    <link rel="preload" href="assets/background-sagra-perugia.png" as="image" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="topbar">
-      <a class="brand" href="#top" aria-label="Sagre Perugia 2026">
-        <span class="brand-mark">PG</span>
-        <span>Sagre Perugia 2026</span>
-      </a>
 
-      <form class="search-form" role="search">
-        <label class="sr-only" for="search">Cerca sagre</label>
-        <input
-          id="search"
-          name="search"
-          type="search"
-          autocomplete="off"
-          placeholder="Cerca sagre, località, date"
-        />
-      </form>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sagre Perugia 2026</title>
+  <meta name="description" content="Sagre, feste popolari ed eventi paesani a Perugia e dintorni nel 2026." />
+  <link rel="preload" href="assets/sagra-perugia.png" as="image" />
+  <link rel="preload" href="assets/background-sagra-perugia.png" as="image" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
 
-      <div class="status-filters" aria-label="Filtra eventi per stato">
-        <button class="filter-button filter-past" type="button" data-status="past" aria-pressed="false">
-          <span id="past-count">0 passati</span>
-        </button>
-        <button class="filter-button filter-active" type="button" data-status="active" aria-pressed="true">
-          <span id="active-count">0 in corso</span>
-        </button>
-        <button class="filter-button filter-future" type="button" data-status="future" aria-pressed="true">
-          <span id="future-count">0 futuri</span>
-        </button>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Sagre Perugia 2026">
+      <span class="brand-mark">PG</span>
+      <span>Sagre Perugia 2026</span>
+    </a>
+
+    <form class="search-form" role="search">
+      <label class="sr-only" for="search">Cerca sagre</label>
+      <input id="search" name="search" type="search" autocomplete="off" placeholder="Cerca sagre, località, date" />
+    </form>
+
+    <div class="status-filters" aria-label="Filtra eventi per stato">
+      <button class="filter-button filter-past" type="button" data-status="past" aria-pressed="false">
+        <span id="past-count">0 passati</span>
+      </button>
+      <button class="filter-button filter-active" type="button" data-status="active" aria-pressed="true">
+        <span id="active-count">0 in corso</span>
+      </button>
+      <button class="filter-button filter-future" type="button" data-status="future" aria-pressed="true">
+        <span id="future-count">0 futuri</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" id="hero">
+      <div class="hero-parallax" aria-hidden="true">
+        <img class="parallax-layer parallax-bg" src="assets/3.png" alt="" data-depth="0.01" />
+        <img class="parallax-layer parallax-stalls" src="assets/1.png" alt="" data-depth="0.20" />
+        <img class="parallax-layer parallax-grifo" src="assets/0.png" alt="" data-depth="0.40" />
+        <img class="parallax-layer parallax-table" src="assets/2.png" alt="" data-depth="1.00" />
       </div>
-    </header>
 
-    <main id="top">
-      <section class="hero" aria-labelledby="page-title">
-        <div class="hero-content">
-          <p class="eyebrow">Perugia e dintorni</p>
-          <h1 id="page-title">Sagre, feste ed eventi popolari 2026</h1>
-          <p class="hero-copy">Forza grifo, dio schifo!</p>
-        </div>
-      </section>
+      <div class="hero-shade" aria-hidden="true"></div>
 
-      <section class="content" aria-live="polite">
-        <div class="cards-grid" id="events"></div>
+      <div class="hero-content">
+        <p class="eyebrow">Perugia e dintorni</p>
+        <h1>Sagre, feste ed eventi popolari 2026</h1>
+        <p class="hero-copy">Forza grifo, dio schifo!</p>
+      </div>
+    </section>
 
-        <p class="empty-state" id="empty-state" hidden>
-          Nessun evento trovato.
-        </p>
-      </section>
-    </main>
+    <section class="content" aria-live="polite">
+      <div class="cards-grid" id="events"></div>
 
-    <script src="app.js" defer></script>
-  </body>
+      <p class="empty-state" id="empty-state" hidden>
+        Nessun evento trovato.
+      </p>
+    </section>
+  </main>
+
+  <script src="app.js" defer></script>
+</body>
+
 </html>

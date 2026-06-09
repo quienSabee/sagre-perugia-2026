@@ -230,4 +230,78 @@ eventsContainer.addEventListener("click", (event) => {
   button.setAttribute("aria-expanded", String(!isOpen));
   map.hidden = isOpen;
 });
+
 init();
+
+function initHeroParallax() {
+  const hero = document.querySelector("#hero");
+  const layers = document.querySelectorAll(".parallax-layer");
+
+  if (!hero || layers.length === 0) {
+    return;
+  }
+
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  if (prefersReducedMotion) {
+    return;
+  }
+
+  let ticking = false;
+  let mouseX = 0;
+  let mouseY = 0;
+
+  function updateParallax() {
+    const rect = hero.getBoundingClientRect();
+    const windowHeight = window.innerHeight || 1;
+
+    /*
+      progress:
+      0 circa quando l'hero è in posizione iniziale,
+      1 quando l'hero sta uscendo verso l'alto.
+    */
+    const progress = Math.min(
+      1,
+      Math.max(0, -rect.top / Math.max(1, rect.height - windowHeight * 0.25))
+    );
+
+    hero.style.setProperty("--hero-scroll", progress.toFixed(4));
+    hero.style.setProperty("--mouse-x", `${mouseX.toFixed(2)}px`);
+    hero.style.setProperty("--mouse-y", `${mouseY.toFixed(2)}px`);
+
+    ticking = false;
+  }
+
+  function requestUpdate() {
+    if (!ticking) {
+      ticking = true;
+      requestAnimationFrame(updateParallax);
+    }
+  }
+
+  window.addEventListener("scroll", requestUpdate, { passive: true });
+  window.addEventListener("resize", requestUpdate);
+
+  hero.addEventListener("pointermove", (event) => {
+    const rect = hero.getBoundingClientRect();
+    const x = (event.clientX - rect.left) / rect.width - 0.5;
+    const y = (event.clientY - rect.top) / rect.height - 0.5;
+
+    mouseX = x * 28;
+    mouseY = y * 18;
+
+    requestUpdate();
+  });
+
+  hero.addEventListener("pointerleave", () => {
+    mouseX = 0;
+    mouseY = 0;
+    requestUpdate();
+  });
+
+  updateParallax();
+}
+
+initHeroParallax();
