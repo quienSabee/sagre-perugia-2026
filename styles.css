@@ -1,0 +1,356 @@
+:root {
+  color-scheme: light;
+  --bg: #f6f3ee;
+  --surface: rgba(255, 252, 246, 0.92);
+  --surface-strong: #fffaf0;
+  --ink: #241b16;
+  --muted: #6f6258;
+  --line: rgba(80, 58, 42, 0.16);
+  --accent: #9f241e;
+  --accent-dark: #651a17;
+  --green: #16803d;
+  --green-soft: #e7f6e8;
+  --past: #4c4742;
+  --shadow: 0 18px 50px rgba(41, 28, 19, 0.14);
+  --topbar-height: 74px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  color: var(--ink);
+  background:
+    linear-gradient(rgba(246, 243, 238, 0.88), rgba(246, 243, 238, 0.88)),
+    url("assets/sagra-perugia.png") center top / min(1400px, 150vw) auto fixed;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.topbar {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 20;
+  display: grid;
+  grid-template-columns: minmax(170px, auto) minmax(180px, 620px);
+  gap: 18px;
+  align-items: center;
+  min-height: var(--topbar-height);
+  padding: 12px clamp(16px, 4vw, 48px);
+  color: #fffaf0;
+  background: rgba(36, 27, 22, 0.72);
+  border-bottom: 1px solid rgba(255, 250, 240, 0.18);
+  backdrop-filter: blur(16px);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  font-weight: 800;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.brand-mark {
+  display: inline-grid;
+  width: 38px;
+  aspect-ratio: 1;
+  place-items: center;
+  border: 1px solid rgba(255, 250, 240, 0.5);
+  border-radius: 8px;
+  background: rgba(159, 36, 30, 0.68);
+  font-size: 0.84rem;
+  letter-spacing: 0;
+}
+
+.search-form {
+  width: 100%;
+}
+
+.search-form input {
+  width: 100%;
+  min-height: 48px;
+  padding: 0 18px;
+  color: #241b16;
+  background: rgba(255, 250, 240, 0.94);
+  border: 1px solid rgba(255, 250, 240, 0.42);
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(12, 8, 5, 0.16);
+  font: inherit;
+  outline: none;
+}
+
+.search-form input:focus {
+  border-color: #f5cb65;
+  box-shadow:
+    0 0 0 3px rgba(245, 203, 101, 0.32),
+    0 10px 25px rgba(12, 8, 5, 0.16);
+}
+
+.hero {
+  position: relative;
+  display: grid;
+  min-height: 64vh;
+  padding: calc(var(--topbar-height) + 72px) clamp(18px, 5vw, 72px) 64px;
+  align-items: end;
+  overflow: hidden;
+  color: #fffaf0;
+  background:
+    linear-gradient(90deg, rgba(22, 13, 9, 0.88), rgba(22, 13, 9, 0.54) 48%, rgba(22, 13, 9, 0.16)),
+    linear-gradient(0deg, rgba(22, 13, 9, 0.76), rgba(22, 13, 9, 0.04) 45%),
+    url("assets/sagra-perugia.png") center / cover;
+}
+
+.hero-content {
+  width: min(780px, 100%);
+  min-width: 0;
+}
+
+.eyebrow {
+  margin: 0 0 14px;
+  color: #f5cb65;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+h1 {
+  max-width: 12ch;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3rem, 8vw, 6.8rem);
+  line-height: 0.94;
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+
+.hero-copy {
+  max-width: 620px;
+  margin: 22px 0 0;
+  color: rgba(255, 250, 240, 0.88);
+  font-size: clamp(1rem, 2vw, 1.28rem);
+  overflow-wrap: break-word;
+}
+
+.content {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 28px 0 64px;
+  min-width: 0;
+}
+
+.summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 800;
+}
+
+.summary span {
+  padding: 8px 12px;
+  background: rgba(255, 250, 240, 0.72);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 310px), 1fr));
+  gap: 18px;
+  min-width: 0;
+}
+
+.card {
+  position: relative;
+  display: grid;
+  gap: 16px;
+  min-height: 286px;
+  min-width: 0;
+  padding: 20px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.card::before {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 6px;
+  content: "";
+  background: var(--status-color, var(--accent));
+  border-radius: 8px 0 0 8px;
+}
+
+.card.is-active {
+  --status-color: var(--green);
+  background: linear-gradient(135deg, rgba(231, 246, 232, 0.98), rgba(255, 252, 246, 0.96));
+  border-color: rgba(22, 128, 61, 0.34);
+}
+
+.card.is-past {
+  --status-color: #6b625c;
+  color: rgba(36, 27, 22, 0.62);
+  background: rgba(45, 42, 38, 0.13);
+  box-shadow: none;
+}
+
+.card.is-future {
+  --status-color: var(--countdown-color, var(--accent));
+}
+
+.card-header {
+  display: grid;
+  gap: 10px;
+}
+
+.meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.badge {
+  display: inline-flex;
+  min-height: 30px;
+  align-items: center;
+  padding: 5px 10px;
+  color: #fff;
+  background: var(--status-color, var(--accent));
+  border-radius: 8px;
+  font-size: 0.78rem;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.date {
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.card h2 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.34rem;
+  line-height: 1.1;
+  letter-spacing: 0;
+  overflow-wrap: break-word;
+}
+
+.location {
+  margin: 0;
+  color: var(--accent-dark);
+  font-weight: 850;
+}
+
+.description {
+  margin: 0;
+  color: var(--muted);
+  overflow-wrap: break-word;
+}
+
+.card-footer {
+  display: flex;
+  gap: 10px;
+  align-items: end;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.source {
+  color: var(--accent-dark);
+  font-size: 0.9rem;
+  font-weight: 850;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+.unconfirmed {
+  color: #705a08;
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+.empty-state {
+  margin: 40px 0 0;
+  padding: 28px;
+  text-align: center;
+  color: var(--muted);
+  background: var(--surface-strong);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+@media (max-width: 720px) {
+  :root {
+    --topbar-height: 118px;
+  }
+
+  .topbar {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .brand {
+    justify-content: center;
+  }
+
+  .hero {
+    min-height: 68vh;
+    padding-top: calc(var(--topbar-height) + 54px);
+  }
+
+  .hero-content {
+    max-width: 340px;
+  }
+
+  .content {
+    width: min(358px, calc(100% - 32px));
+  }
+
+  h1 {
+    max-width: 8ch;
+    font-size: clamp(2.6rem, 12vw, 3.45rem);
+    text-wrap: normal;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

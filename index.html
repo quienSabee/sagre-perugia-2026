@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sagre Perugia 2026</title>
+    <meta
+      name="description"
+      content="Sagre, feste popolari ed eventi paesani a Perugia e dintorni nel 2026."
+    />
+    <link rel="preload" href="assets/sagra-perugia.png" as="image" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Sagre Perugia 2026">
+        <span class="brand-mark">PG</span>
+        <span>Sagre Perugia 2026</span>
+      </a>
+
+      <form class="search-form" role="search">
+        <label class="sr-only" for="search">Cerca sagre</label>
+        <input
+          id="search"
+          name="search"
+          type="search"
+          autocomplete="off"
+          placeholder="Cerca sagre, località, date"
+        />
+      </form>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-content">
+          <p class="eyebrow">Perugia e dintorni</p>
+          <h1 id="page-title">Sagre, feste ed eventi popolari 2026</h1>
+          <p class="hero-copy">
+            Una mappa rapida degli appuntamenti entro circa un'ora da Perugia.
+          </p>
+        </div>
+      </section>
+
+      <section class="content" aria-live="polite">
+        <div class="summary" id="summary">
+          <span id="total-count">0 eventi</span>
+          <span id="active-count">0 in corso</span>
+          <span id="future-count">0 futuri</span>
+        </div>
+
+        <div class="cards-grid" id="events"></div>
+
+        <p class="empty-state" id="empty-state" hidden>
+          Nessun evento trovato.
+        </p>
+      </section>
+    </main>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
