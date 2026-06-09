@@ -5,13 +5,11 @@ const pastCount = document.querySelector("#past-count");
 const activeCount = document.querySelector("#active-count");
 const futureCount = document.querySelector("#future-count");
 const filterButtons = document.querySelectorAll(".filter-button");
-const tagFilters = document.querySelector("#tag-filters");
 const topbar = document.querySelector(".topbar");
 const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
 
 let allEvents = [];
 const enabledStatuses = new Set(["active", "future"]);
-const selectedTags = new Set();
 
 const tagMeta = {
   gastronomia: { label: "Gastronomia", tone: "red" },
@@ -124,7 +122,7 @@ function readableTag(tag) {
 
 function searchableText(event) {
   const subEvents = (event.subEvents || [])
-    .map((group) => [group.range, ...(group.items || []).map((item) => `${item.title} ${item.note || ""}`)].join(" "))
+    .map((item) => `${item.date || ""} ${item.time || ""} ${item.title || ""} ${item.note || ""}`)
     .join(" ");
 
   return [
@@ -221,9 +219,13 @@ function icon(name) {
     `,
     menu: `
       <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M4 6h16"></path>
-        <path d="M4 12h16"></path>
-        <path d="M4 18h16"></path>
+        <path d="M7 3v8"></path>
+        <path d="M4.5 3v8"></path>
+        <path d="M9.5 3v8"></path>
+        <path d="M4.5 11c0 1.4 1.1 2.5 2.5 2.5S9.5 12.4 9.5 11"></path>
+        <path d="M7 13.5V21"></path>
+        <path d="M17 3c-2 1.7-3 3.9-3 6.5V13h3v8"></path>
+        <path d="M17 3v18"></path>
       </svg>
     `,
     info: `
@@ -247,9 +249,9 @@ function eventActionsMarkup(event, mapId, detailsId) {
     ? `<a class="action-button has-tooltip" href="${sourceUrl}" target="_blank" rel="noopener noreferrer" aria-label="Apri fonte: ${sourceLabel}" data-tooltip="Apri fonte">${icon("source")}</a>`
     : `<span class="action-button is-disabled has-tooltip" aria-label="Fonte non disponibile" data-tooltip="Fonte non disponibile">${icon("source")}</span>`;
 
-  const menuButton = event.menuUrl
-    ? `<a class="action-button has-tooltip" href="${menuUrl}" target="_blank" rel="noopener noreferrer" aria-label="Apri menu" data-tooltip="Apri menù">${icon("menu")}</a>`
-    : `<span class="action-button is-disabled has-tooltip" aria-label="Menù non disponibile" data-tooltip="Menù non disponibile">${icon("menu")}</span>`;
+  const menuButton = event.menuUrl && event.menuComplete
+    ? `<a class="action-button has-tooltip" href="${menuUrl}" target="_blank" rel="noopener noreferrer" aria-label="Apri menù completo" data-tooltip="Menù completo">${icon("menu")}</a>`
+    : "";
 
   return `
     <div class="action-group">
@@ -265,30 +267,66 @@ function tagsMarkup(event) {
   return (event.tags || [])
     .map((tag) => {
       const meta = tagMeta[tag] || { label: readableTag(tag), tone: "red" };
-      return `<button class="event-tag tag-${escapeHtml(meta.tone)}" type="button" data-tag="${escapeHtml(tag)}" aria-label="Filtra per ${escapeHtml(meta.label)}">${escapeHtml(meta.label)}</button>`;
+      return `<span class="event-tag tag-${escapeHtml(meta.tone)}">${escapeHtml(meta.label)}</span>`;
     })
     .join("");
 }
 
+function formatSubEventDate(value) {
+  return dateFormatter.format(parseISODate(value));
+}
+
+function getDateState(dateValue, today = localDate()) {
+  const date = parseISODate(dateValue);
+  if (date < today) {
+    return { status: "past", label: "Passata", color: "hsl(26 6% 38%)" };
+  }
+  if (date.getTime() === today.getTime()) {
+    return { status: "active", label: "Oggi", color: "hsl(142 70% 31%)" };
+  }
+  const daysUntil = diffDays(today, date);
+  return {
+    status: "future",
+    label: daysUntil === 1 ? "Domani" : `Tra ${daysUntil} giorni`,
+    color: countdownColor(daysUntil),
+  };
+}
+
 function subEventsMarkup(event) {
-  if (!event.subEvents?.length) {
+  const items = (event.subEvents || [])
+    .filter((item) => item.date && item.title)
+    .sort((a, b) => `${a.date} ${a.time || ""}`.localeCompare(`${b.date} ${b.time || ""}`));
+
+  if (!items.length) {
     return "";
   }
 
+  const grouped = items.reduce((acc, item) => {
+    acc[item.date] ||= [];
+    acc[item.date].push(item);
+    return acc;
+  }, {});
+
   return `
-    <section class="sub-events" aria-label="Sotto-eventi">
-      <h4>Serate e sotto-eventi</h4>
-      ${event.subEvents
-        .map((group) => `
-          <div class="sub-event-group">
-            <h5>${escapeHtml(group.range)}</h5>
-            <ul>
-              ${(group.items || [])
-                .map((item) => `<li><strong>${escapeHtml(item.title)}</strong>${item.note ? ` <span>${escapeHtml(item.note)}</span>` : ""}</li>`)
-                .join("")}
-            </ul>
-          </div>
-        `)
+    <section class="sub-events" aria-label="Serate">
+      <h4>Serate</h4>
+      ${Object.entries(grouped)
+        .map(([date, dayItems]) => {
+          const state = getDateState(date);
+          return `
+            <div class="sub-event-day is-${state.status}" style="--countdown-color: ${state.color}">
+              <header>
+                <h5>${escapeHtml(formatSubEventDate(date))}</h5>
+                <span class="badge sub-event-status">${escapeHtml(state.label)}</span>
+              </header>
+              <ul>
+                ${dayItems
+                  .map((item) => `<li>${item.time ? `<time>${escapeHtml(item.time)}</time>` : ""}<strong>${escapeHtml(item.title)}</strong>${item.note ? ` <span>${escapeHtml(item.note)}</span>` : ""}</li>`)
+                  .join("")}
+              </ul>
+            </div>
+          `;
+        })
         .join("")}
     </section>
   `;
@@ -333,22 +371,7 @@ function renderCard(event) {
 }
 
 function eventMatches(event, query) {
-  const textMatch = query ? searchableText(event).includes(query) : true;
-  const tagMatch = [...selectedTags].every((tag) => event.tags?.includes(tag));
-  return textMatch && tagMatch;
-}
-
-function renderTagFilters() {
-  if (!tagFilters) return;
-
-  const tags = [...new Set(allEvents.flatMap((event) => event.tags || []))].sort((a, b) => readableTag(a).localeCompare(readableTag(b), "it"));
-  tagFilters.innerHTML = tags
-    .map((tag) => {
-      const meta = tagMeta[tag] || { label: readableTag(tag), tone: "red" };
-      const pressed = selectedTags.has(tag);
-      return `<button class="tag-filter tag-${escapeHtml(meta.tone)} has-tooltip" type="button" data-tag="${escapeHtml(tag)}" aria-pressed="${pressed}" data-tooltip="Filtra: ${escapeHtml(meta.label)}">${escapeHtml(meta.label)}</button>`;
-    })
-    .join("");
+  return query ? searchableText(event).includes(query) : true;
 }
 
 function render() {
@@ -361,7 +384,6 @@ function render() {
   activeCount.textContent = `${searchedStates.filter((status) => status === "active").length} in corso`;
   futureCount.textContent = `${searchedStates.filter((status) => status === "future").length} futuri`;
 
-  renderTagFilters();
   eventsContainer.innerHTML = filtered.map(renderCard).join("");
   emptyState.hidden = filtered.length !== 0;
 }
@@ -383,7 +405,7 @@ function toggleMobileMenu(event) {
 
 async function init() {
   try {
-    const response = await fetch("data/sagre.json?v=20260610-content-tags");
+    const response = await fetch("data/sagre.json?v=20260610-refined-serate");
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     allEvents = (await response.json()).sort((a, b) => firstStartDate(a) - firstStartDate(b));
     render();
@@ -411,24 +433,7 @@ filterButtons.forEach((button) => {
   });
 });
 
-tagFilters?.addEventListener("click", (event) => {
-  const button = event.target.closest(".tag-filter");
-  if (!button) return;
-  const tag = button.dataset.tag;
-  if (selectedTags.has(tag)) selectedTags.delete(tag);
-  else selectedTags.add(tag);
-  render();
-});
-
 eventsContainer.addEventListener("click", (event) => {
-  const tag = event.target.closest(".event-tag");
-  if (tag) {
-    selectedTags.add(tag.dataset.tag);
-    render();
-    window.scrollTo({ top: 0, behavior: "smooth" });
-    return;
-  }
-
   const detailsButton = event.target.closest(".details-toggle");
   if (detailsButton) {
     const details = document.getElementById(detailsButton.getAttribute("aria-controls"));

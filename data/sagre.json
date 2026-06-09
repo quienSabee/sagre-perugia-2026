@@ -22,7 +22,8 @@
       "famiglia"
     ],
     "detailsMarkdown": "## Dettagli\nFesta popolare nel calendario comunale perugino 2026. Programma di comunità con momenti conviviali e serate nell’area di Ramazzano.",
-    "subEvents": []
+    "subEvents": [],
+    "menuComplete": false
   },
   {
     "id": "sagra-prosciutto-nostrano-pianello-2026",
@@ -46,7 +47,8 @@
       "tradizione"
     ],
     "detailsMarkdown": "## Dettagli\nEvento gastronomico di inizio estate nel territorio comunale di Perugia, con specialità locali e cucina popolare.",
-    "subEvents": []
+    "subEvents": [],
+    "menuComplete": false
   },
   {
     "id": "sagra-boscaiola-bosco-2026",
@@ -71,7 +73,8 @@
       "tradizione"
     ],
     "detailsMarkdown": "## Dettagli\nSagra storica della frazione di Bosco, inserita nel calendario comunale 2026. Ideale per chi cerca piatti di tradizione e serate all’aperto.",
-    "subEvents": []
+    "subEvents": [],
+    "menuComplete": false
   },
   {
     "id": "sagra-piccione-carrozza-2026",
@@ -95,30 +98,130 @@
       "tradizione",
       "musica"
     ],
-    "detailsMarkdown": "## Dettagli\nIl piatto simbolo è il **piccione in carrozza**, ricetta della tradizione contadina umbra. Gli stand propongono anche primi, torta al testo, arvoltoli, proposte senza glutine e specialità di chianina.\n\n### Novità\nGiardino panoramico per fine serata con pasticceria artigianale e liquori. Posti al coperto in caso di maltempo.",
+    "detailsMarkdown": "## Dettagli\nIl piatto simbolo è il **piccione in carrozza**, ricetta della tradizione contadina umbra. Gli stand aprono ogni sera alle **19:30** e propongono anche primi, torta al testo, arvoltoli, proposte senza glutine e specialità di chianina.\n\n### Novità 2026\nGiardino panoramico per il fine serata con pasticceria artigianale e liquori. Sono disponibili posti al coperto in caso di maltempo.\n\n### Menù\nLa pagina evento contiene il collegamento al **menù completo** pubblicato per l’edizione 2026.",
     "subEvents": [
       {
-        "range": "12-15 giugno 2026",
-        "items": [
-          {
-            "title": "Game Boys - 90s Band",
-            "note": "live music il 12 giugno"
-          },
-          {
-            "title": "Orchestra Simona Fabrizi",
-            "note": "serata danzante il 13 giugno"
-          },
-          {
-            "title": "Orchestra Ilaria Cenciarini",
-            "note": "serata danzante il 14 giugno"
-          },
-          {
-            "title": "I Principi di Galles",
-            "note": "live music il 15 giugno"
-          }
-        ]
+        "date": "2026-06-12",
+        "time": "19:30",
+        "title": "Apertura Stand Gastronomici",
+        "note": "apertura cucina"
+      },
+      {
+        "date": "2026-06-12",
+        "time": "21:30",
+        "title": "Game Boys - 90's Band",
+        "note": "live music"
+      },
+      {
+        "date": "2026-06-13",
+        "time": "19:30",
+        "title": "Apertura Stand Gastronomici",
+        "note": "apertura cucina"
+      },
+      {
+        "date": "2026-06-13",
+        "time": "21:30",
+        "title": "Orchestra Simona Fabrizi",
+        "note": "serata danzante"
+      },
+      {
+        "date": "2026-06-14",
+        "time": "19:30",
+        "title": "Apertura Stand Gastronomici",
+        "note": "apertura cucina"
+      },
+      {
+        "date": "2026-06-14",
+        "time": "21:30",
+        "title": "Orchestra Ilaria Cenciarini",
+        "note": "serata danzante"
+      },
+      {
+        "date": "2026-06-15",
+        "time": "19:30",
+        "title": "Apertura Stand Gastronomici",
+        "note": "apertura cucina"
+      },
+      {
+        "date": "2026-06-15",
+        "time": "21:30",
+        "title": "I Principi di Galles",
+        "note": "live music"
+      },
+      {
+        "date": "2026-06-16",
+        "time": "19:30",
+        "title": "Apertura Stand Gastronomici",
+        "note": "apertura cucina"
+      },
+      {
+        "date": "2026-06-16",
+        "time": "21:30",
+        "title": "Outside Band",
+        "note": "live music"
+      },
+      {
+        "date": "2026-06-17",
+        "time": "19:30",
+        "title": "Apertura Stand Gastronomici",
+        "note": "apertura cucina"
+      },
+      {
+        "date": "2026-06-17",
+        "time": "21:30",
+        "title": "Diana Cover Band",
+        "note": "live music"
+      },
+      {
+        "date": "2026-06-18",
+        "time": "19:30",
+        "title": "Apertura Stand Gastronomici",
+        "note": "apertura cucina"
+      },
+      {
+        "date": "2026-06-18",
+        "time": "21:30",
+        "title": "DeeRadio",
+        "note": "live music"
+      },
+      {
+        "date": "2026-06-19",
+        "time": "19:30",
+        "title": "Apertura Stand Gastronomici",
+        "note": "apertura cucina"
+      },
+      {
+        "date": "2026-06-19",
+        "time": "21:30",
+        "title": "Audio 5",
+        "note": "live music"
+      },
+      {
+        "date": "2026-06-20",
+        "time": "19:30",
+        "title": "Apertura Stand Gastronomici",
+        "note": "apertura cucina"
+      },
+      {
+        "date": "2026-06-20",
+        "time": "21:30",
+        "title": "Orchestra Castellina Pasi",
+        "note": "serata danzante"
+      },
+      {
+        "date": "2026-06-21",
+        "time": "19:30",
+        "title": "Apertura Stand Gastronomici",
+        "note": "apertura cucina"
+      },
+      {
+        "date": "2026-06-21",
+        "time": "21:30",
+        "title": "Orchestra Simona Quaranta",
+        "note": "serata danzante"
       }
-    ]
+    ],
+    "menuComplete": true
   },
   {
     "id": "sagra-ortolano-balanzano-2026",
@@ -127,7 +230,7 @@
     "description": "25ª edizione con prodotti locali, menu umbro e programma serale tra pista e Bilenza Pub.",
     "sourceLabel": "UmbriaEventi - Sagra dell'Ortolano 2026",
     "sourceUrl": "https://www.umbriaeventi.com/sagra-dell-ortolano-balanzano-8014.htm",
-    "menuUrl": "https://www.umbriaeventi.com/sagra-dell-ortolano-balanzano-8014.htm",
+    "menuUrl": "",
     "ranges": [
       {
         "start": "2026-06-12",
@@ -146,68 +249,72 @@
     "detailsMarkdown": "## Dettagli\nSagra a forte identità locale, con marchio regionale a 3 foglie e un menù costruito su prodotti locali. Il menù pubblicato include bruschette, lumache in diverse preparazioni, primi, grigliate, torta al testo, verdure, dessert e menù baby.\n\n### Menù disponibile\nIl programma e il menù 2026 sono disponibili nella pagina dell’evento.",
     "subEvents": [
       {
-        "range": "12-14 giugno 2026",
-        "items": [
-          {
-            "title": "Orchestra Matteo Tassi",
-            "note": "12 giugno"
-          },
-          {
-            "title": "Dj Set Safari",
-            "note": "Bilenza Pub, 12 giugno"
-          },
-          {
-            "title": "Orchestra Orient Express",
-            "note": "13 giugno"
-          },
-          {
-            "title": "Debla on Tour",
-            "note": "Bilenza Pub, 13 giugno"
-          },
-          {
-            "title": "Orchestra Atmosfera Blu",
-            "note": "14 giugno"
-          },
-          {
-            "title": "RandomLatino",
-            "note": "Bilenza Pub, 14 giugno"
-          }
-        ]
+        "date": "2026-06-12",
+        "title": "Orchestra Matteo Tassi",
+        "note": "serata danzante"
       },
       {
-        "range": "15-21 giugno 2026",
-        "items": [
-          {
-            "title": "Marco e Claudia",
-            "note": "15 giugno"
-          },
-          {
-            "title": "Manuel Malanotte",
-            "note": "16 giugno"
-          },
-          {
-            "title": "Omar Lambertini",
-            "note": "17 giugno"
-          },
-          {
-            "title": "Ilaria Cenciarini",
-            "note": "18 giugno"
-          },
-          {
-            "title": "Suonami Band",
-            "note": "19 giugno"
-          },
-          {
-            "title": "Marco Cimarelli Band",
-            "note": "20 giugno"
-          },
-          {
-            "title": "Roberto Carpineti",
-            "note": "21 giugno"
-          }
-        ]
+        "date": "2026-06-12",
+        "title": "Dj Set Safari",
+        "note": "Bilenza Pub"
+      },
+      {
+        "date": "2026-06-13",
+        "title": "Orchestra Orient Express",
+        "note": "serata danzante"
+      },
+      {
+        "date": "2026-06-13",
+        "title": "Debla on Tour",
+        "note": "Bilenza Pub"
+      },
+      {
+        "date": "2026-06-14",
+        "title": "Orchestra Atmosfera Blu",
+        "note": "serata danzante"
+      },
+      {
+        "date": "2026-06-14",
+        "title": "RandomLatino",
+        "note": "Bilenza Pub"
+      },
+      {
+        "date": "2026-06-15",
+        "title": "Marco e Claudia",
+        "note": "serata danzante"
+      },
+      {
+        "date": "2026-06-16",
+        "title": "Manuel Malanotte",
+        "note": "serata danzante"
+      },
+      {
+        "date": "2026-06-17",
+        "title": "Omar Lambertini",
+        "note": "serata danzante"
+      },
+      {
+        "date": "2026-06-18",
+        "title": "Ilaria Cenciarini",
+        "note": "serata danzante"
+      },
+      {
+        "date": "2026-06-19",
+        "title": "Suonami Band",
+        "note": "live music"
+      },
+      {
+        "date": "2026-06-20",
+        "title": "Marco Cimarelli Band",
+        "note": "serata danzante"
+      },
+      {
+        "date": "2026-06-21",
+        "title": "Roberto Carpineti",
+        "note": "serata danzante"
       }
-    ]
+    ],
+    "menuComplete": false
   },
   {
     "id": "palio-arnense-ripa-2026",
@@ -232,7 +339,8 @@
       "famiglia"
     ],
     "detailsMarkdown": "## Dettagli\nFesta popolare inserita dal Comune di Perugia tra le manifestazioni 2026 e riconosciuta come **Festa Popolare Etica di Qualità Perugia**.",
-    "subEvents": []
+    "subEvents": [],
+    "menuComplete": false
   },
   {
     "id": "piccione-in-festa-2026",
@@ -241,7 +349,7 @@
     "description": "Storica manifestazione nell’area verde comunale, con orchestre, Cico’s Pub e specialità gastronomiche.",
     "sourceLabel": "UmbriaEventi - Piccione in Festa 2026",
     "sourceUrl": "https://www.umbriaeventi.com/piccione-in-festa-piccione-8379.htm",
-    "menuUrl": "https://www.umbriaeventi.com/piccione-in-festa-piccione-8379.htm",
+    "menuUrl": "",
     "ranges": [
       {
         "start": "2026-06-19",
@@ -260,44 +368,37 @@
     "detailsMarkdown": "## Dettagli\nManifestazione storica nell’area verde comunale di Piccione. La proposta abbina ballo liscio, energia dance al Cico’s Pub e cucina con specialità come **oca all’arrabbiata**, arrosticini e tagliata.\n\n### Menù disponibile\nLa pagina evento contiene sezioni programma e menù.",
     "subEvents": [
       {
-        "range": "19-24 giugno 2026",
-        "items": [
-          {
-            "title": "Orchestra Manuel Malanotte",
-            "note": "19 giugno"
-          },
-          {
-            "title": "Orchestra Matteo Tassi",
-            "note": "20 giugno"
-          },
-          {
-            "title": "Orchestra Andrea Bianchini",
-            "note": "21 giugno"
-          },
-          {
-            "title": "Orchestra Yuri Morolli",
-            "note": "22 giugno"
-          },
-          {
-            "title": "Orchestra Riccardi",
-            "note": "23 giugno"
-          },
-          {
-            "title": "Orchestra Gianmarco Bagutti",
-            "note": "24 giugno"
-          }
-        ]
+        "date": "2026-06-19",
+        "title": "Orchestra Manuel Malanotte",
+        "note": "serata danzante"
       },
       {
-        "range": "Tutte le sere",
-        "items": [
-          {
-            "title": "Cico’s Pub",
-            "note": "dj set e area serale dalle 22:00"
-          }
-        ]
+        "date": "2026-06-20",
+        "title": "Orchestra Matteo Tassi",
+        "note": "serata danzante"
+      },
+      {
+        "date": "2026-06-21",
+        "title": "Orchestra Andrea Bianchini",
+        "note": "serata danzante"
+      },
+      {
+        "date": "2026-06-22",
+        "title": "Orchestra Yuri Morolli",
+        "note": "serata danzante"
+      },
+      {
+        "date": "2026-06-23",
+        "title": "Orchestra Riccardi",
+        "note": "serata danzante"
+      },
+      {
+        "date": "2026-06-24",
+        "title": "Orchestra Gianmarco Bagutti",
+        "note": "serata danzante"
       }
-    ]
+    ],
+    "menuComplete": false
   },
   {
     "id": "santa-sabina-in-2026",
@@ -322,7 +423,8 @@
       "famiglia"
     ],
     "detailsMarkdown": "## Dettagli\nFesta molto attesa nell’estate perugina, ambientata nel verde del parco di Santa Sabina, con prodotti tipici, birre artigianali e gelati preparati con ingredienti di qualità.",
-    "subEvents": []
+    "subEvents": [],
+    "menuComplete": false
   },
   {
     "id": "sagra-gnocchi-casenuove-2026",
@@ -348,7 +450,8 @@
       "famiglia"
     ],
     "detailsMarkdown": "## Dettagli\n33ª edizione della sagra di Casenuove, con programma pensato per varie età: orchestre spettacolo nella piazza centrale e proposta gastronomica legata agli gnocchi e ai prodotti tipici umbri.",
-    "subEvents": []
+    "subEvents": [],
+    "menuComplete": false
   },
   {
     "id": "festa-inizio-estate-resina-2026",
@@ -373,7 +476,8 @@
       "famiglia"
     ],
     "detailsMarkdown": "## Dettagli\nFesta popolare nel calendario comunale 2026, pensata per aprire la stagione estiva nella frazione di Resina.",
-    "subEvents": []
+    "subEvents": [],
+    "menuComplete": false
   },
   {
     "id": "festa-torta-testo-pila-2026",
@@ -382,7 +486,7 @@
     "description": "47ª edizione dedicata alla torta al testo e ai vini DOC dei Colli Perugini.",
     "sourceLabel": "UmbriaEventi - Festa della Torta al Testo 2026",
     "sourceUrl": "https://www.umbriaeventi.com/festa-della-torta-al-testo-e-vini-doc-dei-colli-perugini-pila-5796.htm",
-    "menuUrl": "https://www.umbriaeventi.com/festa-della-torta-al-testo-e-vini-doc-dei-colli-perugini-pila-5796.htm",
+    "menuUrl": "",
     "ranges": [
       {
         "start": "2026-06-26",
@@ -398,7 +502,8 @@
       "tradizione"
     ],
     "detailsMarkdown": "## Dettagli\nEvento longevo dedicato alla **torta al testo**, focaccia umbra cotta su lastra di pietra sopra le braci, e ai vini DOC dei Colli Perugini.",
-    "subEvents": []
+    "subEvents": [],
+    "menuComplete": false
   },
   {
     "id": "sagra-granocchia-capanne-2026",
@@ -423,7 +528,8 @@
       "musica"
     ],
     "detailsMarkdown": "## Dettagli\nSagra di Capanne dedicata alla granocchia e ai piatti tipici locali, inserita nel calendario comunale 2026.",
-    "subEvents": []
+    "subEvents": [],
+    "menuComplete": false
   },
   {
     "id": "sagra-tartufo-ripa-2026",
@@ -432,7 +538,7 @@
     "description": "38ª edizione della sagra del tartufo: gastronomia, tradizione, spettacoli e musica dal vivo.",
     "sourceLabel": "UmbriaEventi - Sagra del Tartufo 2026",
     "sourceUrl": "https://www.umbriaeventi.com/sagra-del-tartufo-ripa-8169.htm",
-    "menuUrl": "https://www.umbriaeventi.com/sagra-del-tartufo-ripa-8169.htm",
+    "menuUrl": "",
     "ranges": [
       {
         "start": "2026-07-03",
@@ -451,52 +557,52 @@
     "detailsMarkdown": "## Dettagli\nAppuntamento dell’estate perugina dedicato al **tartufo** e alla cucina locale. La manifestazione include spettacoli, musica dal vivo e area bimbi.\n\n### Menù disponibile\nLa pagina evento contiene sezioni programma e menù.",
     "subEvents": [
       {
-        "range": "3-8 luglio 2026",
-        "items": [
-          {
-            "title": "Apertura 38ª edizione",
-            "note": "3 luglio"
-          },
-          {
-            "title": "Orchestra Ilaria Cenciarini",
-            "note": "3 luglio"
-          },
-          {
-            "title": "Orchestra Joselito",
-            "note": "4 luglio"
-          },
-          {
-            "title": "Marco e Claudia",
-            "note": "5 luglio"
-          },
-          {
-            "title": "Orchestra Riccardi",
-            "note": "6 luglio"
-          },
-          {
-            "title": "Marco Cimarelli Band",
-            "note": "7 luglio"
-          },
-          {
-            "title": "Maicol Diaz",
-            "note": "8 luglio"
-          }
-        ]
+        "date": "2026-07-03",
+        "title": "Apertura 38ª edizione",
+        "note": "apertura sagra"
       },
       {
-        "range": "9-12 luglio 2026",
-        "items": [
-          {
-            "title": "Orchestra Silvia Cecconi",
-            "note": "9 luglio"
-          },
-          {
-            "title": "Orchestra Federico Olivotti",
-            "note": "10 luglio"
-          }
-        ]
+        "date": "2026-07-03",
+        "title": "Orchestra Ilaria Cenciarini",
+        "note": "serata danzante"
+      },
+      {
+        "date": "2026-07-04",
+        "title": "Orchestra Joselito",
+        "note": "serata danzante"
+      },
+      {
+        "date": "2026-07-05",
+        "title": "Marco e Claudia",
+        "note": "serata danzante"
+      },
+      {
+        "date": "2026-07-06",
+        "title": "Orchestra Riccardi",
+        "note": "serata danzante"
+      },
+      {
+        "date": "2026-07-07",
+        "title": "Marco Cimarelli Band",
+        "note": "serata danzante"
+      },
+      {
+        "date": "2026-07-08",
+        "title": "Maicol Diaz",
+        "note": "serata danzante"
+      },
+      {
+        "date": "2026-07-09",
+        "title": "Orchestra Silvia Cecconi",
+        "note": "serata danzante"
+      },
+      {
+        "date": "2026-07-10",
+        "title": "Orchestra Federico Olivotti",
+        "note": "serata danzante"
       }
-    ]
+    ],
+    "menuComplete": false
   },
   {
     "id": "pontepattolissima-2026",
@@ -521,7 +627,8 @@
       "famiglia"
     ],
     "detailsMarkdown": "## Dettagli\nFesta popolare organizzata nel periodo centrale di luglio a Ponte Pattoli, presente sia nel calendario comunale sia nel calendario regionale.",
-    "subEvents": []
+    "subEvents": [],
+    "menuComplete": false
   },
   {
     "id": "sagra-tuttosuino-santenea-2026",
@@ -546,7 +653,8 @@
       "ballo"
     ],
     "detailsMarkdown": "## Dettagli\nSagra di Sant’Enea dedicata alle preparazioni del maiale. La formula combina gastronomia locale, allegria, serate danzanti e appuntamenti serali.",
-    "subEvents": []
+    "subEvents": [],
+    "menuComplete": false
   },
   {
     "id": "piccantissima-pila-2026",
@@ -571,7 +679,8 @@
       "famiglia"
     ],
     "detailsMarkdown": "## Dettagli\nFesta popolare di Pila inserita nel calendario regionale 2026, organizzata dall’Associazione Dilettantistica Settevalli - Pila.",
-    "subEvents": []
+    "subEvents": [],
+    "menuComplete": false
   },
   {
     "id": "fontignano-a-tavola-2026",
@@ -596,7 +705,8 @@
       "musica"
     ],
     "detailsMarkdown": "## Dettagli\nFesta estiva di Fontignano, orientata alla cucina di paese e alla socialità nelle serate di luglio.",
-    "subEvents": []
+    "subEvents": [],
+    "menuComplete": false
   },
   {
     "id": "sagra-spaghetto-carbonai-2026",
@@ -622,21 +732,8 @@
       "musica"
     ],
     "detailsMarkdown": "## Dettagli\nL’edizione precedente descriveva un menù ricco e un programma di intrattenimenti per tutte le età. Tra gli appuntamenti tradizionali sono segnalati la **Rassegna del Mulo e del Cavallo da Soma** e il **Palio del Carbonaio**.\n\n### Nota date\nLe date 2026 sono quelle pubblicate dal Comune di Perugia.",
-    "subEvents": [
-      {
-        "range": "17-26 luglio 2026",
-        "items": [
-          {
-            "title": "Rassegna del Mulo e del Cavallo da Soma",
-            "note": "appuntamento tradizionale segnalato nelle schede storiche"
-          },
-          {
-            "title": "Palio del Carbonaio",
-            "note": "evento caratteristico di Fratticiola Selvatica"
-          }
-        ]
-      }
-    ]
+    "subEvents": [],
+    "menuComplete": false
   },
   {
     "id": "sagra-crostone-strozzacapponi-2026",
@@ -645,7 +742,7 @@
     "description": "Sagra del crostone e dei taglierini al tartufo, con cucina umbra e tradizionale Corsa del Gallo.",
     "sourceLabel": "UmbriaEventi - scheda storica Sagra del Crostone",
     "sourceUrl": "https://www.umbriaeventi.com/sagra-del-crostone-e-dei-taglierini-al-tartufo-corsa-del-gallo-strozzacapponi-8459.htm",
-    "menuUrl": "https://www.umbriaeventi.com/sagra-del-crostone-e-dei-taglierini-al-tartufo-corsa-del-gallo-strozzacapponi-8459.htm",
+    "menuUrl": "",
     "ranges": [
       {
         "start": "2026-07-24",
@@ -662,17 +759,8 @@
       "musica"
     ],
     "detailsMarkdown": "## Dettagli\nLa scheda storica descrive il **crostone** come bruschetta condita con un paté preparato con molti ingredienti e servita su pane cotto a legna. La sagra propone anche taglierini al tartufo, cucina umbra e divertimento serale.\n\n### Nota date\nPer il 2026 non ho trovato una scheda ufficiale completa: ho inserito l’evento perché Strozzacapponi compare tra i luoghi delle sagre nel calendario comunale e perché la sagra è documentata negli anni precedenti. Le date sono marcate come da confermare.",
-    "subEvents": [
-      {
-        "range": "Fine sagra",
-        "items": [
-          {
-            "title": "Corsa del Gallo",
-            "note": "sfida tradizionale tra i rioni Fosso, Belvedere e Torre"
-          }
-        ]
-      }
-    ]
+    "subEvents": [],
+    "menuComplete": false
   },
   {
     "id": "montepetriolo-2026",
@@ -697,7 +785,8 @@
       "famiglia"
     ],
     "detailsMarkdown": "## Dettagli\nFesta popolare a Montepetriolo inserita nel calendario comunale 2026, con impostazione di borgo e serate conviviali.",
-    "subEvents": []
+    "subEvents": [],
+    "menuComplete": false
   },
   {
     "id": "sagra-torta-testo-cenere-santegidio-2026",
@@ -722,7 +811,8 @@
       "tradizione"
     ],
     "detailsMarkdown": "## Dettagli\nSagra di Sant’Egidio dedicata a una preparazione tradizionale: la torta al testo cotta sotto la cenere.",
-    "subEvents": []
+    "subEvents": [],
+    "menuComplete": false
   },
   {
     "id": "sound-sisto-live-2026",
@@ -747,7 +837,8 @@
       "famiglia"
     ],
     "detailsMarkdown": "## Dettagli\nEvento estivo di San Sisto con focus su musica live, intrattenimento e convivialità.",
-    "subEvents": []
+    "subEvents": [],
+    "menuComplete": false
   },
   {
     "id": "sagra-baccala-villa-pitignano-2026",
@@ -772,7 +863,8 @@
       "tradizione"
     ],
     "detailsMarkdown": "## Dettagli\nSagra gastronomica dedicata al baccalà, affiancato da prodotti tipici umbri e serate di fine estate.",
-    "subEvents": []
+    "subEvents": [],
+    "menuComplete": false
   },
   {
     "id": "sagra-rucola-santandrea-2026",
@@ -797,7 +889,8 @@
       "famiglia"
     ],
     "detailsMarkdown": "## Dettagli\nSagra di fine agosto dedicata alla rucola e alla cucina tipica umbra.",
-    "subEvents": []
+    "subEvents": [],
+    "menuComplete": false
   },
   {
     "id": "sagra-canaiola-pretola-2026",
@@ -822,6 +915,7 @@
       "musica"
     ],
     "detailsMarkdown": "## Dettagli\nEvento di settembre a Pretola, dedicato alla canaiola e ai prodotti tipici dell’Umbria, ideale come chiusura del calendario estivo delle sagre perugine.",
-    "subEvents": []
+    "subEvents": [],
+    "menuComplete": false
   }
 ]
