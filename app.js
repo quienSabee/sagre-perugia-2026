@@ -7,7 +7,7 @@ const futureCount = document.querySelector("#future-count");
 const filterButtons = document.querySelectorAll(".filter-button");
 
 let allEvents = [];
-const enabledStatuses = new Set(["past", "active", "future"]);
+const enabledStatuses = new Set(["active", "future"]);
 
 const dateFormatter = new Intl.DateTimeFormat("it-IT", {
   day: "numeric",
@@ -116,12 +116,14 @@ function sourceMarkup(event) {
     return `<span class="source">${event.sourceLabel}</span>`;
   }
 
-  return `<a class="source" href="${event.sourceUrl}" target="_blank" rel="noreferrer">Fonte</a>`;
+  return `<a class="source" href="${event.sourceUrl}" target="_blank" rel="noreferrer">${event.sourceLabel}</a>`;
 }
 
 function renderCard(event) {
   const state = getEventState(event);
   const ranges = event.ranges.map(formatDateRange).join(" / ");
+  const mapId = `map-${event.id}`;
+  const mapUrl = `https://www.google.com/maps?q=${encodeURIComponent(`${event.location}, Umbria, Italia`)}&output=embed`;
   const unconfirmed = event.confirmed
     ? ""
     : `<span class="unconfirmed">Date da confermare</span>`;
@@ -138,8 +140,26 @@ function renderCard(event) {
       <p class="location">${event.location}</p>
       <p class="description">${event.description}</p>
       <div class="card-footer">
-        ${sourceMarkup(event)}
-        ${unconfirmed}
+        <div class="card-links">
+          ${sourceMarkup(event)}
+          ${unconfirmed}
+        </div>
+        <button class="map-toggle" type="button" aria-expanded="false" aria-controls="${mapId}">
+          <svg aria-hidden="true" viewBox="0 0 24 24">
+            <path d="M9 18l-6 3V6l6-3 6 3 6-3v15l-6 3-6-3z" />
+            <path d="M9 3v15" />
+            <path d="M15 6v15" />
+          </svg>
+          <span>Mappa</span>
+        </button>
+      </div>
+      <div class="map-frame" id="${mapId}" hidden>
+        <iframe
+          title="Mappa ${event.title}"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src="${mapUrl}">
+        </iframe>
       </div>
     </article>
   `;
@@ -196,5 +216,18 @@ filterButtons.forEach((button) => {
 
     render();
   });
+});
+eventsContainer.addEventListener("click", (event) => {
+  const button = event.target.closest(".map-toggle");
+
+  if (!button) {
+    return;
+  }
+
+  const map = document.getElementById(button.getAttribute("aria-controls"));
+  const isOpen = button.getAttribute("aria-expanded") === "true";
+
+  button.setAttribute("aria-expanded", String(!isOpen));
+  map.hidden = isOpen;
 });
 init();

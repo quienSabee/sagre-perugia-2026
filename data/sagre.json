@@ -4,7 +4,7 @@
     "title": "ACCADE IN PRIMAVERA A SPOLETO 2026",
     "location": "Spoleto",
     "description": "Rassegna culturale con eventi, musica, spettacoli, sport e iniziative diffuse",
-    "sourceLabel": "Sito ufficiale / fonte evento",
+    "sourceLabel": "Fonte: comune.spoleto.pg.it",
     "sourceUrl": "https://www.comune.spoleto.pg.it/it/news/accade-in-primavera-a-spoleto-2026",
     "ranges": [
       {
@@ -21,7 +21,7 @@
     "title": "CALENDIMAGGIO DI ASSISI 2026",
     "location": "Assisi",
     "description": "Festa medievale / rievocazione popolare",
-    "sourceLabel": "Sito ufficiale / fonte evento",
+    "sourceLabel": "Fonte: calendimaggiodiassisi.com",
     "sourceUrl": "https://www.calendimaggiodiassisi.com/",
     "ranges": [
       {
@@ -38,7 +38,7 @@
     "title": "FESTA DEI CERI",
     "location": "Gubbio",
     "description": "Grande festa popolare e religiosa della tradizione eugubina",
-    "sourceLabel": "Sito ufficiale / fonte evento",
+    "sourceLabel": "Fonte: ceri.it",
     "sourceUrl": "https://www.ceri.it/",
     "ranges": [
       {
@@ -55,8 +55,8 @@
     "title": "FESTA DEI SANTI PATRONI",
     "location": "Ramazzano, Perugia",
     "description": "Festa popolare",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-05-22",
@@ -72,8 +72,8 @@
     "title": "SAGRA DEL PROSCIUTTO NOSTRANO",
     "location": "Pianello, Perugia",
     "description": "Sagra",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-05-29",
@@ -89,8 +89,8 @@
     "title": "FESTA DI PRIMAVERA 2.0",
     "location": "Bastia Umbra",
     "description": "Festa popolare",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-06-01",
@@ -106,7 +106,7 @@
     "title": "PERUGIA 1416",
     "location": "Perugia, centro storico",
     "description": "Rievocazione storica / festa medievale",
-    "sourceLabel": "Sito ufficiale / fonte evento",
+    "sourceLabel": "Fonte: perugia1416.com",
     "sourceUrl": "https://www.perugia1416.com/",
     "ranges": [
       {
@@ -123,7 +123,7 @@
     "title": "AMATI FESTIVAL 2026",
     "location": "Todi",
     "description": "Festival musicale / evento diffuso in centro storico",
-    "sourceLabel": "Sito ufficiale / fonte evento",
+    "sourceLabel": "Fonte: fontecesia.it",
     "sourceUrl": "https://www.fontecesia.it/evento/amati-festival/",
     "ranges": [
       {
@@ -140,8 +140,8 @@
     "title": "SAGRA DELLA BOSCAIOLA",
     "location": "Bosco, Perugia",
     "description": "Sagra",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-06-05",
@@ -157,8 +157,8 @@
     "title": "SETTIMANA SANMARIANESE",
     "location": "San Mariano, Corciano",
     "description": "Festa paesana con gastronomia, musica, sport e spettacoli",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-06-05",
@@ -174,7 +174,7 @@
     "title": "INFIORATA DI CANNARA",
     "location": "Cannara",
     "description": "Tradizione popolare / evento floreale",
-    "sourceLabel": "Sito ufficiale / fonte evento",
+    "sourceLabel": "Fonte: umbriaeventi.com",
     "sourceUrl": "https://www.umbriaeventi.com/infiorata-di-cannara-5703.htm",
     "ranges": [
       {
@@ -191,7 +191,7 @@
     "title": "INFIORATE DI SPELLO",
     "location": "Spello",
     "description": "Tradizione popolare / evento floreale del Corpus Domini",
-    "sourceLabel": "Sito ufficiale / fonte evento",
+    "sourceLabel": "Fonte: infioratespello.it",
     "sourceUrl": "https://www.infioratespello.it/",
     "ranges": [
       {
@@ -208,7 +208,7 @@
     "title": "FESTA DEL RINASCIMENTO",
     "location": "Acquasparta",
     "description": "Rievocazione storica con cortei, taverne, contrade, spettacoli e appuntamenti culturali",
-    "sourceLabel": "Sito ufficiale / fonte evento",
+    "sourceLabel": "Fonte: ilrinascimentoadacquasparta.it",
     "sourceUrl": "https://www.ilrinascimentoadacquasparta.it/programma/",
     "ranges": [
       {
@@ -225,7 +225,7 @@
     "title": "LE NOTTI DEL VINO - TORGIANO",
     "location": "Parco delle Sculture di Brufa, Torgiano",
     "description": "Evento enogastronomico con degustazioni, arte, musica e iniziative legate al vino",
-    "sourceLabel": "Sito ufficiale / fonte evento",
+    "sourceLabel": "Fonte: cittadelvino.com",
     "sourceUrl": "https://cittadelvino.com/le-notti-del-vino-2026-gli-appuntamenti-in-umbria-2/",
     "ranges": [
       {
@@ -242,8 +242,8 @@
     "title": "FESTA DELLA MATTONATA ESTATE",
     "location": "Città di Castello, centro storico",
     "description": "Festa popolare rionale",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-06-10",
@@ -259,7 +259,7 @@
     "title": "CHROMA FESTIVAL 2026",
     "location": "Umbriafiere, Bastia Umbra",
     "description": "Festival musicale / evento giovane con concerti e attrazioni",
-    "sourceLabel": "Sito ufficiale / fonte evento",
+    "sourceLabel": "Fonte: chromafestival.it",
     "sourceUrl": "https://www.chromafestival.it/",
     "ranges": [
       {
@@ -276,8 +276,8 @@
     "title": "INFIORATA DI SAN LUIGI GONZAGA",
     "location": "Città della Pieve",
     "description": "Festa popolare / tradizione floreale",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-06-11",
@@ -293,7 +293,7 @@
     "title": "GIOSTRA DELLA QUINTANA - LA SFIDA",
     "location": "Foligno",
     "description": "Rievocazione storica / festa rionale con cortei, taverne e giostra cavalleresca",
-    "sourceLabel": "Sito ufficiale / fonte evento",
+    "sourceLabel": "Fonte: quintana.it",
     "sourceUrl": "https://www.quintana.it/",
     "ranges": [
       {
@@ -310,8 +310,8 @@
     "title": "SAGRA DELLE MANFREGOLE",
     "location": "Fabro, loc. Colonnetta",
     "description": "Sagra",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-06-12",
@@ -327,8 +327,8 @@
     "title": "IL PALIO DEL CUPOLONE",
     "location": "Santa Maria degli Angeli, Assisi",
     "description": "Festa popolare / palio storico",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-06-12",
@@ -344,8 +344,8 @@
     "title": "SAGRA DEL PICCIONE IN CARROZZA",
     "location": "San Fortunato della Collina, Perugia",
     "description": "Sagra",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-06-12",
@@ -361,8 +361,8 @@
     "title": "SAGRA DELL’ORTOLANO",
     "location": "Balanzano, Perugia",
     "description": "Sagra",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-06-12",
@@ -378,8 +378,8 @@
     "title": "SAGRA DELLA CILIEGIA",
     "location": "Capodacqua, Assisi",
     "description": "Sagra",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-06-12",
@@ -395,8 +395,8 @@
     "title": "GIUGNO IN FESTA A RIPABIANCA",
     "location": "Ripabianca, Deruta",
     "description": "Festa popolare",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-06-12",
@@ -412,7 +412,7 @@
     "title": "FESTA DELLO SPORT",
     "location": "Mantignana, Corciano",
     "description": "Festa paesana con cucina locale, musica, giochi e attività sportive",
-    "sourceLabel": "Sito ufficiale / fonte evento",
+    "sourceLabel": "Fonte: facebook.com",
     "sourceUrl": "https://www.facebook.com/prolocomantignana/",
     "ranges": [
       {
@@ -429,7 +429,7 @@
     "title": "FUNTASTICA 2026",
     "location": "Pila, Perugia",
     "description": "Evento ludico con giochi, fumetti, cosplay, modellismo, creatività e attività per famiglie",
-    "sourceLabel": "Sito ufficiale / fonte evento",
+    "sourceLabel": "Fonte: funtastica.it",
     "sourceUrl": "https://www.funtastica.it/",
     "ranges": [
       {
@@ -446,8 +446,8 @@
     "title": "PALIO ARNENSE",
     "location": "Ripa, Perugia",
     "description": "Festa popolare etica di qualità Perugia",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-06-15",
@@ -463,7 +463,7 @@
     "title": "MERCATO DELLE GAITE",
     "location": "Bevagna",
     "description": "Rievocazione storica medievale con taverne, mestieri antichi, mercati e gare tra quartieri",
-    "sourceLabel": "Sito ufficiale / fonte evento",
+    "sourceLabel": "Fonte: ilmercatodellegaite.it",
     "sourceUrl": "https://www.ilmercatodellegaite.it/",
     "ranges": [
       {
@@ -480,7 +480,7 @@
     "title": "HUMUS MUSIC FEST",
     "location": "San Feliciano, Magione",
     "description": "Festival / evento popolare sul lago",
-    "sourceLabel": "Sito ufficiale / fonte evento",
+    "sourceLabel": "Fonte: umbriaeventi.com",
     "sourceUrl": "https://www.umbriaeventi.com/humus-music-fest-san-feliciano-9124.htm",
     "ranges": [
       {
@@ -497,8 +497,8 @@
     "title": "FESTA DEL FUOCO",
     "location": "Grello, Gualdo Tadino",
     "description": "Festa popolare",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-06-19",
@@ -514,8 +514,8 @@
     "title": "PICCIONE IN FESTA",
     "location": "Piccione, Perugia",
     "description": "Festa popolare",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-06-19",
@@ -531,8 +531,8 @@
     "title": "SANTA SABINA IN...",
     "location": "Santa Sabina, Perugia",
     "description": "Festa popolare",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-06-19",
@@ -548,8 +548,8 @@
     "title": "SAGRA DEGLI GNOCCHI E DEI PRODOTTI TIPICI DELL’UMBRIA",
     "location": "Casenuove di Ponte della Pietra, Perugia",
     "description": "Sagra",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-06-19",
@@ -565,8 +565,8 @@
     "title": "TORNEO DEI RIONI E DELLE TAVERNE",
     "location": "Todi",
     "description": "Festa popolare",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-06-19",
@@ -582,7 +582,7 @@
     "title": "L’UMBRIA CHE SPACCA 2026",
     "location": "Perugia, centro storico / Giardini del Frontone",
     "description": "Festival musicale e artistico diffuso in città",
-    "sourceLabel": "Sito ufficiale / fonte evento",
+    "sourceLabel": "Fonte: umbriachespacca.it",
     "sourceUrl": "https://www.umbriachespacca.it/",
     "ranges": [
       {
@@ -599,7 +599,7 @@
     "title": "TRASIMENO MUSIC FESTIVAL",
     "location": "Perugia e Lago Trasimeno",
     "description": "Festival internazionale di musica classica",
-    "sourceLabel": "Sito ufficiale / fonte evento",
+    "sourceLabel": "Fonte: trasimenomusicfestival.com",
     "sourceUrl": "https://trasimenomusicfestival.com/it/",
     "ranges": [
       {
@@ -616,8 +616,8 @@
     "title": "FESTA DI SAN PIETRO E PAOLO DI POZZUOLO",
     "location": "Pozzuolo, Castiglione del Lago",
     "description": "Festa popolare",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-06-26",
@@ -633,8 +633,8 @@
     "title": "FESTA D’INIZIO ESTATE",
     "location": "Resina, Perugia",
     "description": "Festa popolare",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-06-26",
@@ -650,8 +650,8 @@
     "title": "FESTA DELLA TORTA AL TESTO E DEI VINI DOC DEI COLLI PERUGINI",
     "location": "Pila, Perugia",
     "description": "Sagra",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-06-26",
@@ -667,8 +667,8 @@
     "title": "SAGRA DELLA GASTRONOMIA CASTELNOVESE",
     "location": "Castelnuovo, Assisi",
     "description": "Sagra",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-06-26",
@@ -684,8 +684,8 @@
     "title": "CHIUGIANA TI ASPETTA",
     "location": "Chiugiana, Corciano",
     "description": "Festa popolare",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-06-26",
@@ -701,8 +701,8 @@
     "title": "SAGRA FESTA DEL GRANO",
     "location": "Sant’Angelo di Celle, Deruta",
     "description": "Sagra",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-06-26",
@@ -718,8 +718,8 @@
     "title": "SAGRA DELL’AGNELLO SCOTTADITO E DEI PRODOTTI TIPICI UMBRI",
     "location": "Monte Castello di Vibio",
     "description": "Sagra",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-06-26",
@@ -735,8 +735,8 @@
     "title": "SAGRA DELLA BARBOZZA E DELLE CARNI ALLA BRACE",
     "location": "Cerqueto, Gualdo Tadino",
     "description": "Sagra",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-06-26",
@@ -752,7 +752,7 @@
     "title": "FESTIVAL DEI DUE MONDI",
     "location": "Spoleto",
     "description": "Teatro, musica, danza, opera e arti performative",
-    "sourceLabel": "Sito ufficiale / fonte evento",
+    "sourceLabel": "Fonte: festivaldispoleto.com",
     "sourceUrl": "https://www.festivaldispoleto.com/",
     "ranges": [
       {
@@ -769,8 +769,8 @@
     "title": "FESTA D’ESTATE A PANICAROLA",
     "location": "Panicarola, Castiglione del Lago",
     "description": "Festa popolare",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-06-27",
@@ -786,8 +786,8 @@
     "title": "BEEROCK",
     "location": "San Vitale, Assisi",
     "description": "Festa popolare",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-07-01",
@@ -803,8 +803,8 @@
     "title": "CORCIANO A TUTTA BIRRA - SAGRA DELLA BIRRA E DEI PRODOTTI TIPICI UMBRI",
     "location": "Corciano",
     "description": "Sagra",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-07-02",
@@ -820,8 +820,8 @@
     "title": "FESTIVAL DELLE BANDE E DELLE MAJORETTES",
     "location": "Magione",
     "description": "Festa popolare",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-07-02",
@@ -837,8 +837,8 @@
     "title": "SAGRA DELLA GRANOCCHIA E DEI PIATTI TIPICI LOCALI",
     "location": "Capanne, Perugia",
     "description": "Sagra",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-07-03",
@@ -854,8 +854,8 @@
     "title": "SAGRA DEL TARTUFO E DEI PRODOTTI TIPICI PERUGINI",
     "location": "Ripa, Perugia",
     "description": "Sagra",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-07-03",
@@ -871,8 +871,8 @@
     "title": "FESTA DI PASQUAROSA",
     "location": "Deruta",
     "description": "Sagra",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-07-03",
@@ -888,8 +888,8 @@
     "title": "SAGRA DEL PESCE SFILETTATO",
     "location": "Sant’Arcangelo, Magione",
     "description": "Sagra",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-07-03",
@@ -905,8 +905,8 @@
     "title": "BADIOLA NEL VERDE - SAGRA DEL BACCALÀ ALLA PERUGINA",
     "location": "Badiola, Marsciano",
     "description": "Sagra",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-07-03",
@@ -922,8 +922,8 @@
     "title": "SAGRA DEI FRUTTI DEL BOSCO E DEI PRODOTTI TIPICI DELL’UMBRIA",
     "location": "Papiano, Marsciano",
     "description": "Sagra",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-07-03",
@@ -939,7 +939,7 @@
     "title": "UMBRIA JAZZ 2026",
     "location": "Perugia",
     "description": "Festival internazionale jazz con concerti in centro e grandi eventi serali",
-    "sourceLabel": "Sito ufficiale / fonte evento",
+    "sourceLabel": "Fonte: umbriajazz.it",
     "sourceUrl": "https://www.umbriajazz.it/",
     "ranges": [
       {
@@ -956,8 +956,8 @@
     "title": "MADONNA DEL LATTE IN FESTA - SBIRRIAMO",
     "location": "Città di Castello, Madonna del Latte",
     "description": "Festa popolare",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-07-03",
@@ -973,8 +973,8 @@
     "title": "PONTEPATTOLISSIMA",
     "location": "Ponte Pattoli, Perugia",
     "description": "Festa popolare",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-07-10",
@@ -990,8 +990,8 @@
     "title": "SAGRA DEL TUTTOSUINO",
     "location": "Sant’Enea, Perugia",
     "description": "Sagra",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-07-10",
@@ -1007,8 +1007,8 @@
     "title": "TORDANDREA IN FESTA",
     "location": "Tordandrea, Assisi",
     "description": "Sagra",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-07-10",
@@ -1024,8 +1024,8 @@
     "title": "COLLESANTO ANTRIA IN GASTRONOMIA",
     "location": "Collesanto Antria, Magione",
     "description": "Festa popolare",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-07-10",
@@ -1041,8 +1041,8 @@
     "title": "SAGRA DEL CINGHIALE A SPEZZATINO, DELL’ARVOLTOLO E DEI PRODOTTI TIPICI",
     "location": "Migliano, Marsciano",
     "description": "Sagra",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-07-10",
@@ -1058,8 +1058,8 @@
     "title": "FESTA D’ESTATE",
     "location": "San Nicolò di Celle, Deruta",
     "description": "Sagra",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-07-10",
@@ -1075,8 +1075,8 @@
     "title": "FESTA DELLA BATTITURA",
     "location": "Piosina, Città di Castello",
     "description": "Festa popolare",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-07-11",
@@ -1092,8 +1092,8 @@
     "title": "SAGRA DELLA CARAMELLA TARTUFATA",
     "location": "Rigali, Gualdo Tadino",
     "description": "Sagra",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-07-13",
@@ -1109,8 +1109,8 @@
     "title": "LA ZZURLA",
     "location": "Monte del Lago, Magione",
     "description": "Festa gastronomica / cena a lume di candela",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-07-14",
@@ -1126,7 +1126,7 @@
     "title": "ASSISI SUMMER FESTIVAL 2026",
     "location": "Assisi, Rocca Maggiore",
     "description": "Festival musicale con concerti live, DJ set e serate evento",
-    "sourceLabel": "Sito ufficiale / fonte evento",
+    "sourceLabel": "Fonte: assisisummerfestival.it",
     "sourceUrl": "https://assisisummerfestival.it/",
     "ranges": [
       {
@@ -1143,8 +1143,8 @@
     "title": "PICCANTISSIMA",
     "location": "Pila, Perugia",
     "description": "Festa popolare",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-07-17",
@@ -1160,8 +1160,8 @@
     "title": "FONTIGNANO A TAVOLA",
     "location": "Fontignano, Perugia",
     "description": "Festa popolare",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-07-17",
@@ -1177,8 +1177,8 @@
     "title": "SAGRA DELLO SPAGHETTO DEI CARBONAI",
     "location": "Fratticiola Selvatica, Perugia",
     "description": "Sagra",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-07-17",
@@ -1194,7 +1194,7 @@
     "title": "SOLOMEO RINASCIMENTALE",
     "location": "Solomeo, Corciano",
     "description": "Rievocazione storica / festa popolare nel borgo",
-    "sourceLabel": "Sito ufficiale / fonte evento",
+    "sourceLabel": "Fonte: umbriaeventi.com",
     "sourceUrl": "https://www.umbriaeventi.com/solomeo-rinascimentale-5816.htm",
     "ranges": [
       {
@@ -1211,8 +1211,8 @@
     "title": "CENA DEL PONTE",
     "location": "Città di Castello, Ponte sul Tevere",
     "description": "Cena / festa popolare",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-07-18",
@@ -1228,7 +1228,7 @@
     "title": "TRASIMENO BLUES FESTIVAL",
     "location": "Lago Trasimeno",
     "description": "Festival blues itinerante nei borghi del Trasimeno",
-    "sourceLabel": "Sito ufficiale / fonte evento",
+    "sourceLabel": "Fonte: trasimenoblues.it",
     "sourceUrl": "https://trasimenoblues.it/",
     "ranges": [
       {
@@ -1245,7 +1245,7 @@
     "title": "PALIO DELLE BARCHE",
     "location": "Passignano sul Trasimeno",
     "description": "Rievocazione storica con cortei, taverne e gara delle barche",
-    "sourceLabel": "Sito ufficiale / fonte evento",
+    "sourceLabel": "Fonte: paliodellebarche.com",
     "sourceUrl": "https://www.paliodellebarche.com/",
     "ranges": [
       {
@@ -1262,8 +1262,8 @@
     "title": "SAGRA DELL’OCA 2026",
     "location": "Bettona",
     "description": "Sagra",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-07-21",
@@ -1279,7 +1279,7 @@
     "title": "DIAVOLI IN FESTA",
     "location": "Casa del Diavolo, Perugia",
     "description": "Festa popolare con gastronomia, musica, concerti e intrattenimento",
-    "sourceLabel": "Sito ufficiale / fonte evento",
+    "sourceLabel": "Fonte: diavoliinfesta.it",
     "sourceUrl": "https://diavoliinfesta.it/",
     "ranges": [
       {
@@ -1296,7 +1296,7 @@
     "title": "MUSIC FEST PERUGIA",
     "location": "Perugia",
     "description": "Festival internazionale di musica classica con concerti, masterclass e giovani talenti",
-    "sourceLabel": "Sito ufficiale / fonte evento",
+    "sourceLabel": "Fonte: musicfestperugia.net",
     "sourceUrl": "https://musicfestperugia.net/",
     "ranges": [
       {
@@ -1313,8 +1313,8 @@
     "title": "FESTA DI SANT’ANNA",
     "location": "Paradiso, Assisi",
     "description": "Festa popolare",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-07-24",
@@ -1330,8 +1330,8 @@
     "title": "FESTA DEL GIACCHIO",
     "location": "San Feliciano, Magione",
     "description": "Sagra / festa gastronomica del pesce del Lago Trasimeno",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-07-24",
@@ -1347,8 +1347,8 @@
     "title": "DERUTA IN PIAZZA SOTTO LE STELLE",
     "location": "Deruta",
     "description": "Festa popolare",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-07-24",
@@ -1364,7 +1364,7 @@
     "title": "FESTA DEI BARBARI",
     "location": "Castel Rigone, Passignano sul Trasimeno",
     "description": "Rievocazione storica con cene, cortei, accampamenti e spettacoli",
-    "sourceLabel": "Sito ufficiale / fonte evento",
+    "sourceLabel": "Fonte: umbriaeventi.com",
     "sourceUrl": "https://www.umbriaeventi.com/festa-dei-barbari-castel-rigone-5784.htm",
     "ranges": [
       {
@@ -1381,8 +1381,8 @@
     "title": "C’ERA UNA VOLTA MONTEPETRIOLO",
     "location": "Montepetriolo, Perugia",
     "description": "Festa popolare",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-07-31",
@@ -1398,8 +1398,8 @@
     "title": "SAGRA DELLA TORTA AL TESTO COTTA SOTTO LA CENERE",
     "location": "Sant’Egidio, Perugia",
     "description": "Sagra",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-07-31",
@@ -1415,8 +1415,8 @@
     "title": "SAGRA DELL’OCA ARROSTO",
     "location": "Torchiagina, Assisi",
     "description": "Sagra",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-07-31",
@@ -1432,8 +1432,8 @@
     "title": "BORGO IN FESTA",
     "location": "Torre del Colle, Bevagna",
     "description": "Festa popolare nel borgo",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-07-31",
@@ -1449,8 +1449,8 @@
     "title": "SAGRA DEGLI GNOCCHI",
     "location": "Guardea",
     "description": "Sagra",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-07-31",
@@ -1466,8 +1466,8 @@
     "title": "SETTIMANA MAGIONESE - PALIO DEL GIOGO",
     "location": "Magione",
     "description": "Sagra / festa popolare",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-08-01",
@@ -1483,8 +1483,8 @@
     "title": "AGELLO IN FESTA",
     "location": "Agello, Magione",
     "description": "Festa popolare",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-08-04",
@@ -1500,8 +1500,8 @@
     "title": "RADUNO AMICI DE MONTAGNA",
     "location": "Costa di Trex, Assisi",
     "description": "Sagra / festa popolare",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-08-05",
@@ -1517,8 +1517,8 @@
     "title": "SAGRA DELLA PORCHETTA E DEI FAGIOLI CON LE COTICHE",
     "location": "Monte Santa Maria Tiberina",
     "description": "Sagra",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-08-06",
@@ -1534,8 +1534,8 @@
     "title": "MUSICA CITTÀ PANTALLA 2026",
     "location": "Pantalla, Todi",
     "description": "Festa popolare con musica e intrattenimento",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-08-07",
@@ -1551,7 +1551,7 @@
     "title": "AGOSTO CORCIANESE",
     "location": "Corciano",
     "description": "Rassegna popolare, arte, musica, teatro e tradizioni",
-    "sourceLabel": "Sito ufficiale / fonte evento",
+    "sourceLabel": "Fonte: umbriaeventi.com",
     "sourceUrl": "https://www.umbriaeventi.com/agosto-corcianese-corciano-5805.htm",
     "ranges": [
       {
@@ -1568,8 +1568,8 @@
     "title": "VINARELLI",
     "location": "Torgiano",
     "description": "Festa popolare tra vino, arte e tradizione",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-08-08",
@@ -1585,8 +1585,8 @@
     "title": "XXIV FESTA PAESANA",
     "location": "Protte, Spoleto",
     "description": "Festa popolare",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-08-10",
@@ -1602,7 +1602,7 @@
     "title": "PALIO DEI TERZIERI",
     "location": "Città della Pieve",
     "description": "Rievocazione storica rinascimentale con cortei, taverne e Caccia del Toro",
-    "sourceLabel": "Sito ufficiale / fonte evento",
+    "sourceLabel": "Fonte: paliodeiterzieri.it",
     "sourceUrl": "https://www.paliodeiterzieri.it/",
     "ranges": [
       {
@@ -1619,8 +1619,8 @@
     "title": "SAGRA DEI BIGOLI E DEI PRODOTTI DEL PARCO",
     "location": "Costacciaro",
     "description": "Sagra",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-08-17",
@@ -1636,8 +1636,8 @@
     "title": "SAGRA DELLA LUMACA",
     "location": "Cantalupo, Bevagna",
     "description": "Sagra",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-08-21",
@@ -1653,8 +1653,8 @@
     "title": "SOUND SISTO LIVE",
     "location": "San Sisto, Perugia",
     "description": "Festa popolare",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-08-21",
@@ -1670,8 +1670,8 @@
     "title": "OSPEDALICCHIO IN FESTA",
     "location": "Ospedalicchio, Bastia Umbra",
     "description": "Festa popolare",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-08-21",
@@ -1687,8 +1687,8 @@
     "title": "SAGRA DEL GAMBERO",
     "location": "San Savino, Magione",
     "description": "Sagra",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-08-21",
@@ -1704,7 +1704,7 @@
     "title": "BRUFA IN FESTA - SCULTORI A BRUFA",
     "location": "Brufa, Torgiano",
     "description": "Festa popolare / manifestazione artistica con cucina tipica, musica e spettacoli",
-    "sourceLabel": "Sito ufficiale / fonte evento",
+    "sourceLabel": "Fonte: brufa.net",
     "sourceUrl": "https://www.brufa.net/",
     "ranges": [
       {
@@ -1721,8 +1721,8 @@
     "title": "SAGRA DEL BACCALÀ E DEI PRODOTTI TIPICI UMBRI",
     "location": "Villa Pitignano, Perugia",
     "description": "Sagra",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-08-21",
@@ -1738,8 +1738,8 @@
     "title": "SAGRA DELLA RUCOLA E DEI PRODOTTI TIPICI UMBRI",
     "location": "Sant’Andrea d’Agliano, Perugia",
     "description": "Sagra",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-08-21",
@@ -1755,8 +1755,8 @@
     "title": "FESTA PARTITO DEMOCRATICO VAIANO VILLASTRADA 2026",
     "location": "Villastrada / Vaiano, Castiglione del Lago",
     "description": "Festa popolare",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-08-24",
@@ -1772,7 +1772,7 @@
     "title": "TODI FESTIVAL",
     "location": "Todi",
     "description": "Festival di teatro, musica, danza e arti performative",
-    "sourceLabel": "Sito ufficiale / fonte evento",
+    "sourceLabel": "Fonte: todifestival.it",
     "sourceUrl": "https://www.todifestival.it/",
     "ranges": [
       {
@@ -1789,7 +1789,7 @@
     "title": "UMBRICELLI E SPORT",
     "location": "Capanne, Perugia",
     "description": "Sagra / festa con cucina tipica, musica, ballo, sport e pesca di beneficenza",
-    "sourceLabel": "Sito ufficiale / fonte evento",
+    "sourceLabel": "Fonte: umbriaeventi.com",
     "sourceUrl": "https://www.umbriaeventi.com/festa-umbricelli-e-sport-capanne-69.htm",
     "ranges": [
       {
@@ -1806,7 +1806,7 @@
     "title": "MANTIGNANA IN SETTEMBRE - SAGRA DEL POLLO ALL’ARRABBIATA",
     "location": "Mantignana, Corciano",
     "description": "Sagra / festa paesana",
-    "sourceLabel": "Sito ufficiale / fonte evento",
+    "sourceLabel": "Fonte: facebook.com",
     "sourceUrl": "https://www.facebook.com/prolocomantignana/",
     "ranges": [
       {
@@ -1823,7 +1823,7 @@
     "title": "FESTA DELLA CIPOLLA DI CANNARA",
     "location": "Cannara",
     "description": "Sagra gastronomica",
-    "sourceLabel": "Sito ufficiale / fonte evento",
+    "sourceLabel": "Fonte: festadellacipolla.com",
     "sourceUrl": "https://www.festadellacipolla.com/",
     "ranges": [
       {
@@ -1845,8 +1845,8 @@
     "title": "TRE GIORNI DI MONTEDORO",
     "location": "Città di Castello, San Pio X",
     "description": "Festa popolare",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-09-04",
@@ -1862,8 +1862,8 @@
     "title": "FESTA DEL CACCIATORE 2026",
     "location": "Deruta",
     "description": "Festa popolare",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-09-05",
@@ -1879,8 +1879,8 @@
     "title": "MOSTRA MERCATO AGRICOLA ARTIGIANALE DI POZZUOLO",
     "location": "Pozzuolo, Castiglione del Lago",
     "description": "Festa popolare / mostra mercato agricola e artigianale",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-09-05",
@@ -1896,7 +1896,7 @@
     "title": "GIOSTRA DELLA QUINTANA - LA RIVINCITA",
     "location": "Foligno",
     "description": "Rievocazione storica / festa rionale con cortei, taverne e giostra cavalleresca",
-    "sourceLabel": "Sito ufficiale / fonte evento",
+    "sourceLabel": "Fonte: quintana.it",
     "sourceUrl": "https://www.quintana.it/",
     "ranges": [
       {
@@ -1913,8 +1913,8 @@
     "title": "SAGRA DELLA CANAIOLA E DEI PRODOTTI TIPICI DELL’UMBRIA",
     "location": "Pretola, Perugia",
     "description": "Sagra",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-09-18",
@@ -1930,8 +1930,8 @@
     "title": "FESTA DELLA MADONNA DEL BUSSO",
     "location": "Panicarola, Castiglione del Lago",
     "description": "Festa popolare",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-09-19",
@@ -1947,8 +1947,8 @@
     "title": "STRA OKTOBER PORK PIANA 2026",
     "location": "Piana, Castiglione del Lago",
     "description": "Festa popolare / festa gastronomica",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": null,
+    "sourceLabel": "Regione Umbria - Sagre e Feste Popolari al 31 maggio 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26389950/Sagre+e+Feste+Popolari+al+31+maggio+2026/d71658dd-54c2-4705-bb02-0b816125a441",
     "ranges": [
       {
         "start": "2026-10-02",
