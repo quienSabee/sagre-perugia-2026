@@ -5,11 +5,28 @@ const pastCount = document.querySelector("#past-count");
 const activeCount = document.querySelector("#active-count");
 const futureCount = document.querySelector("#future-count");
 const filterButtons = document.querySelectorAll(".filter-button");
+const tagFilters = document.querySelector("#tag-filters");
 const topbar = document.querySelector(".topbar");
 const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
 
 let allEvents = [];
 const enabledStatuses = new Set(["active", "future"]);
+const selectedTags = new Set();
+
+const tagMeta = {
+  gastronomia: { label: "Gastronomia", tone: "red" },
+  musica: { label: "Musica", tone: "violet" },
+  tradizione: { label: "Tradizione", tone: "amber" },
+  "torta-al-testo": { label: "Torta al testo", tone: "orange" },
+  tartufo: { label: "Tartufo", tone: "brown" },
+  gnocchi: { label: "Gnocchi", tone: "green" },
+  baccala: { label: "Baccalà", tone: "blue" },
+  rievocazione: { label: "Rievocazione", tone: "slate" },
+  famiglia: { label: "Famiglia", tone: "pink" },
+  "street-food": { label: "Street food", tone: "lime" },
+  ballo: { label: "Ballo", tone: "purple" },
+  sport: { label: "Sport", tone: "cyan" },
+};
 
 const dateFormatter = new Intl.DateTimeFormat("it-IT", {
   day: "numeric",
@@ -101,25 +118,90 @@ function firstStartDate(event) {
   return Math.min(...event.ranges.map((range) => parseISODate(range.start).getTime()));
 }
 
+function readableTag(tag) {
+  return tagMeta[tag]?.label || tag.replaceAll("-", " ");
+}
+
 function searchableText(event) {
+  const subEvents = (event.subEvents || [])
+    .map((group) => [group.range, ...(group.items || []).map((item) => `${item.title} ${item.note || ""}`)].join(" "))
+    .join(" ");
+
   return [
     event.title,
     event.location,
     event.description,
+    event.detailsMarkdown,
     event.originalDate,
     event.sourceLabel,
+    ...(event.tags || []).map(readableTag),
+    subEvents,
   ]
     .join(" ")
     .toLocaleLowerCase("it-IT");
 }
 
 function escapeHtml(value) {
-  return String(value)
+  return String(value ?? "")
     .replaceAll("&", "&amp;")
     .replaceAll("<", "&lt;")
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#039;");
+}
+
+function markdownToHtml(markdown = "") {
+  const blocks = [];
+  let inList = false;
+
+  function closeList() {
+    if (inList) {
+      blocks.push("</ul>");
+      inList = false;
+    }
+  }
+
+  function inline(text) {
+    return escapeHtml(text)
+      .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+      .replace(/\[(.+?)\]\((https?:\/\/[^\s)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
+  }
+
+  markdown.split(/\r?\n/).forEach((raw) => {
+    const line = raw.trim();
+
+    if (!line) {
+      closeList();
+      return;
+    }
+
+    if (line.startsWith("### ")) {
+      closeList();
+      blocks.push(`<h4>${inline(line.slice(4))}</h4>`);
+      return;
+    }
+
+    if (line.startsWith("## ")) {
+      closeList();
+      blocks.push(`<h3>${inline(line.slice(3))}</h3>`);
+      return;
+    }
+
+    if (line.startsWith("- ")) {
+      if (!inList) {
+        blocks.push("<ul>");
+        inList = true;
+      }
+      blocks.push(`<li>${inline(line.slice(2))}</li>`);
+      return;
+    }
+
+    closeList();
+    blocks.push(`<p>${inline(line)}</p>`);
+  });
+
+  closeList();
+  return blocks.join("");
 }
 
 function icon(name) {
@@ -144,32 +226,71 @@ function icon(name) {
         <path d="M4 18h16"></path>
       </svg>
     `,
+    info: `
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="12" r="10"></circle>
+        <path d="M12 16v-4"></path>
+        <path d="M12 8h.01"></path>
+      </svg>
+    `,
   };
 
   return icons[name] || "";
 }
 
-function eventActionsMarkup(event, mapId) {
+function eventActionsMarkup(event, mapId, detailsId) {
   const sourceLabel = escapeHtml(event.sourceLabel || "Fonte");
   const sourceUrl = escapeHtml(event.sourceUrl || "");
   const menuUrl = escapeHtml(event.menuUrl || "");
 
   const sourceButton = event.sourceUrl
-    ? `<a class="action-button" href="${sourceUrl}" target="_blank" rel="noopener noreferrer" aria-label="Apri fonte: ${sourceLabel}">${icon("source")}</a>`
-    : `<span class="action-button is-disabled" aria-label="Fonte non disponibile">${icon("source")}</span>`;
+    ? `<a class="action-button has-tooltip" href="${sourceUrl}" target="_blank" rel="noopener noreferrer" aria-label="Apri fonte: ${sourceLabel}" data-tooltip="Apri fonte">${icon("source")}</a>`
+    : `<span class="action-button is-disabled has-tooltip" aria-label="Fonte non disponibile" data-tooltip="Fonte non disponibile">${icon("source")}</span>`;
 
   const menuButton = event.menuUrl
-    ? `<a class="action-button" href="${menuUrl}" target="_blank" rel="noopener noreferrer" aria-label="Apri menu">${icon("menu")}</a>`
-    : "";
+    ? `<a class="action-button has-tooltip" href="${menuUrl}" target="_blank" rel="noopener noreferrer" aria-label="Apri menu" data-tooltip="Apri menù">${icon("menu")}</a>`
+    : `<span class="action-button is-disabled has-tooltip" aria-label="Menù non disponibile" data-tooltip="Menù non disponibile">${icon("menu")}</span>`;
 
   return `
     <div class="action-group">
       ${sourceButton}
       ${menuButton}
-      <button class="action-button map-toggle" type="button" aria-expanded="false" aria-controls="${mapId}" aria-label="Mostra mappa">
-        ${icon("map")}
-      </button>
+      <button class="action-button details-toggle has-tooltip" type="button" aria-expanded="false" aria-controls="${detailsId}" aria-label="Mostra dettagli" data-tooltip="Dettagli">${icon("info")}</button>
+      <button class="action-button map-toggle has-tooltip" type="button" aria-expanded="false" aria-controls="${mapId}" aria-label="Mostra mappa" data-tooltip="Mappa">${icon("map")}</button>
     </div>
+  `;
+}
+
+function tagsMarkup(event) {
+  return (event.tags || [])
+    .map((tag) => {
+      const meta = tagMeta[tag] || { label: readableTag(tag), tone: "red" };
+      return `<button class="event-tag tag-${escapeHtml(meta.tone)}" type="button" data-tag="${escapeHtml(tag)}" aria-label="Filtra per ${escapeHtml(meta.label)}">${escapeHtml(meta.label)}</button>`;
+    })
+    .join("");
+}
+
+function subEventsMarkup(event) {
+  if (!event.subEvents?.length) {
+    return "";
+  }
+
+  return `
+    <section class="sub-events" aria-label="Sotto-eventi">
+      <h4>Serate e sotto-eventi</h4>
+      ${event.subEvents
+        .map((group) => `
+          <div class="sub-event-group">
+            <h5>${escapeHtml(group.range)}</h5>
+            <ul>
+              ${(group.items || [])
+                .map((item) => `<li><strong>${escapeHtml(item.title)}</strong>${item.note ? ` <span>${escapeHtml(item.note)}</span>` : ""}</li>`)
+                .join("")}
+            </ul>
+          </div>
+        `)
+        .join("")}
+    </section>
   `;
 }
 
@@ -177,6 +298,7 @@ function renderCard(event) {
   const state = getEventState(event);
   const ranges = event.ranges.map(formatDateRange).join(" / ");
   const mapId = `map-${event.id}`;
+  const detailsId = `details-${event.id}`;
   const mapUrl = `https://www.google.com/maps?q=${encodeURIComponent(`${event.location}, Umbria, Italia`)}&output=embed`;
   const escapedMapUrl = escapeHtml(mapUrl);
   const escapedMapTitle = escapeHtml(`Mappa ${event.title}`);
@@ -184,39 +306,54 @@ function renderCard(event) {
 
   return `
     <article class="card is-${state.status}" style="--countdown-color: ${state.color}">
-      <div class="card-header">
-        <div class="meta-row">
-          <span class="badge">${escapeHtml(state.label)}</span>
-          <span class="date">${escapeHtml(ranges)}</span>
-        </div>
+      <span class="badge card-status">${escapeHtml(state.label)}</span>
+
+      <div class="card-main">
+        <p class="date">${escapeHtml(ranges)}</p>
         <h2>${escapeHtml(event.title)}</h2>
+        <p class="location">${escapeHtml(event.location)}</p>
+        <div class="card-tags">${tagsMarkup(event)}</div>
       </div>
 
-      <p class="location">${escapeHtml(event.location)}</p>
       <p class="description">${escapeHtml(event.description)}</p>
 
       <footer class="card-footer">
         ${unconfirmed}
-        ${eventActionsMarkup(event, mapId)}
+        ${eventActionsMarkup(event, mapId, detailsId)}
       </footer>
 
-      <div
-        class="map-frame"
-        id="${mapId}"
-        data-map-src="${escapedMapUrl}"
-        data-map-title="${escapedMapTitle}"
-        hidden
-      ></div>
+      <div class="details-panel markdown-content" id="${detailsId}" hidden>
+        ${markdownToHtml(event.detailsMarkdown || "")}
+        ${subEventsMarkup(event)}
+      </div>
+
+      <div class="map-frame" id="${mapId}" data-map-src="${escapedMapUrl}" data-map-title="${escapedMapTitle}" hidden></div>
     </article>
   `;
 }
 
+function eventMatches(event, query) {
+  const textMatch = query ? searchableText(event).includes(query) : true;
+  const tagMatch = [...selectedTags].every((tag) => event.tags?.includes(tag));
+  return textMatch && tagMatch;
+}
+
+function renderTagFilters() {
+  if (!tagFilters) return;
+
+  const tags = [...new Set(allEvents.flatMap((event) => event.tags || []))].sort((a, b) => readableTag(a).localeCompare(readableTag(b), "it"));
+  tagFilters.innerHTML = tags
+    .map((tag) => {
+      const meta = tagMeta[tag] || { label: readableTag(tag), tone: "red" };
+      const pressed = selectedTags.has(tag);
+      return `<button class="tag-filter tag-${escapeHtml(meta.tone)} has-tooltip" type="button" data-tag="${escapeHtml(tag)}" aria-pressed="${pressed}" data-tooltip="Filtra: ${escapeHtml(meta.label)}">${escapeHtml(meta.label)}</button>`;
+    })
+    .join("");
+}
+
 function render() {
   const query = searchInput.value.trim().toLocaleLowerCase("it-IT");
-  const searched = query
-    ? allEvents.filter((event) => searchableText(event).includes(query))
-    : allEvents;
-
+  const searched = allEvents.filter((event) => eventMatches(event, query));
   const searchedStates = searched.map((event) => getEventState(event).status);
   const filtered = searched.filter((event) => enabledStatuses.has(getEventState(event).status));
 
@@ -224,15 +361,13 @@ function render() {
   activeCount.textContent = `${searchedStates.filter((status) => status === "active").length} in corso`;
   futureCount.textContent = `${searchedStates.filter((status) => status === "future").length} futuri`;
 
+  renderTagFilters();
   eventsContainer.innerHTML = filtered.map(renderCard).join("");
   emptyState.hidden = filtered.length !== 0;
 }
 
 function closeMobileMenu() {
-  if (!topbar || !mobileMenuToggle) {
-    return;
-  }
-
+  if (!topbar || !mobileMenuToggle) return;
   topbar.classList.remove("is-menu-open");
   mobileMenuToggle.setAttribute("aria-expanded", "false");
   mobileMenuToggle.setAttribute("aria-label", "Apri filtri");
@@ -241,7 +376,6 @@ function closeMobileMenu() {
 function toggleMobileMenu(event) {
   event.preventDefault();
   event.stopPropagation();
-
   const isOpen = topbar.classList.toggle("is-menu-open");
   mobileMenuToggle.setAttribute("aria-expanded", String(isOpen));
   mobileMenuToggle.setAttribute("aria-label", isOpen ? "Chiudi filtri" : "Apri filtri");
@@ -249,12 +383,8 @@ function toggleMobileMenu(event) {
 
 async function init() {
   try {
-    const response = await fetch("data/sagre.json");
-
-    if (!response.ok) {
-      throw new Error(`HTTP ${response.status}`);
-    }
-
+    const response = await fetch("data/sagre.json?v=20260610-content-tags");
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
     allEvents = (await response.json()).sort((a, b) => firstStartDate(a) - firstStartDate(b));
     render();
   } catch (error) {
@@ -270,7 +400,6 @@ searchInput.addEventListener("input", render);
 filterButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const status = button.dataset.status;
-
     if (enabledStatuses.has(status)) {
       enabledStatuses.delete(status);
       button.setAttribute("aria-pressed", "false");
@@ -278,23 +407,48 @@ filterButtons.forEach((button) => {
       enabledStatuses.add(status);
       button.setAttribute("aria-pressed", "true");
     }
-
     render();
   });
 });
 
-eventsContainer.addEventListener("click", (event) => {
-  const button = event.target.closest(".map-toggle");
+tagFilters?.addEventListener("click", (event) => {
+  const button = event.target.closest(".tag-filter");
+  if (!button) return;
+  const tag = button.dataset.tag;
+  if (selectedTags.has(tag)) selectedTags.delete(tag);
+  else selectedTags.add(tag);
+  render();
+});
 
-  if (!button) {
+eventsContainer.addEventListener("click", (event) => {
+  const tag = event.target.closest(".event-tag");
+  if (tag) {
+    selectedTags.add(tag.dataset.tag);
+    render();
+    window.scrollTo({ top: 0, behavior: "smooth" });
     return;
   }
 
-  const map = document.getElementById(button.getAttribute("aria-controls"));
-  const isOpen = button.getAttribute("aria-expanded") === "true";
+  const detailsButton = event.target.closest(".details-toggle");
+  if (detailsButton) {
+    const details = document.getElementById(detailsButton.getAttribute("aria-controls"));
+    const isOpen = detailsButton.getAttribute("aria-expanded") === "true";
+    detailsButton.setAttribute("aria-expanded", String(!isOpen));
+    detailsButton.setAttribute("aria-label", isOpen ? "Mostra dettagli" : "Nascondi dettagli");
+    detailsButton.dataset.tooltip = isOpen ? "Dettagli" : "Chiudi dettagli";
+    details.hidden = isOpen;
+    return;
+  }
 
-  button.setAttribute("aria-expanded", String(!isOpen));
-  button.setAttribute("aria-label", isOpen ? "Mostra mappa" : "Nascondi mappa");
+  const mapButton = event.target.closest(".map-toggle");
+  if (!mapButton) return;
+
+  const map = document.getElementById(mapButton.getAttribute("aria-controls"));
+  const isOpen = mapButton.getAttribute("aria-expanded") === "true";
+
+  mapButton.setAttribute("aria-expanded", String(!isOpen));
+  mapButton.setAttribute("aria-label", isOpen ? "Mostra mappa" : "Nascondi mappa");
+  mapButton.dataset.tooltip = isOpen ? "Mappa" : "Chiudi mappa";
   map.hidden = isOpen;
 
   if (!isOpen && map.childElementCount === 0) {
@@ -311,14 +465,8 @@ if (mobileMenuToggle && topbar) {
   mobileMenuToggle.addEventListener("click", toggleMobileMenu);
 
   document.addEventListener("click", (event) => {
-    if (!topbar.classList.contains("is-menu-open")) {
-      return;
-    }
-
-    if (topbar.contains(event.target)) {
-      return;
-    }
-
+    if (!topbar.classList.contains("is-menu-open")) return;
+    if (topbar.contains(event.target)) return;
     closeMobileMenu();
   });
 
@@ -333,52 +481,22 @@ if (mobileMenuToggle && topbar) {
 function initHeroParallax() {
   const hero = document.querySelector("#hero");
   const layers = document.querySelectorAll(".parallax-layer");
-
-  if (!hero || layers.length === 0) {
-    return;
-  }
+  if (!hero || layers.length === 0) return;
 
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-  if (prefersReducedMotion) {
-    return;
-  }
+  if (prefersReducedMotion) return;
 
   const hasFinePointer = window.matchMedia("(pointer: fine)").matches;
+  const state = { targetScroll: 0, currentScroll: 0, targetMouseX: 0, targetMouseY: 0, currentMouseX: 0, currentMouseY: 0 };
+  const config = { scrollEase: 0.07, mouseEase: 0.045, maxMouseX: 32, maxMouseY: 20 };
 
-  const state = {
-    targetScroll: 0,
-    currentScroll: 0,
-    targetMouseX: 0,
-    targetMouseY: 0,
-    currentMouseX: 0,
-    currentMouseY: 0,
-  };
-
-  const config = {
-    scrollEase: 0.07,
-    mouseEase: 0.045,
-    maxMouseX: 32,
-    maxMouseY: 20,
-  };
-
-  function clamp(value, min, max) {
-    return Math.min(max, Math.max(min, value));
-  }
-
-  function lerp(current, target, ease) {
-    return current + (target - current) * ease;
-  }
+  function clamp(value, min, max) { return Math.min(max, Math.max(min, value)); }
+  function lerp(current, target, ease) { return current + (target - current) * ease; }
 
   function updateTargets(event) {
     const rect = hero.getBoundingClientRect();
     const windowHeight = window.innerHeight || 1;
-
-    state.targetScroll = clamp(
-      -rect.top / Math.max(1, rect.height - windowHeight * 0.25),
-      0,
-      1,
-    );
+    state.targetScroll = clamp(-rect.top / Math.max(1, rect.height - windowHeight * 0.25), 0, 1);
 
     if (hasFinePointer && event && typeof event.clientX === "number") {
       const viewportX = event.clientX / (window.innerWidth || 1) - 0.5;
@@ -392,20 +510,15 @@ function initHeroParallax() {
     state.currentScroll = lerp(state.currentScroll, state.targetScroll, config.scrollEase);
     state.currentMouseX = lerp(state.currentMouseX, state.targetMouseX, config.mouseEase);
     state.currentMouseY = lerp(state.currentMouseY, state.targetMouseY, config.mouseEase);
-
     hero.style.setProperty("--hero-scroll", state.currentScroll.toFixed(4));
     hero.style.setProperty("--mouse-x", `${state.currentMouseX.toFixed(2)}px`);
     hero.style.setProperty("--mouse-y", `${state.currentMouseY.toFixed(2)}px`);
-
     requestAnimationFrame(renderParallax);
   }
 
   window.addEventListener("scroll", updateTargets, { passive: true });
   window.addEventListener("resize", updateTargets);
-
-  if (hasFinePointer) {
-    window.addEventListener("pointermove", updateTargets, { passive: true });
-  }
+  if (hasFinePointer) window.addEventListener("pointermove", updateTargets, { passive: true });
 
   updateTargets();
   renderParallax();
