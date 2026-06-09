@@ -1,11 +1,13 @@
 const eventsContainer = document.querySelector("#events");
 const searchInput = document.querySelector("#search");
 const emptyState = document.querySelector("#empty-state");
-const totalCount = document.querySelector("#total-count");
+const pastCount = document.querySelector("#past-count");
 const activeCount = document.querySelector("#active-count");
 const futureCount = document.querySelector("#future-count");
+const filterButtons = document.querySelectorAll(".filter-button");
 
 let allEvents = [];
+const enabledStatuses = new Set(["past", "active", "future"]);
 
 const dateFormatter = new Intl.DateTimeFormat("it-IT", {
   day: "numeric",
@@ -93,6 +95,10 @@ function getEventState(event, today = localDate()) {
   };
 }
 
+function firstStartDate(event) {
+  return Math.min(...event.ranges.map((range) => parseISODate(range.start).getTime()));
+}
+
 function searchableText(event) {
   return [
     event.title,
@@ -141,15 +147,18 @@ function renderCard(event) {
 
 function render() {
   const query = searchInput.value.trim().toLocaleLowerCase("it-IT");
-  const filtered = query
+  const searched = query
     ? allEvents.filter((event) => searchableText(event).includes(query))
     : allEvents;
 
-  const states = filtered.map((event) => getEventState(event).status);
+  const searchedStates = searched.map((event) => getEventState(event).status);
+  const filtered = searched.filter((event) =>
+    enabledStatuses.has(getEventState(event).status),
+  );
 
-  totalCount.textContent = `${filtered.length} ${filtered.length === 1 ? "evento" : "eventi"}`;
-  activeCount.textContent = `${states.filter((status) => status === "active").length} in corso`;
-  futureCount.textContent = `${states.filter((status) => status === "future").length} futuri`;
+  pastCount.textContent = `${searchedStates.filter((status) => status === "past").length} passati`;
+  activeCount.textContent = `${searchedStates.filter((status) => status === "active").length} in corso`;
+  futureCount.textContent = `${searchedStates.filter((status) => status === "future").length} futuri`;
 
   eventsContainer.innerHTML = filtered.map(renderCard).join("");
   emptyState.hidden = filtered.length !== 0;
@@ -162,7 +171,7 @@ async function init() {
       throw new Error(`HTTP ${response.status}`);
     }
 
-    allEvents = await response.json();
+    allEvents = (await response.json()).sort((a, b) => firstStartDate(a) - firstStartDate(b));
     render();
   } catch (error) {
     eventsContainer.innerHTML = "";
@@ -173,4 +182,19 @@ async function init() {
 }
 
 searchInput.addEventListener("input", render);
+filterButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const status = button.dataset.status;
+
+    if (enabledStatuses.has(status)) {
+      enabledStatuses.delete(status);
+      button.setAttribute("aria-pressed", "false");
+    } else {
+      enabledStatuses.add(status);
+      button.setAttribute("aria-pressed", "true");
+    }
+
+    render();
+  });
+});
 init();

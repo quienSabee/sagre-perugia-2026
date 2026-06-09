@@ -10,9 +10,12 @@
   --accent-dark: #651a17;
   --green: #16803d;
   --green-soft: #e7f6e8;
+  --yellow: #c79714;
+  --yellow-soft: #fff3bd;
   --past: #4c4742;
   --shadow: 0 18px 50px rgba(41, 28, 19, 0.14);
   --topbar-height: 74px;
+  --hero-image-max: 1480px;
 }
 
 * {
@@ -28,8 +31,8 @@ body {
   margin: 0;
   color: var(--ink);
   background:
-    linear-gradient(rgba(246, 243, 238, 0.88), rgba(246, 243, 238, 0.88)),
-    url("assets/sagra-perugia.png") center top / min(1400px, 150vw) auto fixed;
+    linear-gradient(rgba(246, 243, 238, 0.84), rgba(246, 243, 238, 0.84)),
+    url("assets/background-sagra-perugia.png") center top / cover fixed no-repeat;
   font-family:
     Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
@@ -58,8 +61,8 @@ a {
   inset: 0 0 auto;
   z-index: 20;
   display: grid;
-  grid-template-columns: minmax(170px, auto) minmax(180px, 620px);
-  gap: 18px;
+  grid-template-columns: minmax(170px, auto) minmax(260px, 1fr) minmax(300px, auto);
+  gap: 14px;
   align-items: center;
   min-height: var(--topbar-height);
   padding: 12px clamp(16px, 4vw, 48px);
@@ -115,22 +118,92 @@ a {
     0 10px 25px rgba(12, 8, 5, 0.16);
 }
 
+.status-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.filter-button {
+  min-height: 40px;
+  padding: 8px 12px;
+  color: #fffaf0;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font: inherit;
+  font-size: 0.84rem;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(12, 8, 5, 0.12);
+}
+
+.filter-button[aria-pressed="false"] {
+  color: rgba(255, 250, 240, 0.68);
+  background: rgba(255, 250, 240, 0.1);
+  border-color: rgba(255, 250, 240, 0.16);
+  box-shadow: none;
+}
+
+.filter-button:focus-visible {
+  outline: 3px solid rgba(245, 203, 101, 0.52);
+  outline-offset: 2px;
+}
+
+.filter-past[aria-pressed="true"] {
+  background: #5f5a54;
+}
+
+.filter-active[aria-pressed="true"] {
+  background: var(--green);
+}
+
+.filter-future[aria-pressed="true"] {
+  color: #241b16;
+  background: var(--yellow);
+}
+
 .hero {
   position: relative;
   display: grid;
-  min-height: 64vh;
-  padding: calc(var(--topbar-height) + 72px) clamp(18px, 5vw, 72px) 64px;
+  min-height: min(760px, 72vh);
+  padding: calc(var(--topbar-height) + 48px) clamp(18px, 5vw, 72px) 56px;
   align-items: end;
   overflow: hidden;
   color: #fffaf0;
+  background: #1f1510;
+}
+
+.hero::before,
+.hero::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+}
+
+.hero::before {
   background:
-    linear-gradient(90deg, rgba(22, 13, 9, 0.88), rgba(22, 13, 9, 0.54) 48%, rgba(22, 13, 9, 0.16)),
+    linear-gradient(rgba(22, 13, 9, 0.24), rgba(22, 13, 9, 0.24)),
+    url("assets/sagra-perugia.png") center top / cover no-repeat;
+  filter: blur(24px);
+  opacity: 0.68;
+  transform: scale(1.05);
+}
+
+.hero::after {
+  background:
+    linear-gradient(90deg, rgba(22, 13, 9, 0.9), rgba(22, 13, 9, 0.56) 48%, rgba(22, 13, 9, 0.16)),
     linear-gradient(0deg, rgba(22, 13, 9, 0.76), rgba(22, 13, 9, 0.04) 45%),
-    url("assets/sagra-perugia.png") center / cover;
+    url("assets/sagra-perugia.png") center top / min(100vw, var(--hero-image-max)) auto no-repeat;
+  mask-image: linear-gradient(90deg, transparent 0, #000 11%, #000 89%, transparent 100%);
+  z-index: 1;
 }
 
 .hero-content {
-  width: min(780px, 100%);
+  position: relative;
+  z-index: 2;
+  width: min(660px, 100%);
   min-width: 0;
 }
 
@@ -144,11 +217,11 @@ a {
 }
 
 h1 {
-  max-width: 12ch;
+  max-width: 13ch;
   margin: 0;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(3rem, 8vw, 6.8rem);
-  line-height: 0.94;
+  font-size: clamp(2.7rem, 5.7vw, 5rem);
+  line-height: 0.98;
   letter-spacing: 0;
   text-wrap: balance;
 }
@@ -164,25 +237,8 @@ h1 {
 .content {
   width: min(1180px, calc(100% - 32px));
   margin: 0 auto;
-  padding: 28px 0 64px;
+  padding: 32px 0 64px;
   min-width: 0;
-}
-
-.summary {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 18px;
-  color: var(--muted);
-  font-size: 0.92rem;
-  font-weight: 800;
-}
-
-.summary span {
-  padding: 8px 12px;
-  background: rgba(255, 250, 240, 0.72);
-  border: 1px solid var(--line);
-  border-radius: 8px;
 }
 
 .cards-grid {
@@ -315,9 +371,24 @@ h1 {
   border-radius: 8px;
 }
 
+@media (max-width: 1040px) {
+  :root {
+    --topbar-height: 124px;
+  }
+
+  .topbar {
+    grid-template-columns: minmax(170px, auto) 1fr;
+  }
+
+  .status-filters {
+    grid-column: 1 / -1;
+    justify-content: center;
+  }
+}
+
 @media (max-width: 720px) {
   :root {
-    --topbar-height: 118px;
+    --topbar-height: 168px;
   }
 
   .topbar {
@@ -331,7 +402,7 @@ h1 {
 
   .hero {
     min-height: 68vh;
-    padding-top: calc(var(--topbar-height) + 54px);
+    padding-top: calc(var(--topbar-height) + 42px);
   }
 
   .hero-content {
@@ -343,8 +414,8 @@ h1 {
   }
 
   h1 {
-    max-width: 8ch;
-    font-size: clamp(2.6rem, 12vw, 3.45rem);
+    max-width: 10ch;
+    font-size: clamp(2.35rem, 10vw, 3.15rem);
     text-wrap: normal;
   }
 }

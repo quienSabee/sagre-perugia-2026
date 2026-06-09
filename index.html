@@ -9,6 +9,7 @@
       content="Sagre, feste popolari ed eventi paesani a Perugia e dintorni nel 2026."
     />
     <link rel="preload" href="assets/sagra-perugia.png" as="image" />
+    <link rel="preload" href="assets/background-sagra-perugia.png" as="image" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -28,6 +29,18 @@
           placeholder="Cerca sagre, località, date"
         />
       </form>
+
+      <div class="status-filters" aria-label="Filtra eventi per stato">
+        <button class="filter-button filter-past" type="button" data-status="past" aria-pressed="true">
+          <span id="past-count">0 passati</span>
+        </button>
+        <button class="filter-button filter-active" type="button" data-status="active" aria-pressed="true">
+          <span id="active-count">0 in corso</span>
+        </button>
+        <button class="filter-button filter-future" type="button" data-status="future" aria-pressed="true">
+          <span id="future-count">0 futuri</span>
+        </button>
+      </div>
     </header>
 
     <main id="top">
@@ -35,19 +48,11 @@
         <div class="hero-content">
           <p class="eyebrow">Perugia e dintorni</p>
           <h1 id="page-title">Sagre, feste ed eventi popolari 2026</h1>
-          <p class="hero-copy">
-            Una mappa rapida degli appuntamenti entro circa un'ora da Perugia.
-          </p>
+          <p class="hero-copy">Forza grifo, dio schifo!</p>
         </div>
       </section>
 
       <section class="content" aria-live="polite">
-        <div class="summary" id="summary">
-          <span id="total-count">0 eventi</span>
-          <span id="active-count">0 in corso</span>
-          <span id="future-count">0 futuri</span>
-        </div>
-
         <div class="cards-grid" id="events"></div>
 
         <p class="empty-state" id="empty-state" hidden>
