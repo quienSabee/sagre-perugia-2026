@@ -1,6 +1,6 @@
-# Sagre Perugia 2026
+# Sagre Perugia
 
-Pagina web statica per consultare sagre, feste popolari ed eventi paesani a Perugia e dintorni nel 2026.
+Pagina web statica per consultare sagre, feste popolari ed eventi paesani a Perugia e dintorni.
 
 ## Struttura
 
