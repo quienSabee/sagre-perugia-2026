@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="it">
-
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -8,9 +7,11 @@
   <meta name="description" content="Sagre, feste popolari ed eventi paesani a Perugia e dintorni nel 2026." />
   <link rel="icon" href="assets/grifo.svg" type="image/svg+xml" />
   <link rel="preload" href="assets/0.png" as="image" />
-  <link rel="stylesheet" href="styles.css?v=20260609-3" />
+  <link rel="preload" href="assets/1.png" as="image" />
+  <link rel="preload" href="assets/2.png" as="image" />
+  <link rel="preload" href="assets/3.png" as="image" />
+  <link rel="stylesheet" href="styles.css?v=20260610-mobile-fix" />
 </head>
-
 <body>
   <header class="topbar">
     <a class="brand" href="#top" aria-label="Sagre Perugia 2026">
@@ -18,7 +19,13 @@
       <span>Sagre Perugia 2026</span>
     </a>
 
-    <button class="mobile-menu-toggle" type="button" aria-label="Apri filtri" aria-expanded="false" aria-controls="topbar-panel">
+    <button
+      class="mobile-menu-toggle"
+      type="button"
+      aria-label="Apri filtri"
+      aria-expanded="false"
+      aria-controls="topbar-panel"
+    >
       <span></span>
       <span></span>
       <span></span>
@@ -47,10 +54,10 @@
   <main id="top">
     <section class="hero" id="hero">
       <div class="hero-parallax" aria-hidden="true">
-        <img class="parallax-layer parallax-bg" src="assets/3.png" alt="" data-depth="0.01" />
-        <img class="parallax-layer parallax-stalls" src="assets/1.png" alt="" data-depth="0.30" />
-        <img class="parallax-layer parallax-grifo" src="assets/0.png" alt="" data-depth="0.60" />
-        <img class="parallax-layer parallax-table" src="assets/2.png" alt="" data-depth="0.90" />
+        <img class="parallax-layer parallax-bg" src="assets/3.png" alt="" />
+        <img class="parallax-layer parallax-stalls" src="assets/1.png" alt="" />
+        <img class="parallax-layer parallax-grifo" src="assets/0.png" alt="" />
+        <img class="parallax-layer parallax-table" src="assets/2.png" alt="" />
       </div>
 
       <div class="hero-shade" aria-hidden="true"></div>
@@ -64,14 +71,10 @@
 
     <section class="content" aria-live="polite">
       <div class="cards-grid" id="events"></div>
-
-      <p class="empty-state" id="empty-state" hidden>
-        Nessun evento trovato.
-      </p>
+      <p class="empty-state" id="empty-state" hidden>Nessun evento trovato.</p>
     </section>
   </main>
 
-  <script src="app.js?v=20260609-3" defer></script>
+  <script src="app.js?v=20260610-mobile-fix" defer></script>
 </body>
-
 </html>

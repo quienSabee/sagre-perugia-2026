@@ -118,67 +118,55 @@ function escapeHtml(value) {
     .replaceAll("&", "&amp;")
     .replaceAll("<", "&lt;")
     .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;");
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
 }
 
 function icon(name) {
   const icons = {
     source: `
-      <svg aria-hidden="true" viewBox="0 0 24 24">
-        <path d="M10 13a5 5 0 0 0 7.1 0l2.8-2.8a5 5 0 0 0-7.1-7.1l-1.6 1.6" />
-        <path d="M14 11a5 5 0 0 0-7.1 0l-2.8 2.8a5 5 0 0 0 7.1 7.1l1.6-1.6" />
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M14 3h7v7"></path>
+        <path d="M10 14 21 3"></path>
+        <path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"></path>
       </svg>
     `,
     map: `
-      <svg aria-hidden="true" viewBox="0 0 24 24">
-        <path d="M9 18l-6 3V6l6-3 6 3 6-3v15l-6 3-6-3z" />
-        <path d="M9 3v15" />
-        <path d="M15 6v15" />
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M20 10c0 5-8 11-8 11s-8-6-8-11a8 8 0 1 1 16 0Z"></path>
+        <circle cx="12" cy="10" r="3"></circle>
       </svg>
     `,
     menu: `
-      <svg aria-hidden="true" viewBox="0 0 24 24">
-        <path d="M4 4h16" />
-        <path d="M4 10h16" />
-        <path d="M4 16h10" />
-        <path d="M4 20h8" />
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M4 6h16"></path>
+        <path d="M4 12h16"></path>
+        <path d="M4 18h16"></path>
       </svg>
     `,
   };
 
-  return icons[name];
+  return icons[name] || "";
 }
 
 function eventActionsMarkup(event, mapId) {
-  const sourceLabel = escapeHtml(event.sourceLabel);
+  const sourceLabel = escapeHtml(event.sourceLabel || "Fonte");
   const sourceUrl = escapeHtml(event.sourceUrl || "");
   const menuUrl = escapeHtml(event.menuUrl || "");
 
   const sourceButton = event.sourceUrl
-    ? `
-      <a class="action-button source-button" href="${sourceUrl}" target="_blank" rel="noreferrer" aria-label="Apri fonte: ${sourceLabel}" title="Fonte">
-        ${icon("source")}
-      </a>
-    `
-    : `
-      <span class="action-button source-button is-disabled" aria-label="${sourceLabel}" title="${sourceLabel}">
-        ${icon("source")}
-      </span>
-    `;
+    ? `<a class="action-button" href="${sourceUrl}" target="_blank" rel="noopener noreferrer" aria-label="Apri fonte: ${sourceLabel}">${icon("source")}</a>`
+    : `<span class="action-button is-disabled" aria-label="Fonte non disponibile">${icon("source")}</span>`;
 
   const menuButton = event.menuUrl
-    ? `
-      <a class="action-button menu-button" href="${menuUrl}" target="_blank" rel="noreferrer" aria-label="Apri menù" title="Menù">
-        ${icon("menu")}
-      </a>
-    `
+    ? `<a class="action-button" href="${menuUrl}" target="_blank" rel="noopener noreferrer" aria-label="Apri menu">${icon("menu")}</a>`
     : "";
 
   return `
-    <div class="action-group" aria-label="Azioni evento">
+    <div class="action-group">
       ${sourceButton}
       ${menuButton}
-      <button class="action-button map-toggle" type="button" aria-label="Mostra mappa" title="Mappa" aria-expanded="false" aria-controls="${mapId}">
+      <button class="action-button map-toggle" type="button" aria-expanded="false" aria-controls="${mapId}" aria-label="Mostra mappa">
         ${icon("map")}
       </button>
     </div>
@@ -192,27 +180,33 @@ function renderCard(event) {
   const mapUrl = `https://www.google.com/maps?q=${encodeURIComponent(`${event.location}, Umbria, Italia`)}&output=embed`;
   const escapedMapUrl = escapeHtml(mapUrl);
   const escapedMapTitle = escapeHtml(`Mappa ${event.title}`);
-  const unconfirmed = event.confirmed
-    ? ""
-    : `<span class="unconfirmed">Date da confermare</span>`;
+  const unconfirmed = event.confirmed ? "" : `<span class="unconfirmed">Date da confermare</span>`;
 
   return `
     <article class="card is-${state.status}" style="--countdown-color: ${state.color}">
       <div class="card-header">
         <div class="meta-row">
-          <span class="badge">${state.label}</span>
-          <span class="date">${ranges}</span>
+          <span class="badge">${escapeHtml(state.label)}</span>
+          <span class="date">${escapeHtml(ranges)}</span>
         </div>
-        <h2>${event.title}</h2>
+        <h2>${escapeHtml(event.title)}</h2>
       </div>
-      <p class="location">${event.location}</p>
-      <p class="description">${event.description}</p>
-      <div class="card-footer">
+
+      <p class="location">${escapeHtml(event.location)}</p>
+      <p class="description">${escapeHtml(event.description)}</p>
+
+      <footer class="card-footer">
         ${unconfirmed}
         ${eventActionsMarkup(event, mapId)}
-      </div>
-      <div class="map-frame" id="${mapId}" data-map-src="${escapedMapUrl}" data-map-title="${escapedMapTitle}" hidden>
-      </div>
+      </footer>
+
+      <div
+        class="map-frame"
+        id="${mapId}"
+        data-map-src="${escapedMapUrl}"
+        data-map-title="${escapedMapTitle}"
+        hidden
+      ></div>
     </article>
   `;
 }
@@ -224,9 +218,7 @@ function render() {
     : allEvents;
 
   const searchedStates = searched.map((event) => getEventState(event).status);
-  const filtered = searched.filter((event) =>
-    enabledStatuses.has(getEventState(event).status),
-  );
+  const filtered = searched.filter((event) => enabledStatuses.has(getEventState(event).status));
 
   pastCount.textContent = `${searchedStates.filter((status) => status === "past").length} passati`;
   activeCount.textContent = `${searchedStates.filter((status) => status === "active").length} in corso`;
@@ -236,9 +228,29 @@ function render() {
   emptyState.hidden = filtered.length !== 0;
 }
 
+function closeMobileMenu() {
+  if (!topbar || !mobileMenuToggle) {
+    return;
+  }
+
+  topbar.classList.remove("is-menu-open");
+  mobileMenuToggle.setAttribute("aria-expanded", "false");
+  mobileMenuToggle.setAttribute("aria-label", "Apri filtri");
+}
+
+function toggleMobileMenu(event) {
+  event.preventDefault();
+  event.stopPropagation();
+
+  const isOpen = topbar.classList.toggle("is-menu-open");
+  mobileMenuToggle.setAttribute("aria-expanded", String(isOpen));
+  mobileMenuToggle.setAttribute("aria-label", isOpen ? "Chiudi filtri" : "Apri filtri");
+}
+
 async function init() {
   try {
     const response = await fetch("data/sagre.json");
+
     if (!response.ok) {
       throw new Error(`HTTP ${response.status}`);
     }
@@ -254,6 +266,7 @@ async function init() {
 }
 
 searchInput.addEventListener("input", render);
+
 filterButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const status = button.dataset.status;
@@ -269,6 +282,7 @@ filterButtons.forEach((button) => {
     render();
   });
 });
+
 eventsContainer.addEventListener("click", (event) => {
   const button = event.target.closest(".map-toggle");
 
@@ -294,24 +308,27 @@ eventsContainer.addEventListener("click", (event) => {
 });
 
 if (mobileMenuToggle && topbar) {
-  mobileMenuToggle.addEventListener("click", () => {
-    const isOpen = topbar.classList.toggle("is-menu-open");
-    mobileMenuToggle.setAttribute("aria-expanded", String(isOpen));
-    mobileMenuToggle.setAttribute("aria-label", isOpen ? "Chiudi filtri" : "Apri filtri");
-  });
+  mobileMenuToggle.addEventListener("click", toggleMobileMenu);
 
-  document.addEventListener("keydown", (event) => {
-    if (event.key !== "Escape" || !topbar.classList.contains("is-menu-open")) {
+  document.addEventListener("click", (event) => {
+    if (!topbar.classList.contains("is-menu-open")) {
       return;
     }
 
-    topbar.classList.remove("is-menu-open");
-    mobileMenuToggle.setAttribute("aria-expanded", "false");
-    mobileMenuToggle.setAttribute("aria-label", "Apri filtri");
+    if (topbar.contains(event.target)) {
+      return;
+    }
+
+    closeMobileMenu();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && topbar.classList.contains("is-menu-open")) {
+      closeMobileMenu();
+      mobileMenuToggle.focus();
+    }
   });
 }
-
-init();
 
 function initHeroParallax() {
   const hero = document.querySelector("#hero");
@@ -321,25 +338,21 @@ function initHeroParallax() {
     return;
   }
 
-  const prefersReducedMotion = window.matchMedia(
-    "(prefers-reduced-motion: reduce)"
-  ).matches;
-  const hasFinePointer = window.matchMedia("(pointer: fine)").matches;
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   if (prefersReducedMotion) {
     return;
   }
 
+  const hasFinePointer = window.matchMedia("(pointer: fine)").matches;
+
   const state = {
     targetScroll: 0,
     currentScroll: 0,
-
     targetMouseX: 0,
     targetMouseY: 0,
     currentMouseX: 0,
     currentMouseY: 0,
-
-    rafId: null,
   };
 
   const config = {
@@ -364,72 +377,39 @@ function initHeroParallax() {
     state.targetScroll = clamp(
       -rect.top / Math.max(1, rect.height - windowHeight * 0.25),
       0,
-      1
+      1,
     );
 
-    if (event && typeof event.clientX === "number") {
+    if (hasFinePointer && event && typeof event.clientX === "number") {
       const viewportX = event.clientX / (window.innerWidth || 1) - 0.5;
       const viewportY = event.clientY / (window.innerHeight || 1) - 0.5;
-
       state.targetMouseX = viewportX * config.maxMouseX;
       state.targetMouseY = viewportY * config.maxMouseY;
     }
   }
 
-  function render() {
-    state.currentScroll = lerp(
-      state.currentScroll,
-      state.targetScroll,
-      config.scrollEase
-    );
-
-    state.currentMouseX = lerp(
-      state.currentMouseX,
-      state.targetMouseX,
-      config.mouseEase
-    );
-
-    state.currentMouseY = lerp(
-      state.currentMouseY,
-      state.targetMouseY,
-      config.mouseEase
-    );
+  function renderParallax() {
+    state.currentScroll = lerp(state.currentScroll, state.targetScroll, config.scrollEase);
+    state.currentMouseX = lerp(state.currentMouseX, state.targetMouseX, config.mouseEase);
+    state.currentMouseY = lerp(state.currentMouseY, state.targetMouseY, config.mouseEase);
 
     hero.style.setProperty("--hero-scroll", state.currentScroll.toFixed(4));
     hero.style.setProperty("--mouse-x", `${state.currentMouseX.toFixed(2)}px`);
     hero.style.setProperty("--mouse-y", `${state.currentMouseY.toFixed(2)}px`);
 
-    state.rafId = requestAnimationFrame(render);
+    requestAnimationFrame(renderParallax);
   }
 
-  window.addEventListener(
-    "scroll",
-    () => {
-      updateTargets();
-    },
-    { passive: true }
-  );
-
+  window.addEventListener("scroll", updateTargets, { passive: true });
   window.addEventListener("resize", updateTargets);
 
-  /*
-    Importante:
-    usiamo window, non hero.
-    Così il movimento del mouse continua anche quando
-    il cursore esce dall'hero.
-  */
   if (hasFinePointer) {
-    window.addEventListener(
-      "pointermove",
-      (event) => {
-        updateTargets(event);
-      },
-      { passive: true }
-    );
+    window.addEventListener("pointermove", updateTargets, { passive: true });
   }
 
   updateTargets();
-  render();
+  renderParallax();
 }
 
+init();
 initHeroParallax();
