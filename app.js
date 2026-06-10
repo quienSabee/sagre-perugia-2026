@@ -26,6 +26,25 @@ const tagMeta = {
   sport: { label: "Sport", tone: "cyan" },
 };
 
+const eventImageMeta = {
+  barbari: {
+    label: "Immagine Festa dei Barbari",
+    match: ["barbari", "barbar"],
+    widths: [480, 768, 1024, 1366, 1448],
+  },
+  cipolla: {
+    label: "Immagine Sagra della Cipolla",
+    match: ["cipolla", "cipolle"],
+    widths: [480, 768, 1024, 1366, 1448],
+  },
+  cinghiale: {
+    label: "Immagine Sagra del Cinghiale",
+    match: ["cinghiale", "cinghiali"],
+    widths: [480, 768, 1024, 1366, 1448],
+  },
+};
+
+
 const dateFormatter = new Intl.DateTimeFormat("it-IT", {
   day: "numeric",
   month: "long",
@@ -243,6 +262,39 @@ function tagsMarkup(event) {
     .join("");
 }
 
+function findEventImageKey(event) {
+  const explicitKey = String(event.imageKey || event.revealImage || event.image || "")
+    .replace(/^assets\//, "")
+    .replace(/\.(png|jpe?g|webp)$/i, "")
+    .toLocaleLowerCase("it-IT");
+
+  if (eventImageMeta[explicitKey]) return explicitKey;
+
+  const haystack = [event.id, event.title, event.location, event.description, event.detailsMarkdown]
+    .join(" ")
+    .toLocaleLowerCase("it-IT");
+
+  return Object.entries(eventImageMeta).find(([, meta]) => meta.match.some((token) => haystack.includes(token)))?.[0] || null;
+}
+
+function eventRevealMarkup(event) {
+  const imageKey = findEventImageKey(event);
+  if (!imageKey) return "";
+
+  const meta = eventImageMeta[imageKey];
+  const srcset = meta.widths.map((width) => `assets/${imageKey}-${width}.webp ${width}w`).join(", ");
+  const fallbackWidth = meta.widths.includes(1024) ? 1024 : meta.widths.at(-1);
+
+  return `
+    <section class="festival-reveal" data-reveal-image="${escapeHtml(imageKey)}" aria-label="${escapeHtml(meta.label)}">
+      <picture class="festival-reveal-media" style="--placeholder: url('assets/${escapeHtml(imageKey)}-placeholder.png')">
+        <source type="image/webp" srcset="${escapeHtml(srcset)}" sizes="100vw" />
+        <img src="assets/${escapeHtml(imageKey)}-${fallbackWidth}.webp" alt="" width="1448" height="1086" loading="lazy" decoding="async" />
+      </picture>
+    </section>
+  `;
+}
+
 function formatSubEventDate(value) {
   return dateFormatter.format(parseISODate(value));
 }
@@ -282,7 +334,15 @@ function subEventsMarkup(event) {
               </header>
               <ul>
                 ${dayItems
-                  .map((item) => `<li>${item.time ? `<time>${escapeHtml(item.time)}</time>` : ""}<strong>${escapeHtml(item.title)}</strong>${item.note ? ` <span>${escapeHtml(item.note)}</span>` : ""}</li>`)
+                  .map(
+                    (item) => `<li>
+                      <time class="sub-event-time">${escapeHtml(item.time || "")}</time>
+                      <div class="sub-event-content">
+                        <strong>${escapeHtml(item.title)}</strong>
+                        ${item.note ? `<span>${escapeHtml(item.note)}</span>` : ""}
+                      </div>
+                    </li>`
+                  )
                   .join("")}
               </ul>
             </div>
@@ -322,6 +382,7 @@ function renderCard(event) {
         ${subEventsMarkup(event)}
       </div>
       <div class="map-frame" id="${mapId}" data-map-src="${escapedMapUrl}" data-map-title="${escapedMapTitle}" hidden></div>
+      ${eventRevealMarkup(event)}
     </article>
   `;
 }
@@ -341,6 +402,8 @@ function render() {
   futureCount.textContent = `${searchedStates.filter((status) => status === "future").length} futuri`;
   eventsContainer.innerHTML = filtered.map(renderCard).join("");
   emptyState.hidden = filtered.length !== 0;
+  initResponsiveImages(eventsContainer);
+  updateFestivalRevealTargets();
 }
 
 function closeMobileMenu() {
@@ -413,7 +476,7 @@ function handlePanelToggle(event) {
 
 async function init() {
   try {
-    const response = await fetch("data/sagre.json?v=20260610-direct-fixes");
+    const response = await fetch("data/sagre.json?v=20260610-image-reveal");
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     allEvents = (await response.json()).sort((a, b) => firstStartDate(a) - firstStartDate(b));
     render();
@@ -461,13 +524,15 @@ if (mobileMenuToggle && topbar) {
 }
 
 
-function initParallaxImages() {
-  document.querySelectorAll(".parallax-picture").forEach((picture) => {
+function initResponsiveImages(root = document) {
+  root.querySelectorAll(".parallax-picture, .festival-reveal-media").forEach((picture) => {
     const image = picture.querySelector("img");
-    if (!image) return;
+    if (!image || picture.dataset.loadingInitialized === "true") return;
+    picture.dataset.loadingInitialized = "true";
 
     function markLoaded() {
       picture.classList.add("is-loaded");
+      if (picture.classList.contains("festival-reveal-media")) updateFestivalRevealTargets();
     }
 
     if (image.complete && image.naturalWidth > 0) {
@@ -478,6 +543,41 @@ function initParallaxImages() {
     image.addEventListener("load", markLoaded, { once: true });
     image.addEventListener("error", markLoaded, { once: true });
   });
+}
+
+function updateFestivalRevealTargets() {
+  document.querySelectorAll(".festival-reveal").forEach((section) => {
+    const image = section.querySelector("img");
+    if (!image) return;
+
+    const rect = section.getBoundingClientRect();
+    const viewportHeight = window.innerHeight || 1;
+    const imageRatio = image.naturalWidth > 0 && image.naturalHeight > 0 ? image.naturalHeight / image.naturalWidth : 0.75;
+    const imageHeight = Math.max(rect.width * imageRatio, rect.height);
+    const progress = Math.min(1, Math.max(0, (viewportHeight - rect.top) / (viewportHeight + rect.height)));
+    section.style.setProperty("--festival-image-height", `${imageHeight.toFixed(1)}px`);
+    section.style.setProperty("--reveal-progress", progress.toFixed(4));
+  });
+}
+
+function initFestivalImageReveal() {
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (prefersReducedMotion) return;
+
+  let ticking = false;
+  function requestUpdate() {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      updateFestivalRevealTargets();
+      ticking = false;
+    });
+  }
+
+  window.addEventListener("scroll", requestUpdate, { passive: true });
+  window.addEventListener("resize", requestUpdate);
+  window.addEventListener("orientationchange", requestUpdate);
+  updateFestivalRevealTargets();
 }
 
 function initHeroParallax() {
@@ -545,5 +645,6 @@ function initHeroParallax() {
 }
 
 init();
-initParallaxImages();
+initResponsiveImages();
 initHeroParallax();
+initFestivalImageReveal();
