@@ -1618,56 +1618,6 @@
     "subEvents": []
   },
   {
-    "id": "sagra-della-ciliegia-46",
-    "title": "SAGRA DELLA CILIEGIA",
-    "location": "Fraz. Capodacqua Via Romana 44, Assisi",
-    "description": "Sagra nel calendario regionale umbro 2026, organizzata a Fraz. Capodacqua Via Romana 44, Assisi.",
-    "sourceLabel": "Regione Umbria - Calendario regionale Sagre e feste popolari 2026",
-    "sourceUrl": "https://www.regione.umbria.it/documents/18/26285955/Anno%2B2026%2B-%2BCalendario%2Bregionale%2Bdelle%2Bsagre%2Be%2Bfeste%2Bpopolari%2Baggiornato%2Bal%2B30-04-2026/7242d78b-756e-45c3-a7ad-35976acd39a0",
-    "menuUrl": "",
-    "menuComplete": false,
-    "ranges": [
-      {
-        "start": "2026-06-12",
-        "end": "2026-06-21",
-        "confirmed": true
-      }
-    ],
-    "originalDate": "2026-06-12 / 2026-06-21",
-    "confirmed": true,
-    "tags": [
-      "gastronomia",
-      "tradizione"
-    ],
-    "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Sagra\n- **Comune:** Assisi\n- **Luogo:** Fraz. Capodacqua Via Romana 44\n- **Organizzatore:** PRO LOCO CAPODACQUA",
-    "subEvents": []
-  },
-  {
-    "id": "sagra-delle-manfregole-44",
-    "title": "SAGRA DELLE MANFREGOLE",
-    "location": "Giardini Pubblici. Loc. Colonnetta, Fabro",
-    "description": "Sagra nel calendario regionale umbro 2026, organizzata a Giardini Pubblici. Loc. Colonnetta, Fabro.",
-    "sourceLabel": "Regione Umbria - Calendario regionale Sagre e feste popolari 2026",
-    "sourceUrl": "https://www.regione.umbria.it/documents/18/26285955/Anno%2B2026%2B-%2BCalendario%2Bregionale%2Bdelle%2Bsagre%2Be%2Bfeste%2Bpopolari%2Baggiornato%2Bal%2B30-04-2026/7242d78b-756e-45c3-a7ad-35976acd39a0",
-    "menuUrl": "",
-    "menuComplete": false,
-    "ranges": [
-      {
-        "start": "2026-06-12",
-        "end": "2026-06-14",
-        "confirmed": true
-      }
-    ],
-    "originalDate": "2026-06-12 / 2026-06-14",
-    "confirmed": true,
-    "tags": [
-      "gastronomia",
-      "tradizione"
-    ],
-    "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Sagra\n- **Comune:** Fabro\n- **Luogo:** Giardini Pubblici. Loc. Colonnetta\n- **Organizzatore:** PRO LOCO FABRO",
-    "subEvents": []
-  },
-  {
     "id": "sagra-ortolano-balanzano-2026",
     "title": "SAGRA DELL'ORTOLANO",
     "location": "Balanzano, Perugia",
@@ -2000,6 +1950,56 @@
       }
     ],
     "menuComplete": true
+  },
+  {
+    "id": "sagra-della-ciliegia-46",
+    "title": "SAGRA DELLA CILIEGIA",
+    "location": "Fraz. Capodacqua Via Romana 44, Assisi",
+    "description": "Sagra nel calendario regionale umbro 2026, organizzata a Fraz. Capodacqua Via Romana 44, Assisi.",
+    "sourceLabel": "Regione Umbria - Calendario regionale Sagre e feste popolari 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26285955/Anno%2B2026%2B-%2BCalendario%2Bregionale%2Bdelle%2Bsagre%2Be%2Bfeste%2Bpopolari%2Baggiornato%2Bal%2B30-04-2026/7242d78b-756e-45c3-a7ad-35976acd39a0",
+    "menuUrl": "",
+    "menuComplete": false,
+    "ranges": [
+      {
+        "start": "2026-06-12",
+        "end": "2026-06-21",
+        "confirmed": true
+      }
+    ],
+    "originalDate": "2026-06-12 / 2026-06-21",
+    "confirmed": true,
+    "tags": [
+      "gastronomia",
+      "tradizione"
+    ],
+    "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Sagra\n- **Comune:** Assisi\n- **Luogo:** Fraz. Capodacqua Via Romana 44\n- **Organizzatore:** PRO LOCO CAPODACQUA",
+    "subEvents": []
+  },
+  {
+    "id": "sagra-delle-manfregole-44",
+    "title": "SAGRA DELLE MANFREGOLE",
+    "location": "Giardini Pubblici. Loc. Colonnetta, Fabro",
+    "description": "Sagra nel calendario regionale umbro 2026, organizzata a Giardini Pubblici. Loc. Colonnetta, Fabro.",
+    "sourceLabel": "Regione Umbria - Calendario regionale Sagre e feste popolari 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26285955/Anno%2B2026%2B-%2BCalendario%2Bregionale%2Bdelle%2Bsagre%2Be%2Bfeste%2Bpopolari%2Baggiornato%2Bal%2B30-04-2026/7242d78b-756e-45c3-a7ad-35976acd39a0",
+    "menuUrl": "",
+    "menuComplete": false,
+    "ranges": [
+      {
+        "start": "2026-06-12",
+        "end": "2026-06-14",
+        "confirmed": true
+      }
+    ],
+    "originalDate": "2026-06-12 / 2026-06-14",
+    "confirmed": true,
+    "tags": [
+      "gastronomia",
+      "tradizione"
+    ],
+    "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Sagra\n- **Comune:** Fabro\n- **Luogo:** Giardini Pubblici. Loc. Colonnetta\n- **Organizzatore:** PRO LOCO FABRO",
+    "subEvents": []
   },
   {
     "id": "esposizione-e-raduno-di-mezzi-agricoli-ed-industriali-52",
@@ -2892,6 +2892,31 @@
     "menuComplete": false
   },
   {
+    "id": "sagra-dell-agnello-scottadito-e-dei-prodotti-tipici-umbri-73",
+    "title": "SAGRA DELL'AGNELLO SCOTTADITO E DEI PRODOTTI TIPICI UMBRI",
+    "location": "Campo Sportivo, via B.J. Della Rovere, Monte Castello di Vibio",
+    "description": "Sagra nel calendario regionale umbro 2026, organizzata a Campo Sportivo, via B.J. Della Rovere, Monte Castello di Vibio.",
+    "sourceLabel": "Regione Umbria - Calendario regionale Sagre e feste popolari 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26285955/Anno%2B2026%2B-%2BCalendario%2Bregionale%2Bdelle%2Bsagre%2Be%2Bfeste%2Bpopolari%2Baggiornato%2Bal%2B30-04-2026/7242d78b-756e-45c3-a7ad-35976acd39a0",
+    "menuUrl": "",
+    "menuComplete": false,
+    "ranges": [
+      {
+        "start": "2026-06-26",
+        "end": "2026-07-05",
+        "confirmed": true
+      }
+    ],
+    "originalDate": "2026-06-26 / 2026-07-05",
+    "confirmed": true,
+    "tags": [
+      "gastronomia",
+      "tradizione"
+    ],
+    "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Sagra\n- **Comune:** Monte Castello di Vibio\n- **Luogo:** Campo Sportivo, via B.J. Della Rovere\n- **Organizzatore:** ASSOCIAZIONE CAMPO VECCHIO",
+    "subEvents": []
+  },
+  {
     "id": "sagra-della-barbozza-e-delle-carni-alla-brace-74",
     "title": "SAGRA DELLA BARBOZZA E DELLE CARNI ALLA BRACE",
     "location": "Fraz. Cerqueto via Guido Rossa Piersanti Mattarella, Gualdo Tadino",
@@ -2939,31 +2964,6 @@
       "tradizione"
     ],
     "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Sagra\n- **Comune:** Assisi\n- **Luogo:** Fraz. Castelnuovo Via del Campaccio 2\n- **Organizzatore:** PRO LOCO CASTELNUOVO",
-    "subEvents": []
-  },
-  {
-    "id": "sagra-dell-agnello-scottadito-e-dei-prodotti-tipici-umbri-73",
-    "title": "SAGRA DELL'AGNELLO SCOTTADITO E DEI PRODOTTI TIPICI UMBRI",
-    "location": "Campo Sportivo, via B.J. Della Rovere, Monte Castello di Vibio",
-    "description": "Sagra nel calendario regionale umbro 2026, organizzata a Campo Sportivo, via B.J. Della Rovere, Monte Castello di Vibio.",
-    "sourceLabel": "Regione Umbria - Calendario regionale Sagre e feste popolari 2026",
-    "sourceUrl": "https://www.regione.umbria.it/documents/18/26285955/Anno%2B2026%2B-%2BCalendario%2Bregionale%2Bdelle%2Bsagre%2Be%2Bfeste%2Bpopolari%2Baggiornato%2Bal%2B30-04-2026/7242d78b-756e-45c3-a7ad-35976acd39a0",
-    "menuUrl": "",
-    "menuComplete": false,
-    "ranges": [
-      {
-        "start": "2026-06-26",
-        "end": "2026-07-05",
-        "confirmed": true
-      }
-    ],
-    "originalDate": "2026-06-26 / 2026-07-05",
-    "confirmed": true,
-    "tags": [
-      "gastronomia",
-      "tradizione"
-    ],
-    "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Sagra\n- **Comune:** Monte Castello di Vibio\n- **Luogo:** Campo Sportivo, via B.J. Della Rovere\n- **Organizzatore:** ASSOCIAZIONE CAMPO VECCHIO",
     "subEvents": []
   },
   {
@@ -3526,6 +3526,44 @@
     "detailsMarkdown": "## Dettagli\nFesta popolare organizzata nel periodo centrale di luglio a Ponte Pattoli, presente sia nel calendario comunale sia nel calendario regionale.",
     "subEvents": [],
     "menuComplete": false
+  },
+  {
+    "id": "sagra-del-cinghiale-a-spezzatino-e-dellarvoltolo-migliano-2026",
+    "title": "SAGRA DEL CINGHIALE A SPEZZATINO E DELL'ARVOLTOLO",
+    "location": "Migliano, Marsciano",
+    "description": "Sagra gastronomica dedicata al cinghiale a spezzatino e all'arvoltolo.",
+    "sourceLabel": "UmbriaEventi",
+    "sourceUrl": "https://www.umbriaeventi.com/sagra-spezzatino-cinghiale-arvoltolo-migliano-8380.htm",
+    "menuUrl": "",
+    "menuComplete": false,
+    "ranges": [
+      {
+        "start": "2026-07-10",
+        "end": "2026-07-19",
+        "confirmed": true
+      }
+    ],
+    "originalDate": "2026-07-10 / 2026-07-19",
+    "confirmed": true,
+    "tags": [
+      "gastronomia",
+      "tradizione"
+    ],
+    "detailsMarkdown": "## Dettagli\nSagra gastronomica a Migliano, frazione di Marsciano, dedicata al cinghiale a spezzatino e all'arvoltolo.\n\nFonte: UmbriaEventi.",
+    "subEvents": [],
+    "revealImage": {
+      "key": "cinghiale",
+      "alt": "Sagra del Cinghiale a Spezzatino e dell'Arvoltolo",
+      "widths": [
+        480,
+        768,
+        1024,
+        1366,
+        1448
+      ],
+      "width": 1448,
+      "height": 1086
+    }
   },
   {
     "id": "sagra-tuttosuino-santenea-2026",
@@ -4135,6 +4173,45 @@
     "subEvents": []
   },
   {
+    "id": "festa-dei-barbari-castel-rigone-2026",
+    "title": "FESTA DEI BARBARI",
+    "location": "Castel Rigone, Passignano sul Trasimeno",
+    "description": "Rievocazione storica di epoca barbarica con cene, cortei storici, accampamenti e spettacoli.",
+    "sourceLabel": "UmbriaEventi",
+    "sourceUrl": "https://www.umbriaeventi.com/festa-dei-barbari-castel-rigone-10447.htm",
+    "menuUrl": "",
+    "menuComplete": false,
+    "ranges": [
+      {
+        "start": "2026-07-29",
+        "end": "2026-08-02",
+        "confirmed": true
+      }
+    ],
+    "originalDate": "2026-07-29 / 2026-08-02",
+    "confirmed": true,
+    "tags": [
+      "tradizione",
+      "rievocazione",
+      "gastronomia"
+    ],
+    "detailsMarkdown": "## Dettagli\nRievocazione storica di epoca barbarica a Castel Rigone, con cene barbare, cortei storici, simulazioni, accampamenti e spettacoli.\n\nFonte: UmbriaEventi.",
+    "subEvents": [],
+    "revealImage": {
+      "key": "barbari",
+      "alt": "Festa dei Barbari a Castel Rigone",
+      "widths": [
+        480,
+        768,
+        1024,
+        1366,
+        1448
+      ],
+      "width": 1448,
+      "height": 1086
+    }
+  },
+  {
     "id": "il-novecento-a-montefranco-104",
     "title": "IL NOVECENTO A MONTEFRANCO",
     "location": "Montefranco",
@@ -4236,6 +4313,31 @@
     "subEvents": []
   },
   {
+    "id": "sagra-dell-oca-arrosto-108",
+    "title": "SAGRA DELL'OCA ARROSTO",
+    "location": "fraz. Torchiagina Piazza Domenico Siena, Assisi",
+    "description": "Sagra nel calendario regionale umbro 2026, organizzata a fraz. Torchiagina Piazza Domenico Siena, Assisi.",
+    "sourceLabel": "Regione Umbria - Calendario regionale Sagre e feste popolari 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26285955/Anno%2B2026%2B-%2BCalendario%2Bregionale%2Bdelle%2Bsagre%2Be%2Bfeste%2Bpopolari%2Baggiornato%2Bal%2B30-04-2026/7242d78b-756e-45c3-a7ad-35976acd39a0",
+    "menuUrl": "",
+    "menuComplete": false,
+    "ranges": [
+      {
+        "start": "2026-07-31",
+        "end": "2026-08-09",
+        "confirmed": true
+      }
+    ],
+    "originalDate": "2026-07-31 / 2026-08-09",
+    "confirmed": true,
+    "tags": [
+      "gastronomia",
+      "tradizione"
+    ],
+    "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Sagra\n- **Comune:** Assisi\n- **Luogo:** fraz. Torchiagina Piazza Domenico Siena\n- **Organizzatore:** PRO LOCO TORCHIAGINA",
+    "subEvents": []
+  },
+  {
     "id": "sagra-torta-testo-cenere-santegidio-2026",
     "title": "SAGRA DELLA TORTA AL TESTO COTTA SOTTO LA CENERE",
     "location": "Sant’Egidio, Perugia",
@@ -4260,31 +4362,6 @@
     "detailsMarkdown": "## Dettagli\nSagra dedicata alla torta al testo cotta sotto la cenere, con prodotti tipici umbri.\n\nFonte: Comune di Perugia - Feste popolari e Sagre 2026.",
     "subEvents": [],
     "menuComplete": false
-  },
-  {
-    "id": "sagra-dell-oca-arrosto-108",
-    "title": "SAGRA DELL'OCA ARROSTO",
-    "location": "fraz. Torchiagina Piazza Domenico Siena, Assisi",
-    "description": "Sagra nel calendario regionale umbro 2026, organizzata a fraz. Torchiagina Piazza Domenico Siena, Assisi.",
-    "sourceLabel": "Regione Umbria - Calendario regionale Sagre e feste popolari 2026",
-    "sourceUrl": "https://www.regione.umbria.it/documents/18/26285955/Anno%2B2026%2B-%2BCalendario%2Bregionale%2Bdelle%2Bsagre%2Be%2Bfeste%2Bpopolari%2Baggiornato%2Bal%2B30-04-2026/7242d78b-756e-45c3-a7ad-35976acd39a0",
-    "menuUrl": "",
-    "menuComplete": false,
-    "ranges": [
-      {
-        "start": "2026-07-31",
-        "end": "2026-08-09",
-        "confirmed": true
-      }
-    ],
-    "originalDate": "2026-07-31 / 2026-08-09",
-    "confirmed": true,
-    "tags": [
-      "gastronomia",
-      "tradizione"
-    ],
-    "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Sagra\n- **Comune:** Assisi\n- **Luogo:** fraz. Torchiagina Piazza Domenico Siena\n- **Organizzatore:** PRO LOCO TORCHIAGINA",
-    "subEvents": []
   },
   {
     "id": "festa-popolare-di-strozzacapponi-strozzacapponi-perugia-2026",
@@ -4738,6 +4815,44 @@
     ],
     "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Festa popolare\n- **Comune:** Castiglione del Lago\n- **Luogo:** Villastrada - Area impianto sportivo)\n- **Organizzatore:** PD PARTITO DEMOCRATICO CIRCOLO TERRITORIALE DI VAIANO - VILLASTRADA",
     "subEvents": []
+  },
+  {
+    "id": "festa-della-cipolla-cannara-2026",
+    "title": "FESTA DELLA CIPOLLA",
+    "location": "Cannara",
+    "description": "Festa gastronomica dedicata alla cipolla di Cannara, con stand e piatti a base di cipolla.",
+    "sourceLabel": "UmbriaEventi / SagreFestival",
+    "sourceUrl": "https://www.umbriaeventi.com/festa-cipolla-cannara-8735.htm",
+    "menuUrl": "",
+    "menuComplete": false,
+    "ranges": [
+      {
+        "start": "2026-09-01",
+        "end": "2026-09-30",
+        "confirmed": false
+      }
+    ],
+    "originalDate": "Settembre 2026 (date precise da confermare)",
+    "confirmed": false,
+    "tags": [
+      "gastronomia",
+      "tradizione"
+    ],
+    "detailsMarkdown": "## Dettagli\nFesta gastronomica dedicata alla cipolla di Cannara, con stand e piatti a base di cipolla.\n\nLe fonti disponibili indicano l'edizione 2026 a settembre, ma non confermano ancora il calendario giornaliero definitivo.",
+    "subEvents": [],
+    "revealImage": {
+      "key": "cipolla",
+      "alt": "Festa della Cipolla di Cannara",
+      "widths": [
+        480,
+        768,
+        1024,
+        1366,
+        1448
+      ],
+      "width": 1448,
+      "height": 1086
+    }
   },
   {
     "id": "40-tre-giorni-di-montedoro-122",
