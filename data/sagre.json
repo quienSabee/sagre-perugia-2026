@@ -566,7 +566,18 @@
       "famiglia"
     ],
     "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Festa popolare\n- **Comune:** Avigliano Umbro\n- **Luogo:** Piazza Piave Via Montegrappa AVIGLIANO\n- **Organizzatore:** PRO LOCO AVIGLIANO UMBRO",
-    "subEvents": []
+    "subEvents": [],
+    "revealImage": {
+      "key": "madonna-grazie",
+      "alt": "Festa della Madonna delle Grazie 2026",
+      "widths": [
+        480,
+        768,
+        1024,
+        1366,
+        1672
+      ]
+    }
   },
   {
     "id": "festa-di-primavera-30-edizione-23",
@@ -2323,6 +2334,19 @@
       "tradizione",
       "famiglia"
     ],
+    "revealImage": {
+      "key": "piccione",
+      "alt": "Piccione in Festa",
+      "widths": [
+        480,
+        768,
+        1024,
+        1366,
+        1448
+      ],
+      "width": 1448,
+      "height": 1086
+    },
     "detailsMarkdown": "## Dettagli\nEvento storico nell’area verde comunale di Piccione, con orchestre da ballo e DJ set al **Cico’s Pub**.\n\n## Menù\nMenù completo in pagina: oca all’arrabbiata, arrosticini, tagliata, gnocchi al sugo d’oca, gnocchi al tartufo, tortellini alla boscaiola, penne alla norcina, polenta contadina, antipasti, torta al testo, dolci e contorni.",
     "subEvents": [
       {
@@ -3971,7 +3995,18 @@
     ],
     "detailsMarkdown": "## Dettagli\nL’edizione precedente descriveva un menù ricco e un programma di intrattenimenti per tutte le età. Tra gli appuntamenti tradizionali sono segnalati la **Rassegna del Mulo e del Cavallo da Soma** e il **Palio del Carbonaio**.\n\n### Nota date\nLe date 2026 sono quelle pubblicate dal Comune di Perugia.",
     "subEvents": [],
-    "menuComplete": false
+    "menuComplete": false,
+    "revealImage": {
+      "key": "fratticciola",
+      "alt": "Sagra dello Spaghetto dei Carbonai a Fratticiola Selvatica",
+      "widths": [
+        480,
+        768,
+        1024,
+        1366,
+        1672
+      ]
+    }
   },
   {
     "id": "ix-cena-del-ponte-98",
@@ -4146,7 +4181,18 @@
     ],
     "detailsMarkdown": "## Dettagli\nLa scheda storica descrive il **crostone** come bruschetta condita con un paté preparato con molti ingredienti e servita su pane cotto a legna. La sagra propone anche taglierini al tartufo, cucina umbra e divertimento serale.\n\n### Nota date\nPer il 2026 non ho trovato una scheda ufficiale completa: ho inserito l’evento perché Strozzacapponi compare tra i luoghi delle sagre nel calendario comunale e perché la sagra è documentata negli anni precedenti. Le date sono marcate come da confermare.",
     "subEvents": [],
-    "menuComplete": false
+    "menuComplete": false,
+    "revealImage": {
+      "key": "corsa-gallo",
+      "alt": "Sagra del Crostone e Corsa del Gallo a Strozzacapponi",
+      "widths": [
+        480,
+        768,
+        1024,
+        1366,
+        1672
+      ]
+    }
   },
   {
     "id": "sanfatucchio-insieme-103",

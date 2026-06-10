@@ -1,1 +1,3 @@
 .verify/
+/.venv
+*.pyc

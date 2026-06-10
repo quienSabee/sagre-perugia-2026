@@ -1,21 +1,24 @@
-# Sagre Perugia
 
-Pagina web statica per consultare sagre, feste popolari ed eventi paesani a Perugia e dintorni.
+## Ottimizzazione immagini
 
-## Struttura
-
-- `index.html`: pagina principale
-- `styles.css`: layout e stati visivi
-- `app.js`: filtro, conteggi e stato temporale degli eventi
-- `data/sagre.json`: elenco data-driven delle sagre
-- `assets/sagra-perugia.png`: immagine hero e sfondo in trasparenza
-
-## Avvio locale
-
-La pagina carica il JSON con `fetch`, quindi va servita via HTTP:
+Per generare automaticamente le varianti responsive WebP e i placeholder low-res blur dagli asset PNG:
 
 ```bash
-python -m http.server 8000
+python -m pip install -r requirements.txt
+python scripts/optimize-images.py
 ```
 
-Poi apri `http://localhost:8000`.
+Il comando converte tutti i `*.png` in `assets/`, ignorando i file `*-placeholder.png`, e produce file come:
+
+- `assets/nome-480.webp`
+- `assets/nome-768.webp`
+- `assets/nome-1024.webp`
+- `assets/nome-1366.webp`
+- `assets/nome-1672.webp`
+- `assets/nome-placeholder.png`
+
+Per forzare la rigenerazione:
+
+```bash
+python scripts/optimize-images.py --force
+```

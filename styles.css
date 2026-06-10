@@ -527,8 +527,9 @@ h1 {
   position: relative;
   width: 100vw;
   max-width: 100vw;
-  height: clamp(220px, 34vw, 420px);
+  height: clamp(260px, 38vw, 500px);
   margin: 6px calc(50% - 50vw) -22px;
+  --reveal-offset: 0px;
   overflow: hidden;
   background: #120c09;
   isolation: isolate;
@@ -559,17 +560,18 @@ h1 {
 .festival-reveal-media img {
   position: absolute;
   inset: auto 0;
-  top: calc((100% - var(--festival-image-height, 100%)) * var(--reveal-progress, 0));
+  top: 50%;
   z-index: 1;
   display: block;
   width: 100%;
   min-height: 100%;
   max-width: none;
-  height: auto;
+  height: var(--festival-image-height, auto);
   object-fit: cover;
   opacity: 0;
+  transform: translate3d(0, calc(-50% + var(--reveal-offset, 0px)), 0);
   transition: opacity 260ms ease;
-  will-change: top;
+  will-change: transform;
 }
 
 .festival-reveal-media.is-loaded::before { opacity: 0; }
@@ -672,7 +674,7 @@ h1 {
   .has-tooltip::after { display: none; }
   .sub-event-day header { align-items: flex-start; }
   .sub-event-day li { grid-template-columns: 44px minmax(0, 1fr); gap: 8px; }
-  .festival-reveal { height: clamp(190px, 58vw, 310px); margin-bottom: -16px; }
+  .festival-reveal { height: clamp(220px, 62vw, 360px); margin-bottom: -16px; }
 }
 
 @media (max-width: 360px) {

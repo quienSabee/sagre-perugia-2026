@@ -484,7 +484,7 @@ function handlePanelToggle(event) {
 
 async function init() {
   try {
-    const response = await fetch("data/sagre.json?v=20260610-data-driven-reveal");
+    const response = await fetch("data/sagre.json?v=20260610-image-tools-reveal-motion");
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     allEvents = (await response.json()).sort((a, b) => firstStartDate(a) - firstStartDate(b));
     render();
@@ -553,6 +553,16 @@ function initResponsiveImages(root = document) {
   });
 }
 
+const revealAnimationState = new WeakMap();
+
+function clamp01(value) {
+  return Math.min(1, Math.max(0, value));
+}
+
+function easeInOutSine(value) {
+  return -(Math.cos(Math.PI * clamp01(value)) - 1) / 2;
+}
+
 function updateFestivalRevealTargets() {
   document.querySelectorAll(".festival-reveal").forEach((section) => {
     const image = section.querySelector("img");
@@ -561,11 +571,37 @@ function updateFestivalRevealTargets() {
     const rect = section.getBoundingClientRect();
     const viewportHeight = window.innerHeight || 1;
     const imageRatio = image.naturalWidth > 0 && image.naturalHeight > 0 ? image.naturalHeight / image.naturalWidth : 0.75;
-    const imageHeight = Math.max(rect.width * imageRatio, rect.height);
-    const progress = Math.min(1, Math.max(0, (viewportHeight - rect.top) / (viewportHeight + rect.height)));
+    const imageHeight = Math.max(rect.width * imageRatio, rect.height * 1.18);
+    const maxTravel = Math.max(0, imageHeight - rect.height);
+
+    // Lascia visibile la parte alta e quella bassa più a lungo: l'immagine
+    // inizia a muoversi solo quando la sezione è entrata bene in viewport e
+    // rallenta in modo armonioso vicino ai limiti.
+    const rawProgress = clamp01((viewportHeight - rect.top) / (viewportHeight + rect.height));
+    const scrollStart = Number(section.dataset.revealStart) || 0.18;
+    const scrollEnd = Number(section.dataset.revealEnd) || 0.84;
+    const easedProgress = easeInOutSine((rawProgress - scrollStart) / Math.max(0.01, scrollEnd - scrollStart));
+    const targetOffset = (0.5 - easedProgress) * maxTravel;
+
+    const state = revealAnimationState.get(section) || { currentOffset: targetOffset };
+    state.targetOffset = targetOffset;
+    state.imageHeight = imageHeight;
+    revealAnimationState.set(section, state);
+
     section.style.setProperty("--festival-image-height", `${imageHeight.toFixed(1)}px`);
-    section.style.setProperty("--reveal-progress", progress.toFixed(4));
   });
+}
+
+function renderFestivalRevealMotion() {
+  document.querySelectorAll(".festival-reveal").forEach((section) => {
+    const state = revealAnimationState.get(section);
+    if (!state) return;
+
+    state.currentOffset += (state.targetOffset - state.currentOffset) * 0.085;
+    section.style.setProperty("--reveal-offset", `${state.currentOffset.toFixed(2)}px`);
+  });
+
+  requestAnimationFrame(renderFestivalRevealMotion);
 }
 
 function initFestivalImageReveal() {
@@ -586,6 +622,7 @@ function initFestivalImageReveal() {
   window.addEventListener("resize", requestUpdate);
   window.addEventListener("orientationchange", requestUpdate);
   updateFestivalRevealTargets();
+  renderFestivalRevealMotion();
 }
 
 function initHeroParallax() {
