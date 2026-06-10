@@ -2865,33 +2865,6 @@
     "subEvents": []
   },
   {
-    "id": "festa-d-inizio-estate-resina-perugia-2026",
-    "title": "FESTA D’INIZIO ESTATE",
-    "location": "Resina, Perugia",
-    "description": "Festa popolare di inizio estate con cucina e intrattenimento.",
-    "sourceLabel": "Comune di Perugia - Feste popolari e Sagre 2026",
-    "sourceUrl": "https://www.comune.perugia.it/evento/feste-popolari-e-sagre-2026/",
-    "menuUrl": "",
-    "ranges": [
-      {
-        "start": "2026-06-26",
-        "end": "2026-07-05",
-        "confirmed": true
-      }
-    ],
-    "originalDate": "2026-06-26 / 2026-07-05",
-    "confirmed": true,
-    "tags": [
-      "tradizione",
-      "gastronomia",
-      "musica",
-      "famiglia"
-    ],
-    "detailsMarkdown": "## Dettagli\nFesta popolare di inizio estate con cucina e intrattenimento.\n\nFonte: Comune di Perugia - Feste popolari e Sagre 2026.",
-    "subEvents": [],
-    "menuComplete": false
-  },
-  {
     "id": "festival-dei-due-mondi-spoleto-2026",
     "title": "FESTIVAL DEI DUE MONDI",
     "location": "Spoleto",
