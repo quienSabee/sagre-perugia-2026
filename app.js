@@ -49,19 +49,12 @@ function diffDays(from, to) {
 function formatDateRange(range) {
   const start = parseISODate(range.start);
   const end = parseISODate(range.end);
-
-  if (range.start === range.end) {
-    return dateFormatter.format(start);
-  }
-
+  if (range.start === range.end) return dateFormatter.format(start);
   return `${dateFormatter.format(start)} - ${dateFormatter.format(end)}`;
 }
 
 function countdownColor(daysUntil) {
-  if (daysUntil > 7) {
-    return "hsl(4 74% 42%)";
-  }
-
+  if (daysUntil > 7) return "hsl(4 74% 42%)";
   const clamped = Math.max(1, Math.min(7, daysUntil));
   const hue = 118 - ((clamped - 1) / 6) * 66;
   return `hsl(${Math.round(hue)} 76% 38%)`;
@@ -76,22 +69,12 @@ function getEventState(event, today = localDate()) {
     }))
     .sort((a, b) => a.startDate - b.startDate);
 
-  const activeRange = ranges.find(
-    (range) => today >= range.startDate && today <= range.endDate,
-  );
-
+  const activeRange = ranges.find((range) => today >= range.startDate && today <= range.endDate);
   if (activeRange) {
-    return {
-      status: "active",
-      label: "In corso",
-      range: activeRange,
-      color: "hsl(142 70% 31%)",
-      daysUntil: 0,
-    };
+    return { status: "active", label: "In corso", range: activeRange, color: "hsl(142 70% 31%)", daysUntil: 0 };
   }
 
   const nextRange = ranges.find((range) => range.startDate > today);
-
   if (nextRange) {
     const daysUntil = diffDays(today, nextRange.startDate);
     return {
@@ -103,13 +86,7 @@ function getEventState(event, today = localDate()) {
     };
   }
 
-  return {
-    status: "past",
-    label: "Conclusa",
-    range: ranges.at(-1),
-    color: "hsl(26 6% 38%)",
-    daysUntil: null,
-  };
+  return { status: "past", label: "Conclusa", range: ranges.at(-1), color: "hsl(26 6% 38%)", daysUntil: null };
 }
 
 function firstStartDate(event) {
@@ -167,24 +144,20 @@ function markdownToHtml(markdown = "") {
 
   markdown.split(/\r?\n/).forEach((raw) => {
     const line = raw.trim();
-
     if (!line) {
       closeList();
       return;
     }
-
     if (line.startsWith("### ")) {
       closeList();
       blocks.push(`<h4>${inline(line.slice(4))}</h4>`);
       return;
     }
-
     if (line.startsWith("## ")) {
       closeList();
       blocks.push(`<h3>${inline(line.slice(3))}</h3>`);
       return;
     }
-
     if (line.startsWith("- ")) {
       if (!inList) {
         blocks.push("<ul>");
@@ -193,7 +166,6 @@ function markdownToHtml(markdown = "") {
       blocks.push(`<li>${inline(line.slice(2))}</li>`);
       return;
     }
-
     closeList();
     blocks.push(`<p>${inline(line)}</p>`);
   });
@@ -236,7 +208,6 @@ function icon(name) {
       </svg>
     `,
   };
-
   return icons[name] || "";
 }
 
@@ -278,18 +249,10 @@ function formatSubEventDate(value) {
 
 function getDateState(dateValue, today = localDate()) {
   const date = parseISODate(dateValue);
-  if (date < today) {
-    return { status: "past", label: "Passata", color: "hsl(26 6% 38%)" };
-  }
-  if (date.getTime() === today.getTime()) {
-    return { status: "active", label: "Oggi", color: "hsl(142 70% 31%)" };
-  }
+  if (date < today) return { status: "past", label: "Passata", color: "hsl(26 6% 38%)" };
+  if (date.getTime() === today.getTime()) return { status: "active", label: "Oggi", color: "hsl(142 70% 31%)" };
   const daysUntil = diffDays(today, date);
-  return {
-    status: "future",
-    label: daysUntil === 1 ? "Domani" : `Tra ${daysUntil} giorni`,
-    color: countdownColor(daysUntil),
-  };
+  return { status: "future", label: daysUntil === 1 ? "Domani" : `Tra ${daysUntil} giorni`, color: countdownColor(daysUntil) };
 }
 
 function subEventsMarkup(event) {
@@ -297,9 +260,7 @@ function subEventsMarkup(event) {
     .filter((item) => item.date && item.title)
     .sort((a, b) => `${a.date} ${a.time || ""}`.localeCompare(`${b.date} ${b.time || ""}`));
 
-  if (!items.length) {
-    return "";
-  }
+  if (!items.length) return "";
 
   const grouped = items.reduce((acc, item) => {
     acc[item.date] ||= [];
@@ -345,26 +306,21 @@ function renderCard(event) {
   return `
     <article class="card is-${state.status}" style="--countdown-color: ${state.color}">
       <span class="badge card-status">${escapeHtml(state.label)}</span>
-
       <div class="card-main">
         <p class="date">${escapeHtml(ranges)}</p>
         <h2>${escapeHtml(event.title)}</h2>
         <p class="location">${escapeHtml(event.location)}</p>
         <div class="card-tags">${tagsMarkup(event)}</div>
       </div>
-
       <p class="description">${escapeHtml(event.description)}</p>
-
       <footer class="card-footer">
         ${unconfirmed}
         ${eventActionsMarkup(event, mapId, detailsId)}
       </footer>
-
       <div class="details-panel markdown-content" id="${detailsId}" hidden>
         ${markdownToHtml(event.detailsMarkdown || "")}
         ${subEventsMarkup(event)}
       </div>
-
       <div class="map-frame" id="${mapId}" data-map-src="${escapedMapUrl}" data-map-title="${escapedMapTitle}" hidden></div>
     </article>
   `;
@@ -383,7 +339,6 @@ function render() {
   pastCount.textContent = `${searchedStates.filter((status) => status === "past").length} passati`;
   activeCount.textContent = `${searchedStates.filter((status) => status === "active").length} in corso`;
   futureCount.textContent = `${searchedStates.filter((status) => status === "future").length} futuri`;
-
   eventsContainer.innerHTML = filtered.map(renderCard).join("");
   emptyState.hidden = filtered.length !== 0;
 }
@@ -403,9 +358,62 @@ function toggleMobileMenu(event) {
   mobileMenuToggle.setAttribute("aria-label", isOpen ? "Chiudi filtri" : "Apri filtri");
 }
 
+function closeSiblingPanel(button, panelSelector) {
+  const card = button.closest(".card");
+  if (!card) return;
+
+  const siblingButton = card.querySelector(panelSelector === ".map-frame" ? ".map-toggle" : ".details-toggle");
+  const siblingPanel = card.querySelector(panelSelector);
+
+  if (!siblingButton || !siblingPanel) return;
+  siblingButton.setAttribute("aria-expanded", "false");
+  siblingButton.setAttribute("aria-label", panelSelector === ".map-frame" ? "Mostra mappa" : "Mostra dettagli");
+  siblingButton.dataset.tooltip = panelSelector === ".map-frame" ? "Mappa" : "Dettagli";
+  siblingPanel.hidden = true;
+}
+
+function ensureMapIframe(map) {
+  if (map.childElementCount > 0) return;
+  const iframe = document.createElement("iframe");
+  iframe.title = map.dataset.mapTitle;
+  iframe.loading = "lazy";
+  iframe.referrerPolicy = "no-referrer-when-downgrade";
+  iframe.src = map.dataset.mapSrc;
+  map.append(iframe);
+}
+
+function handlePanelToggle(event) {
+  const detailsButton = event.target.closest(".details-toggle");
+  const mapButton = event.target.closest(".map-toggle");
+  const button = detailsButton || mapButton;
+  if (!button) return;
+
+  const isDetails = Boolean(detailsButton);
+  const panel = document.getElementById(button.getAttribute("aria-controls"));
+  if (!panel) return;
+
+  const isOpen = button.getAttribute("aria-expanded") === "true";
+
+  if (isDetails) {
+    closeSiblingPanel(button, ".map-frame");
+    button.setAttribute("aria-expanded", String(!isOpen));
+    button.setAttribute("aria-label", isOpen ? "Mostra dettagli" : "Nascondi dettagli");
+    button.dataset.tooltip = isOpen ? "Dettagli" : "Chiudi dettagli";
+    panel.hidden = isOpen;
+    return;
+  }
+
+  closeSiblingPanel(button, ".details-panel");
+  button.setAttribute("aria-expanded", String(!isOpen));
+  button.setAttribute("aria-label", isOpen ? "Mostra mappa" : "Nascondi mappa");
+  button.dataset.tooltip = isOpen ? "Mappa" : "Chiudi mappa";
+  panel.hidden = isOpen;
+  if (!isOpen) ensureMapIframe(panel);
+}
+
 async function init() {
   try {
-    const response = await fetch("data/sagre.json?v=20260610-refined-serate");
+    const response = await fetch("data/sagre.json?v=20260610-direct-fixes");
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     allEvents = (await response.json()).sort((a, b) => firstStartDate(a) - firstStartDate(b));
     render();
@@ -418,7 +426,6 @@ async function init() {
 }
 
 searchInput.addEventListener("input", render);
-
 filterButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const status = button.dataset.status;
@@ -433,41 +440,11 @@ filterButtons.forEach((button) => {
   });
 });
 
-eventsContainer.addEventListener("click", (event) => {
-  const detailsButton = event.target.closest(".details-toggle");
-  if (detailsButton) {
-    const details = document.getElementById(detailsButton.getAttribute("aria-controls"));
-    const isOpen = detailsButton.getAttribute("aria-expanded") === "true";
-    detailsButton.setAttribute("aria-expanded", String(!isOpen));
-    detailsButton.setAttribute("aria-label", isOpen ? "Mostra dettagli" : "Nascondi dettagli");
-    detailsButton.dataset.tooltip = isOpen ? "Dettagli" : "Chiudi dettagli";
-    details.hidden = isOpen;
-    return;
-  }
-
-  const mapButton = event.target.closest(".map-toggle");
-  if (!mapButton) return;
-
-  const map = document.getElementById(mapButton.getAttribute("aria-controls"));
-  const isOpen = mapButton.getAttribute("aria-expanded") === "true";
-
-  mapButton.setAttribute("aria-expanded", String(!isOpen));
-  mapButton.setAttribute("aria-label", isOpen ? "Mostra mappa" : "Nascondi mappa");
-  mapButton.dataset.tooltip = isOpen ? "Mappa" : "Chiudi mappa";
-  map.hidden = isOpen;
-
-  if (!isOpen && map.childElementCount === 0) {
-    const iframe = document.createElement("iframe");
-    iframe.title = map.dataset.mapTitle;
-    iframe.loading = "lazy";
-    iframe.referrerPolicy = "no-referrer-when-downgrade";
-    iframe.src = map.dataset.mapSrc;
-    map.append(iframe);
-  }
-});
+eventsContainer.addEventListener("click", handlePanelToggle);
 
 if (mobileMenuToggle && topbar) {
   mobileMenuToggle.addEventListener("click", toggleMobileMenu);
+  mobileMenuToggle.addEventListener("pointerup", (event) => event.stopPropagation());
 
   document.addEventListener("click", (event) => {
     if (!topbar.classList.contains("is-menu-open")) return;
@@ -492,20 +469,37 @@ function initHeroParallax() {
   if (prefersReducedMotion) return;
 
   const hasFinePointer = window.matchMedia("(pointer: fine)").matches;
-  const state = { targetScroll: 0, currentScroll: 0, targetMouseX: 0, targetMouseY: 0, currentMouseX: 0, currentMouseY: 0 };
-  const config = { scrollEase: 0.07, mouseEase: 0.045, maxMouseX: 32, maxMouseY: 20 };
+  const state = {
+    targetScroll: 0,
+    currentScroll: 0,
+    targetMouseX: 0,
+    targetMouseY: 0,
+    currentMouseX: 0,
+    currentMouseY: 0,
+  };
+  const config = {
+    scrollEase: 0.09,
+    mouseEase: 0.055,
+    maxMouseX: hasFinePointer ? 46 : 0,
+    maxMouseY: hasFinePointer ? 30 : 0,
+  };
 
-  function clamp(value, min, max) { return Math.min(max, Math.max(min, value)); }
-  function lerp(current, target, ease) { return current + (target - current) * ease; }
+  function clamp(value, min, max) {
+    return Math.min(max, Math.max(min, value));
+  }
+
+  function lerp(current, target, ease) {
+    return current + (target - current) * ease;
+  }
 
   function updateTargets(event) {
     const rect = hero.getBoundingClientRect();
-    const windowHeight = window.innerHeight || 1;
-    state.targetScroll = clamp(-rect.top / Math.max(1, rect.height - windowHeight * 0.25), 0, 1);
+    const viewportHeight = window.innerHeight || 1;
+    state.targetScroll = clamp(-rect.top / Math.max(1, rect.height - viewportHeight * 0.18), 0, 1);
 
     if (hasFinePointer && event && typeof event.clientX === "number") {
       const viewportX = event.clientX / (window.innerWidth || 1) - 0.5;
-      const viewportY = event.clientY / (window.innerHeight || 1) - 0.5;
+      const viewportY = event.clientY / viewportHeight - 0.5;
       state.targetMouseX = viewportX * config.maxMouseX;
       state.targetMouseY = viewportY * config.maxMouseY;
     }
@@ -523,6 +517,7 @@ function initHeroParallax() {
 
   window.addEventListener("scroll", updateTargets, { passive: true });
   window.addEventListener("resize", updateTargets);
+  window.addEventListener("orientationchange", updateTargets);
   if (hasFinePointer) window.addEventListener("pointermove", updateTargets, { passive: true });
 
   updateTargets();
