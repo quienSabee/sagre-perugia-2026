@@ -26,6 +26,96 @@ const tagMeta = {
   sport: { label: "Sport", tone: "cyan" },
 };
 
+
+const recoveredEvents = [
+  {
+    id: "festa-dei-barbari-castel-rigone-2026-recovered",
+    title: "FESTA DEI BARBARI",
+    location: "Castel Rigone, Passignano sul Trasimeno",
+    description: "Rievocazione storica di epoca barbarica con cene, cortei, accampamenti, spettacoli e momenti di vita medievale nel borgo di Castel Rigone.",
+    sourceLabel: "Recuperato da controllo storico / UmbriaEventi",
+    sourceUrl: "https://www.umbriaeventi.com/festa-dei-barbari-castel-rigone-10447.htm",
+    menuUrl: "",
+    menuComplete: false,
+    ranges: [{ start: "2026-07-29", end: "2026-08-02", confirmed: false }],
+    originalDate: "Fine luglio / inizio agosto 2026 (date da confermare)",
+    confirmed: false,
+    tags: ["tradizione", "rievocazione", "famiglia"],
+    imageKey: "barbari",
+    detailsMarkdown: "## Dettagli\nRievocazione storica ambientata a Castel Rigone, ispirata all'arrivo di Totila.\n\n- **Tipologia:** Festa popolare / rievocazione storica\n- **Comune:** Passignano sul Trasimeno\n- **Luogo:** Castel Rigone\n- **Nota:** evento recuperato perché assente nel JSON corrente; le date 2026 sono da confermare.",
+    subEvents: [],
+  },
+  {
+    id: "sagra-cipolla-cannara-2026-recovered",
+    title: "SAGRA DELLA CIPOLLA DI CANNARA",
+    location: "Cannara",
+    description: "Storica sagra gastronomica dedicata alla cipolla di Cannara, con taverne, ricette tipiche e prodotti del territorio.",
+    sourceLabel: "Sagrefestival / fonti evento",
+    sourceUrl: "https://sagrefestival.com/sagre/sagra-della-cipolla-di-cannara/",
+    menuUrl: "",
+    menuComplete: false,
+    ranges: [{ start: "2026-09-01", end: "2026-09-13", confirmed: false }],
+    originalDate: "Settembre 2026 (date da confermare)",
+    confirmed: false,
+    tags: ["gastronomia", "tradizione", "famiglia"],
+    imageKey: "cipolla",
+    detailsMarkdown: "## Dettagli\nSagra gastronomica dedicata alla cipolla di Cannara.\n\n- **Tipologia:** Sagra\n- **Comune:** Cannara\n- **Nota:** evento recuperato perché assente nel JSON corrente; il periodo 2026 è indicato come settembre, con date puntuali da confermare.",
+    subEvents: [],
+  },
+  {
+    id: "sagra-cinghiale-arvoltolo-migliano-2026-recovered",
+    title: "SAGRA DEL CINGHIALE E DELL'ARVOLTOLO",
+    location: "Migliano, Marsciano",
+    description: "Sagra dello spezzatino di cinghiale, dell'arvoltolo e dei prodotti tipici umbri nel borgo di Migliano.",
+    sourceLabel: "UmbriaEventi / Regione Umbria",
+    sourceUrl: "https://www.umbriaeventi.com/sagra-spezzatino-cinghiale-arvoltolo-migliano-8380.htm",
+    menuUrl: "",
+    menuComplete: false,
+    ranges: [{ start: "2026-07-10", end: "2026-07-19", confirmed: true }],
+    originalDate: "2026-07-10 / 2026-07-19",
+    confirmed: true,
+    tags: ["gastronomia", "tradizione", "famiglia"],
+    imageKey: "cinghiale",
+    detailsMarkdown: "## Dettagli\nSagra dello spezzatino di cinghiale, dell'arvoltolo e dei prodotti tipici umbri.\n\n- **Tipologia:** Sagra\n- **Comune:** Marsciano\n- **Luogo:** Migliano\n- **Date:** 10/07/2026 - 19/07/2026",
+    subEvents: [],
+  },
+];
+
+function normalizeText(value = "") {
+  return String(value)
+    .toLocaleLowerCase("it-IT")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+}
+
+function eventIdentityText(event) {
+  return normalizeText([event.id, event.title, event.location].join(" "));
+}
+
+function isSameRecoveredEvent(event, recovered) {
+  const current = eventIdentityText(event);
+  const expected = eventIdentityText(recovered);
+  if (event.id === recovered.id) return true;
+
+  if (recovered.id.includes("barbari")) return current.includes("barbari") || current.includes("barbar");
+  if (recovered.id.includes("cipolla")) return current.includes("cipolla") && current.includes("cannara");
+  if (recovered.id.includes("cinghiale")) return current.includes("cinghiale") && (current.includes("migliano") || current.includes("marsciano") || current.includes("arvoltolo"));
+
+  return current === expected;
+}
+
+function mergeRecoveredEvents(events) {
+  const merged = [...events];
+  recoveredEvents.forEach((recovered) => {
+    if (!merged.some((event) => isSameRecoveredEvent(event, recovered))) {
+      merged.push(recovered);
+    }
+  });
+  return merged;
+}
+
 const eventImageMeta = {
   barbari: {
     label: "Immagine Festa dei Barbari",
@@ -476,9 +566,9 @@ function handlePanelToggle(event) {
 
 async function init() {
   try {
-    const response = await fetch("data/sagre.json?v=20260610-image-reveal");
+    const response = await fetch("data/sagre.json?v=20260610-recovered-events");
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    allEvents = (await response.json()).sort((a, b) => firstStartDate(a) - firstStartDate(b));
+    allEvents = mergeRecoveredEvents(await response.json()).sort((a, b) => firstStartDate(a) - firstStartDate(b));
     render();
   } catch (error) {
     eventsContainer.innerHTML = "";
