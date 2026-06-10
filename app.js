@@ -26,113 +26,48 @@ const tagMeta = {
   sport: { label: "Sport", tone: "cyan" },
 };
 
+const DEFAULT_REVEAL_IMAGE_WIDTHS = [480, 768, 1024, 1366, 1448];
 
-const recoveredEvents = [
-  {
-    id: "festa-dei-barbari-castel-rigone-2026-recovered",
-    title: "FESTA DEI BARBARI",
-    location: "Castel Rigone, Passignano sul Trasimeno",
-    description: "Rievocazione storica di epoca barbarica con cene, cortei, accampamenti, spettacoli e momenti di vita medievale nel borgo di Castel Rigone.",
-    sourceLabel: "Recuperato da controllo storico / UmbriaEventi",
-    sourceUrl: "https://www.umbriaeventi.com/festa-dei-barbari-castel-rigone-10447.htm",
-    menuUrl: "",
-    menuComplete: false,
-    ranges: [{ start: "2026-07-29", end: "2026-08-02", confirmed: false }],
-    originalDate: "Fine luglio / inizio agosto 2026 (date da confermare)",
-    confirmed: false,
-    tags: ["tradizione", "rievocazione", "famiglia"],
-    imageKey: "barbari",
-    detailsMarkdown: "## Dettagli\nRievocazione storica ambientata a Castel Rigone, ispirata all'arrivo di Totila.\n\n- **Tipologia:** Festa popolare / rievocazione storica\n- **Comune:** Passignano sul Trasimeno\n- **Luogo:** Castel Rigone\n- **Nota:** evento recuperato perché assente nel JSON corrente; le date 2026 sono da confermare.",
-    subEvents: [],
-  },
-  {
-    id: "sagra-cipolla-cannara-2026-recovered",
-    title: "SAGRA DELLA CIPOLLA DI CANNARA",
-    location: "Cannara",
-    description: "Storica sagra gastronomica dedicata alla cipolla di Cannara, con taverne, ricette tipiche e prodotti del territorio.",
-    sourceLabel: "Sagrefestival / fonti evento",
-    sourceUrl: "https://sagrefestival.com/sagre/sagra-della-cipolla-di-cannara/",
-    menuUrl: "",
-    menuComplete: false,
-    ranges: [{ start: "2026-09-01", end: "2026-09-13", confirmed: false }],
-    originalDate: "Settembre 2026 (date da confermare)",
-    confirmed: false,
-    tags: ["gastronomia", "tradizione", "famiglia"],
-    imageKey: "cipolla",
-    detailsMarkdown: "## Dettagli\nSagra gastronomica dedicata alla cipolla di Cannara.\n\n- **Tipologia:** Sagra\n- **Comune:** Cannara\n- **Nota:** evento recuperato perché assente nel JSON corrente; il periodo 2026 è indicato come settembre, con date puntuali da confermare.",
-    subEvents: [],
-  },
-  {
-    id: "sagra-cinghiale-arvoltolo-migliano-2026-recovered",
-    title: "SAGRA DEL CINGHIALE E DELL'ARVOLTOLO",
-    location: "Migliano, Marsciano",
-    description: "Sagra dello spezzatino di cinghiale, dell'arvoltolo e dei prodotti tipici umbri nel borgo di Migliano.",
-    sourceLabel: "UmbriaEventi / Regione Umbria",
-    sourceUrl: "https://www.umbriaeventi.com/sagra-spezzatino-cinghiale-arvoltolo-migliano-8380.htm",
-    menuUrl: "",
-    menuComplete: false,
-    ranges: [{ start: "2026-07-10", end: "2026-07-19", confirmed: true }],
-    originalDate: "2026-07-10 / 2026-07-19",
-    confirmed: true,
-    tags: ["gastronomia", "tradizione", "famiglia"],
-    imageKey: "cinghiale",
-    detailsMarkdown: "## Dettagli\nSagra dello spezzatino di cinghiale, dell'arvoltolo e dei prodotti tipici umbri.\n\n- **Tipologia:** Sagra\n- **Comune:** Marsciano\n- **Luogo:** Migliano\n- **Date:** 10/07/2026 - 19/07/2026",
-    subEvents: [],
-  },
-];
+function revealImageFromData(event) {
+  const raw = event.revealImage || event.image || null;
+  if (!raw) return null;
 
-function normalizeText(value = "") {
-  return String(value)
+  const config = typeof raw === "string" ? { key: raw } : raw;
+  if (!config || typeof config !== "object") return null;
+
+  const key = String(config.key || config.name || config.baseName || "")
+    .replace(/^assets\//, "")
+    .replace(/\.(png|jpe?g|webp)$/i, "")
     .toLocaleLowerCase("it-IT")
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .replace(/[^a-z0-9]+/g, " ")
     .trim();
+
+  if (!key) return null;
+
+  const widths = Array.isArray(config.widths) && config.widths.length
+    ? config.widths.map(Number).filter(Number.isFinite).sort((a, b) => a - b)
+    : DEFAULT_REVEAL_IMAGE_WIDTHS;
+
+  if (!widths.length) return null;
+
+  const basePath = String(config.basePath || `assets/${key}`).replace(/\.(png|jpe?g|webp)$/i, "");
+  const format = String(config.format || "webp").replace(/^\./, "");
+  const placeholder = String(config.placeholder || `${basePath}-placeholder.png`);
+  const fallbackWidth = Number(config.fallbackWidth) || (widths.includes(1024) ? 1024 : widths.at(-1));
+
+  return {
+    key,
+    alt: String(config.alt || ""),
+    label: String(config.label || config.alt || `Immagine ${event.title || key}`),
+    basePath,
+    format,
+    placeholder,
+    widths,
+    fallbackWidth,
+    intrinsicWidth: Number(config.width) || widths.at(-1),
+    intrinsicHeight: Number(config.height) || Math.round(widths.at(-1) * 0.75),
+  };
 }
 
-function eventIdentityText(event) {
-  return normalizeText([event.id, event.title, event.location].join(" "));
-}
-
-function isSameRecoveredEvent(event, recovered) {
-  const current = eventIdentityText(event);
-  const expected = eventIdentityText(recovered);
-  if (event.id === recovered.id) return true;
-
-  if (recovered.id.includes("barbari")) return current.includes("barbari") || current.includes("barbar");
-  if (recovered.id.includes("cipolla")) return current.includes("cipolla") && current.includes("cannara");
-  if (recovered.id.includes("cinghiale")) return current.includes("cinghiale") && (current.includes("migliano") || current.includes("marsciano") || current.includes("arvoltolo"));
-
-  return current === expected;
-}
-
-function mergeRecoveredEvents(events) {
-  const merged = [...events];
-  recoveredEvents.forEach((recovered) => {
-    if (!merged.some((event) => isSameRecoveredEvent(event, recovered))) {
-      merged.push(recovered);
-    }
-  });
-  return merged;
-}
-
-const eventImageMeta = {
-  barbari: {
-    label: "Immagine Festa dei Barbari",
-    match: ["barbari", "barbar"],
-    widths: [480, 768, 1024, 1366, 1448],
-  },
-  cipolla: {
-    label: "Immagine Sagra della Cipolla",
-    match: ["cipolla", "cipolle"],
-    widths: [480, 768, 1024, 1366, 1448],
-  },
-  cinghiale: {
-    label: "Immagine Sagra del Cinghiale",
-    match: ["cinghiale", "cinghiali"],
-    widths: [480, 768, 1024, 1366, 1448],
-  },
-};
 
 
 const dateFormatter = new Intl.DateTimeFormat("it-IT", {
@@ -352,34 +287,17 @@ function tagsMarkup(event) {
     .join("");
 }
 
-function findEventImageKey(event) {
-  const explicitKey = String(event.imageKey || event.revealImage || event.image || "")
-    .replace(/^assets\//, "")
-    .replace(/\.(png|jpe?g|webp)$/i, "")
-    .toLocaleLowerCase("it-IT");
-
-  if (eventImageMeta[explicitKey]) return explicitKey;
-
-  const haystack = [event.id, event.title, event.location, event.description, event.detailsMarkdown]
-    .join(" ")
-    .toLocaleLowerCase("it-IT");
-
-  return Object.entries(eventImageMeta).find(([, meta]) => meta.match.some((token) => haystack.includes(token)))?.[0] || null;
-}
-
 function eventRevealMarkup(event) {
-  const imageKey = findEventImageKey(event);
-  if (!imageKey) return "";
+  const image = revealImageFromData(event);
+  if (!image) return "";
 
-  const meta = eventImageMeta[imageKey];
-  const srcset = meta.widths.map((width) => `assets/${imageKey}-${width}.webp ${width}w`).join(", ");
-  const fallbackWidth = meta.widths.includes(1024) ? 1024 : meta.widths.at(-1);
+  const srcset = image.widths.map((width) => `${image.basePath}-${width}.${image.format} ${width}w`).join(", ");
 
   return `
-    <section class="festival-reveal" data-reveal-image="${escapeHtml(imageKey)}" aria-label="${escapeHtml(meta.label)}">
-      <picture class="festival-reveal-media" style="--placeholder: url('assets/${escapeHtml(imageKey)}-placeholder.png')">
-        <source type="image/webp" srcset="${escapeHtml(srcset)}" sizes="100vw" />
-        <img src="assets/${escapeHtml(imageKey)}-${fallbackWidth}.webp" alt="" width="1448" height="1086" loading="lazy" decoding="async" />
+    <section class="festival-reveal" data-reveal-image="${escapeHtml(image.key)}" aria-label="${escapeHtml(image.label)}">
+      <picture class="festival-reveal-media" style="--placeholder: url('${escapeHtml(image.placeholder)}')">
+        <source type="image/${escapeHtml(image.format)}" srcset="${escapeHtml(srcset)}" sizes="100vw" />
+        <img src="${escapeHtml(image.basePath)}-${escapeHtml(image.fallbackWidth)}.${escapeHtml(image.format)}" alt="${escapeHtml(image.alt)}" width="${escapeHtml(image.intrinsicWidth)}" height="${escapeHtml(image.intrinsicHeight)}" loading="lazy" decoding="async" />
       </picture>
     </section>
   `;
@@ -566,9 +484,9 @@ function handlePanelToggle(event) {
 
 async function init() {
   try {
-    const response = await fetch("data/sagre.json?v=20260610-recovered-events");
+    const response = await fetch("data/sagre.json?v=20260610-data-driven-reveal");
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    allEvents = mergeRecoveredEvents(await response.json()).sort((a, b) => firstStartDate(a) - firstStartDate(b));
+    allEvents = (await response.json()).sort((a, b) => firstStartDate(a) - firstStartDate(b));
     render();
   } catch (error) {
     eventsContainer.innerHTML = "";
