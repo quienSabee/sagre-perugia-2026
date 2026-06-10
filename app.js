@@ -460,6 +460,26 @@ if (mobileMenuToggle && topbar) {
   });
 }
 
+
+function initParallaxImages() {
+  document.querySelectorAll(".parallax-picture").forEach((picture) => {
+    const image = picture.querySelector("img");
+    if (!image) return;
+
+    function markLoaded() {
+      picture.classList.add("is-loaded");
+    }
+
+    if (image.complete && image.naturalWidth > 0) {
+      markLoaded();
+      return;
+    }
+
+    image.addEventListener("load", markLoaded, { once: true });
+    image.addEventListener("error", markLoaded, { once: true });
+  });
+}
+
 function initHeroParallax() {
   const hero = document.querySelector("#hero");
   const layers = document.querySelectorAll(".parallax-layer");
@@ -525,4 +545,5 @@ function initHeroParallax() {
 }
 
 init();
+initParallaxImages();
 initHeroParallax();
