@@ -2334,19 +2334,6 @@
       "tradizione",
       "famiglia"
     ],
-    "revealImage": {
-      "key": "piccione",
-      "alt": "Piccione in Festa",
-      "widths": [
-        480,
-        768,
-        1024,
-        1366,
-        1448
-      ],
-      "width": 1448,
-      "height": 1086
-    },
     "detailsMarkdown": "## Dettagli\nEvento storico nell’area verde comunale di Piccione, con orchestre da ballo e DJ set al **Cico’s Pub**.\n\n## Menù\nMenù completo in pagina: oca all’arrabbiata, arrosticini, tagliata, gnocchi al sugo d’oca, gnocchi al tartufo, tortellini alla boscaiola, penne alla norcina, polenta contadina, antipasti, torta al testo, dolci e contorni.",
     "subEvents": [
       {
@@ -2863,6 +2850,33 @@
     ],
     "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Festa popolare\n- **Comune:** Castiglione del Lago\n- **Luogo:** Pozzuolo - via della Chiesa (Area adiacente chiesa parrocchiale)\n- **Organizzatore:** ASSOCIAZIONE PARROCCHIA SS. PIETRO PAOLO E MARIA DELLE GRAZIE",
     "subEvents": []
+  },
+  {
+    "id": "festa-d-inizio-estate-resina-perugia-2026",
+    "title": "FESTA D’INIZIO ESTATE",
+    "location": "Resina, Perugia",
+    "description": "Festa popolare di inizio estate con cucina e intrattenimento.",
+    "sourceLabel": "Comune di Perugia - Feste popolari e Sagre 2026",
+    "sourceUrl": "https://www.comune.perugia.it/evento/feste-popolari-e-sagre-2026/",
+    "menuUrl": "",
+    "ranges": [
+      {
+        "start": "2026-06-26",
+        "end": "2026-07-05",
+        "confirmed": true
+      }
+    ],
+    "originalDate": "2026-06-26 / 2026-07-05",
+    "confirmed": true,
+    "tags": [
+      "tradizione",
+      "gastronomia",
+      "musica",
+      "famiglia"
+    ],
+    "detailsMarkdown": "## Dettagli\nFesta popolare di inizio estate con cucina e intrattenimento.\n\nFonte: Comune di Perugia - Feste popolari e Sagre 2026.",
+    "subEvents": [],
+    "menuComplete": false
   },
   {
     "id": "festival-dei-due-mondi-spoleto-2026",

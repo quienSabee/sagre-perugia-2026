@@ -65,6 +65,8 @@ function revealImageFromData(event) {
     fallbackWidth,
     intrinsicWidth: Number(config.width) || widths.at(-1),
     intrinsicHeight: Number(config.height) || Math.round(widths.at(-1) * 0.75),
+    revealStartVh: Number(config.revealStartVh),
+    revealEndVh: Number(config.revealEndVh),
   };
 }
 
@@ -293,8 +295,13 @@ function eventRevealMarkup(event) {
 
   const srcset = image.widths.map((width) => `${image.basePath}-${width}.${image.format} ${width}w`).join(", ");
 
+  const tuning = [
+    Number.isFinite(image.revealStartVh) ? `data-reveal-start-vh="${escapeHtml(image.revealStartVh)}"` : "",
+    Number.isFinite(image.revealEndVh) ? `data-reveal-end-vh="${escapeHtml(image.revealEndVh)}"` : "",
+  ].filter(Boolean).join(" ");
+
   return `
-    <section class="festival-reveal" data-reveal-image="${escapeHtml(image.key)}" aria-label="${escapeHtml(image.label)}">
+    <section class="festival-reveal" data-reveal-image="${escapeHtml(image.key)}" ${tuning} aria-label="${escapeHtml(image.label)}">
       <picture class="festival-reveal-media" style="--placeholder: url('${escapeHtml(image.placeholder)}')">
         <source type="image/${escapeHtml(image.format)}" srcset="${escapeHtml(srcset)}" sizes="100vw" />
         <img src="${escapeHtml(image.basePath)}-${escapeHtml(image.fallbackWidth)}.${escapeHtml(image.format)}" alt="${escapeHtml(image.alt)}" width="${escapeHtml(image.intrinsicWidth)}" height="${escapeHtml(image.intrinsicHeight)}" loading="lazy" decoding="async" />
@@ -484,7 +491,7 @@ function handlePanelToggle(event) {
 
 async function init() {
   try {
-    const response = await fetch("data/sagre.json?v=20260610-image-tools-reveal-motion");
+    const response = await fetch("data/sagre.json?v=20260610-alpha-scroll-fix");
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     allEvents = (await response.json()).sort((a, b) => firstStartDate(a) - firstStartDate(b));
     render();
@@ -571,16 +578,20 @@ function updateFestivalRevealTargets() {
     const rect = section.getBoundingClientRect();
     const viewportHeight = window.innerHeight || 1;
     const imageRatio = image.naturalWidth > 0 && image.naturalHeight > 0 ? image.naturalHeight / image.naturalWidth : 0.75;
-    const imageHeight = Math.max(rect.width * imageRatio, rect.height * 1.18);
+    const imageHeight = Math.max(rect.width * imageRatio, rect.height * 1.28);
     const maxTravel = Math.max(0, imageHeight - rect.height);
 
-    // Lascia visibile la parte alta e quella bassa più a lungo: l'immagine
-    // inizia a muoversi solo quando la sezione è entrata bene in viewport e
-    // rallenta in modo armonioso vicino ai limiti.
-    const rawProgress = clamp01((viewportHeight - rect.top) / (viewportHeight + rect.height));
-    const scrollStart = Number(section.dataset.revealStart) || 0.18;
-    const scrollEnd = Number(section.dataset.revealEnd) || 0.84;
-    const easedProgress = easeInOutSine((rawProgress - scrollStart) / Math.max(0.01, scrollEnd - scrollStart));
+    // La parte alta resta leggibile quando la sezione entra in viewport.
+    // Il movimento comincia solo quando il blocco è già dentro la pagina
+    // e finisce prima che sparisca, con easing lento ai limiti. I valori
+    // possono essere sovrascritti per singola sagra con data-reveal-start-vh
+    // e data-reveal-end-vh, espressi come frazione dell'altezza viewport.
+    const startVh = Number(section.dataset.revealStartVh) || 0.68;
+    const endVh = Number(section.dataset.revealEndVh) || -0.18;
+    const startLine = viewportHeight * startVh;
+    const endLine = viewportHeight * endVh;
+    const rawProgress = clamp01((startLine - rect.top) / Math.max(1, startLine - endLine + rect.height));
+    const easedProgress = easeInOutSine(rawProgress);
     const targetOffset = (0.5 - easedProgress) * maxTravel;
 
     const state = revealAnimationState.get(section) || { currentOffset: targetOffset };
@@ -597,7 +608,7 @@ function renderFestivalRevealMotion() {
     const state = revealAnimationState.get(section);
     if (!state) return;
 
-    state.currentOffset += (state.targetOffset - state.currentOffset) * 0.085;
+    state.currentOffset += (state.targetOffset - state.currentOffset) * 0.055;
     section.style.setProperty("--reveal-offset", `${state.currentOffset.toFixed(2)}px`);
   });
 

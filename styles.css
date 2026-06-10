@@ -527,7 +527,7 @@ h1 {
   position: relative;
   width: 100vw;
   max-width: 100vw;
-  height: clamp(260px, 38vw, 500px);
+  height: clamp(300px, 42vw, 560px);
   margin: 6px calc(50% - 50vw) -22px;
   --reveal-offset: 0px;
   overflow: hidden;

@@ -12,6 +12,10 @@ The script reads PNG files, creates:
   ...
   assets/<name>-placeholder.png
 
+Transparency is preserved automatically: PNG files with an alpha channel
+(or palette transparency) are converted to RGBA and saved as WebP with alpha,
+so layered parallax assets do not get flattened on a solid background.
+
 It intentionally ignores already generated placeholders and derived files.
 """
 from __future__ import annotations
@@ -77,6 +81,33 @@ def should_write(output: Path, source: Path, force: bool) -> bool:
     return source.stat().st_mtime > output.stat().st_mtime
 
 
+def image_has_transparency(image: Image.Image) -> bool:
+    """Return True when the source has real transparent/semi-transparent pixels."""
+    if image.mode in {"RGBA", "LA"}:
+        alpha = image.getchannel("A")
+        return alpha.getextrema()[0] < 255
+    if image.mode == "P" and "transparency" in image.info:
+        return True
+    return "transparency" in image.info
+
+
+def normalize_source(image: Image.Image) -> tuple[Image.Image, bool]:
+    has_alpha = image_has_transparency(image)
+    if has_alpha:
+        return image.convert("RGBA"), True
+    return image.convert("RGB"), False
+
+
+def save_webp(image: Image.Image, output: Path, quality: int, has_alpha: bool) -> None:
+    output.parent.mkdir(parents=True, exist_ok=True)
+    if has_alpha:
+        # Keep RGBA all the way to WebP: this preserves the alpha mask for
+        # layered artwork without flattening it against black/white.
+        image.save(output, format="WEBP", quality=max(quality, 90), method=4)
+    else:
+        image.save(output, format="WEBP", quality=quality, method=6)
+
+
 def save_placeholder(image: Image.Image, output: Path, source: Path, force: bool, size: int) -> None:
     if not should_write(output, source, force):
         return
@@ -88,7 +119,7 @@ def save_placeholder(image: Image.Image, output: Path, source: Path, force: bool
 def convert_one(path: Path, widths: tuple[int, ...], quality: int, placeholder_size: int, force: bool) -> dict[str, object]:
     with Image.open(path) as img:
         img = ImageOps.exif_transpose(img)
-        source = img.convert("RGBA") if img.mode in {"P", "LA"} or "transparency" in img.info else img.convert("RGB")
+        source, has_alpha = normalize_source(img)
         original_width, original_height = source.size
         generated_widths = output_widths(original_width, widths)
 
@@ -102,8 +133,7 @@ def convert_one(path: Path, widths: tuple[int, ...], quality: int, placeholder_s
             if not should_write(output, path, force):
                 continue
             resized = source.resize((width, height), Image.Resampling.LANCZOS)
-            output.parent.mkdir(parents=True, exist_ok=True)
-            resized.save(output, format="WEBP", quality=quality, method=6)
+            save_webp(resized, output, quality, has_alpha)
 
     return {
         "key": path.stem,
@@ -111,6 +141,7 @@ def convert_one(path: Path, widths: tuple[int, ...], quality: int, placeholder_s
         "height": original_height,
         "widths": generated_widths,
         "placeholder": placeholder_path.as_posix(),
+        "transparent": has_alpha,
     }
 
 
@@ -147,7 +178,8 @@ def main() -> int:
             continue
         result = convert_one(source, args.widths, args.quality, args.placeholder_size, args.force)
         widths = ", ".join(str(width) for width in result["widths"])
-        print(f"{source}: {result['width']}x{result['height']} -> WebP [{widths}] + placeholder")
+        alpha_note = " trasparenza preservata" if result.get("transparent") else ""
+        print(f"{source}: {result['width']}x{result['height']} -> WebP [{widths}] + placeholder{alpha_note}")
         print(
             "  revealImage: "
             f"{{ \"key\": \"{result['key']}\", \"widths\": [{widths}], "
