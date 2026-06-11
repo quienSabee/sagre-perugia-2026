@@ -990,6 +990,9 @@
         "confirmed": true
       }
     ],
+    "revealImage": {
+      "key": "chroma-festival"
+    },
     "originalDate": "11/14 giugno",
     "confirmed": true,
     "tags": [
@@ -1863,93 +1866,139 @@
     "subEvents": [
       {
         "date": "2026-06-19",
-        "title": "Orchestra Manuel Malanotte",
-        "note": "serata danzante"
-      },
-      {
-        "date": "2026-06-19",
-        "time": "21:00",
-        "title": "Orchestra Manuel Malanotte",
-        "note": "ore 22:00 Cico's Pub DJ Set"
+        "events": [
+          {
+            "time": "21:00",
+            "title": "Orchestra Manuel Malanotte",
+            "note": "serata danzante"
+          },
+          {
+            "time": "22:00",
+            "title": "Cico's Pub DJ Set"
+          }
+        ]
       },
       {
         "date": "2026-06-20",
-        "title": "Orchestra Matteo Tassi",
-        "note": "serata danzante"
-      },
-      {
-        "date": "2026-06-20",
-        "time": "21:00",
-        "title": "Orchestra Matteo Tassi",
-        "note": "ore 22:00 Cico's Pub DJ Set"
+        "events": [
+          {
+            "time": "21:00",
+            "title": "Orchestra Matteo Tassi",
+            "note": "serata danzante"
+          },
+          {
+            "time": "22:00",
+            "title": "Cico's Pub DJ Set"
+          }
+        ]
       },
       {
         "date": "2026-06-21",
-        "title": "Orchestra Andrea Bianchini",
-        "note": "serata danzante"
-      },
-      {
-        "date": "2026-06-21",
-        "time": "21:00",
-        "title": "Orchestra Andrea Bianchini",
-        "note": "ore 22:00 Cico's Pub DJ Set"
+        "events": [
+          {
+            "time": "21:00",
+            "title": "Orchestra Andrea Bianchini",
+            "note": "serata danzante"
+          },
+          {
+            "time": "22:00",
+            "title": "Cico's Pub DJ Set"
+          }
+        ]
       },
       {
         "date": "2026-06-22",
-        "title": "Orchestra Yuri Morolli",
-        "note": "serata danzante"
-      },
-      {
-        "date": "2026-06-22",
-        "time": "21:00",
-        "title": "Orchestra Yuri Morolli",
-        "note": "ore 22:00 Cico's Pub DJ Set"
+        "events": [
+          {
+            "time": "21:00",
+            "title": "Orchestra Yuri Morolli",
+            "note": "serata danzante"
+          },
+          {
+            "time": "22:00",
+            "title": "Cico's Pub DJ Set"
+          }
+        ]
       },
       {
         "date": "2026-06-23",
-        "title": "Orchestra Riccardi",
-        "note": "serata danzante"
-      },
-      {
-        "date": "2026-06-23",
-        "time": "21:00",
-        "title": "Orchestra Riccardi",
-        "note": "ore 22:00 Cico's Pub DJ Set"
+        "events": [
+          {
+            "time": "21:00",
+            "title": "Orchestra Riccardi",
+            "note": "serata danzante"
+          },
+          {
+            "time": "22:00",
+            "title": "Cico's Pub DJ Set"
+          }
+        ]
       },
       {
         "date": "2026-06-24",
-        "title": "Orchestra Gianmarco Bagutti",
-        "note": "serata danzante"
-      },
-      {
-        "date": "2026-06-24",
-        "time": "21:00",
-        "title": "Orchestra Gianmarco Bagutti",
-        "note": "ore 22:00 Cico's Pub DJ Set"
+        "events": [
+          {
+            "time": "21:00",
+            "title": "Orchestra Gianmarco Bagutti",
+            "note": "serata danzante"
+          },
+          {
+            "time": "22:00",
+            "title": "Cico's Pub DJ Set"
+          }
+        ]
       },
       {
         "date": "2026-06-25",
-        "time": "21:00",
-        "title": "Orchestra Castellina Pasi",
-        "note": "ore 22:00 Cico's Pub DJ Set"
+        "events": [
+          {
+            "time": "21:00",
+            "title": "Orchestra Castellina Pasi"
+          },
+          {
+            "time": "22:00",
+            "title": "Cico's Pub DJ Set"
+          }
+        ]
       },
       {
         "date": "2026-06-26",
-        "time": "21:00",
-        "title": "Orchestra Elena Cammarone",
-        "note": "ore 22:00 Cico's Pub DJ Set"
+        "events": [
+          {
+            "time": "21:00",
+            "title": "Orchestra Elena Cammarone"
+          },
+          {
+            "time": "22:00",
+            "title": "Cico's Pub DJ Set"
+          }
+        ]
       },
       {
         "date": "2026-06-27",
-        "time": "21:00",
-        "title": "Orchestra Rossella Ferrari",
-        "note": "ore 22:00 Cico's Pub DJ Set"
+        "events": [
+          {
+            "time": "21:00",
+            "title": "Orchestra Rossella Ferrari"
+          },
+          {
+            "time": "22:00",
+            "title": "Cico's Pub DJ Set"
+          }
+        ]
       },
       {
         "date": "2026-06-28",
-        "time": "21:00",
-        "title": "Orchestra Simona Fabrizi",
-        "note": "ore 22:00 Cico's Pub DJ Set"
+        "events": [
+          {
+            "time": "21:00",
+            "title": "Orchestra Simona Fabrizi"
+          },
+          {
+            "time": "22:00",
+            "title": "Cico's Pub DJ Set"
+          }
+        ]
       }
     ],
     "menuComplete": true
@@ -1962,6 +2011,9 @@
     "sourceLabel": "Comune di Perugia - Feste popolari e Sagre 2026",
     "sourceUrl": "https://www.umbriaeventi.com/sagra-degli-gnocchi-casenuove-ponte-della-pietra-8013.htm",
     "menuUrl": "",
+    "revealImage": {
+      "key": "gnocchi"
+    },
     "ranges": [
       {
         "start": "2026-06-19",
@@ -2096,6 +2148,9 @@
         "confirmed": true
       }
     ],
+    "revealImage": {
+      "key": "umbria-che-spacca"
+    },
     "originalDate": "24/28 giugno",
     "confirmed": true,
     "tags": [
@@ -2634,108 +2689,145 @@
     "subEvents": [
       {
         "date": "2026-07-03",
-        "title": "Apertura 38ª edizione",
-        "note": "apertura sagra"
-      },
-      {
-        "date": "2026-07-03",
-        "title": "Orchestra Ilaria Cenciarini",
-        "note": "serata danzante"
-      },
-      {
-        "date": "2026-07-03",
-        "time": "21:30",
-        "title": "Orchestra Ilaria Cenciarini",
-        "note": "apertura stand ore 19:30"
-      },
-      {
-        "date": "2026-07-04",
-        "title": "Orchestra Joselito",
-        "note": "serata danzante"
+        "events": [
+          {
+            "title": "Apertura 38ª edizione",
+            "note": "apertura sagra"
+          },
+          {
+            "time": "19:30",
+            "title": "Apertura Stand Gastronomici"
+          },
+          {
+            "time": "21:30",
+            "title": "Orchestra Ilaria Cenciarini",
+            "note": "serata danzante"
+          }
+        ]
       },
       {
         "date": "2026-07-04",
-        "time": "21:30",
-        "title": "Orchestra Joselito",
-        "note": "apertura stand ore 19:30"
+        "events": [
+          {
+            "time": "19:30",
+            "title": "Apertura Stand Gastronomici"
+          },
+          {
+            "time": "21:30",
+            "title": "Orchestra Joselito",
+            "note": "serata danzante"
+          }
+        ]
       },
       {
         "date": "2026-07-05",
-        "title": "Marco e Claudia",
-        "note": "serata danzante"
-      },
-      {
-        "date": "2026-07-05",
-        "time": "21:30",
-        "title": "Orchestra Marco e Claudia",
-        "note": "apertura stand ore 19:30"
+        "events": [
+          {
+            "time": "19:30",
+            "title": "Apertura Stand Gastronomici"
+          },
+          {
+            "time": "21:30",
+            "title": "Orchestra Marco e Claudia",
+            "note": "serata danzante"
+          }
+        ]
       },
       {
         "date": "2026-07-06",
-        "title": "Orchestra Riccardi",
-        "note": "serata danzante"
-      },
-      {
-        "date": "2026-07-06",
-        "time": "21:30",
-        "title": "Orchestra Riccardi",
-        "note": "apertura stand ore 19:30"
+        "events": [
+          {
+            "time": "19:30",
+            "title": "Apertura Stand Gastronomici"
+          },
+          {
+            "time": "21:30",
+            "title": "Orchestra Riccardi",
+            "note": "serata danzante"
+          }
+        ]
       },
       {
         "date": "2026-07-07",
-        "title": "Marco Cimarelli Band",
-        "note": "serata danzante"
-      },
-      {
-        "date": "2026-07-07",
-        "time": "21:30",
-        "title": "Marco Cimarelli Band",
-        "note": "apertura stand ore 19:30"
+        "events": [
+          {
+            "time": "19:30",
+            "title": "Apertura Stand Gastronomici"
+          },
+          {
+            "time": "21:30",
+            "title": "Marco Cimarelli Band",
+            "note": "serata danzante"
+          }
+        ]
       },
       {
         "date": "2026-07-08",
-        "title": "Maicol Diaz",
-        "note": "serata danzante"
-      },
-      {
-        "date": "2026-07-08",
-        "time": "21:30",
-        "title": "Orchestra Spettacolo Maicol Diaz",
-        "note": "apertura stand ore 19:30"
+        "events": [
+          {
+            "time": "19:30",
+            "title": "Apertura Stand Gastronomici"
+          },
+          {
+            "time": "21:30",
+            "title": "Orchestra Spettacolo Maicol Diaz",
+            "note": "serata danzante"
+          }
+        ]
       },
       {
         "date": "2026-07-09",
-        "title": "Orchestra Silvia Cecconi",
-        "note": "serata danzante"
-      },
-      {
-        "date": "2026-07-09",
-        "time": "21:30",
-        "title": "Orchestra Silvia Cecconi",
-        "note": "apertura stand ore 19:30"
+        "events": [
+          {
+            "time": "19:30",
+            "title": "Apertura Stand Gastronomici"
+          },
+          {
+            "time": "21:30",
+            "title": "Orchestra Silvia Cecconi",
+            "note": "serata danzante"
+          }
+        ]
       },
       {
         "date": "2026-07-10",
-        "title": "Orchestra Federico Olivotti",
-        "note": "serata danzante"
-      },
-      {
-        "date": "2026-07-10",
-        "time": "21:30",
-        "title": "Orchestra Federico Olivotti",
-        "note": "apertura stand ore 19:30"
+        "events": [
+          {
+            "time": "19:30",
+            "title": "Apertura Stand Gastronomici"
+          },
+          {
+            "time": "21:30",
+            "title": "Orchestra Federico Olivotti",
+            "note": "serata danzante"
+          }
+        ]
       },
       {
         "date": "2026-07-11",
-        "time": "21:30",
-        "title": "Orchestra Samuele Loretucci",
-        "note": "apertura stand ore 19:30"
+        "events": [
+          {
+            "time": "19:30",
+            "title": "Apertura Stand Gastronomici"
+          },
+          {
+            "time": "21:30",
+            "title": "Orchestra Samuele Loretucci"
+          }
+        ]
       },
       {
         "date": "2026-07-12",
-        "time": "21:30",
-        "title": "Laura Piunti Band",
-        "note": "apertura stand ore 19:30"
+        "events": [
+          {
+            "time": "19:30",
+            "title": "Apertura Stand Gastronomici"
+          },
+          {
+            "time": "21:30",
+            "title": "Laura Piunti Band"
+          }
+        ]
       }
     ],
     "menuComplete": true
@@ -2774,6 +2866,9 @@
     "sourceLabel": "Sito ufficiale / fonte evento",
     "sourceUrl": "https://www.umbriajazz.it/",
     "menuUrl": "",
+    "revealImage": {
+      "key": "umbria-jazz"
+    },
     "ranges": [
       {
         "start": "2026-07-03",
@@ -3122,6 +3217,37 @@
     ],
     "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Festa popolare\n- **Comune:** Bevagna\n- **Luogo:** Impianti Sportivi, via A.Palmieri\n- **Organizzatore:** CENTRO SOCIALE DI CAPRO",
     "subEvents": []
+  },
+  {
+    "id": "festa-solomeo-rinascimentale-2026",
+    "title": "FESTA SOLOMEO RINASCIMENTALE",
+    "location": "Borgo di Solomeo, Corciano",
+    "description": "Rievocazione rinascimentale nel borgo di Solomeo con menestrelli, cantori, giullari, saltimbanchi, mangiatori di fuoco, falconieri, musica e cucina tradizionale.",
+    "sourceLabel": "Solomeo - Festa Solomeo Rinascimentale",
+    "sourceUrl": "https://solomeo.it/it/arte-e-cultura-nel-borgo/festa-solomeo-rinascimentale",
+    "menuUrl": "",
+    "ranges": [
+      {
+        "start": "2026-07-17",
+        "end": "2026-07-26",
+        "confirmed": false
+      }
+    ],
+    "revealImage": {
+      "key": "solomeo-rinascimentale"
+    },
+    "originalDate": "2026-07-17 / 2026-07-26 (date da confermare)",
+    "confirmed": false,
+    "tags": [
+      "rievocazione",
+      "tradizione",
+      "gastronomia",
+      "musica",
+      "famiglia"
+    ],
+    "detailsMarkdown": "## Dettagli\nLa festa rinascimentale anima il borgo di Solomeo con menestrelli, cantori, giullari, saltimbanchi, mangiatori di fuoco, falconieri, spettacoli, musiche, mestieri antichi e cucina tradizionale.\n\n### Nota date\nLa pagina ufficiale descrive l'evento e documenta le edizioni precedenti, ma al momento non pubblica ancora il calendario giornaliero 2026. Ho inserito l'intervallo 17/26 luglio 2026 come data presunta, coerente con il periodo storico della manifestazione, marcandolo come da confermare.",
+    "subEvents": [],
+    "menuComplete": false
   },
   {
     "id": "festa-popolare-di-casa-del-diavolo-casa-del-diavolo-perugia-2026",

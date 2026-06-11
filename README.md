@@ -1,4 +1,26 @@
 
+## Formato subEvents
+
+Per piu appuntamenti nello stesso giorno, raggruppare la data e inserire gli eventi nel campo `events`:
+
+```json
+{
+  "date": "2026-06-19",
+  "events": [
+    {
+      "time": "21:00",
+      "title": "Orchestra Manuel Malanotte"
+    },
+    {
+      "time": "22:00",
+      "title": "Cico's Pub DJ Set"
+    }
+  ]
+}
+```
+
+Il formato storico piatto (`date`, `time`, `title`, `note`) resta supportato.
+
 ## Ottimizzazione immagini
 
 Per generare automaticamente le varianti responsive WebP, i placeholder low-res blur e il manifest dagli asset PNG originali:

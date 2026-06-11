@@ -152,8 +152,23 @@ function readableTag(tag) {
   return tagMeta[tag]?.label || tag.replaceAll("-", " ");
 }
 
+function normalizeSubEvents(event) {
+  return (event.subEvents || []).flatMap((item) => {
+    if (!item?.date) return [];
+    if (!Array.isArray(item.events)) return [item];
+
+    return item.events.filter(Boolean).map((child) => ({
+      ...child,
+      date: child.date || item.date,
+      time: child.time ?? item.time ?? "",
+      title: child.title || item.title || "",
+      note: child.note ?? item.note ?? "",
+    }));
+  });
+}
+
 function searchableText(event) {
-  const subEvents = (event.subEvents || [])
+  const subEvents = normalizeSubEvents(event)
     .map((item) => `${item.date || ""} ${item.time || ""} ${item.title || ""} ${item.note || ""}`)
     .join(" ");
 
@@ -332,7 +347,7 @@ function getDateState(dateValue, today = localDate()) {
 }
 
 function subEventsMarkup(event) {
-  const items = (event.subEvents || [])
+  const items = normalizeSubEvents(event)
     .filter((item) => item.date && item.title)
     .sort((a, b) => `${a.date} ${a.time || ""}`.localeCompare(`${b.date} ${b.time || ""}`));
 
@@ -500,7 +515,7 @@ function handlePanelToggle(event) {
 
 async function loadImageAssetManifest() {
   try {
-    const response = await fetch("data/image-assets.json?v=20260611-image-assets");
+    const response = await fetch("data/image-assets.json?v=20260611-event-images");
     if (!response.ok) return {};
     const payload = await response.json();
     const assets = payload && typeof payload === "object" && payload.assets && typeof payload.assets === "object"
@@ -521,7 +536,7 @@ async function loadImageAssetManifest() {
 async function init() {
   try {
     const [response, assets] = await Promise.all([
-      fetch("data/sagre.json?v=20260611-image-assets"),
+      fetch("data/sagre.json?v=20260611-event-images"),
       loadImageAssetManifest(),
     ]);
     if (!response.ok) throw new Error(`HTTP ${response.status}`);

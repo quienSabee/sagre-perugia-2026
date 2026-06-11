@@ -35,6 +35,23 @@
       "height": 1086,
       "transparent": false
     },
+    "chroma-festival": {
+      "key": "chroma-festival",
+      "source": "assets/original/chroma-festival.png",
+      "basePath": "assets/optimized/chroma-festival",
+      "format": "webp",
+      "placeholder": "assets/optimized/chroma-festival-placeholder.png",
+      "widths": [
+        480,
+        768,
+        1024,
+        1366,
+        1448
+      ],
+      "width": 1448,
+      "height": 1086,
+      "transparent": false
+    },
     "cinghiale": {
       "key": "cinghiale",
       "source": "assets/original/cinghiale.png",
@@ -80,10 +97,10 @@
         768,
         1024,
         1366,
-        1402
+        1401
       ],
-      "width": 1402,
-      "height": 1122,
+      "width": 1401,
+      "height": 1123,
       "transparent": false
     },
     "diavoli-festa": {
@@ -118,6 +135,23 @@
       ],
       "width": 1448,
       "height": 1086,
+      "transparent": false
+    },
+    "gnocchi": {
+      "key": "gnocchi",
+      "source": "assets/original/gnocchi.png",
+      "basePath": "assets/optimized/gnocchi",
+      "format": "webp",
+      "placeholder": "assets/optimized/gnocchi-placeholder.png",
+      "widths": [
+        480,
+        768,
+        1024,
+        1366,
+        1672
+      ],
+      "width": 1672,
+      "height": 941,
       "transparent": false
     },
     "madonna-grazie": {
@@ -254,6 +288,57 @@
       ],
       "width": 1448,
       "height": 1086,
+      "transparent": false
+    },
+    "solomeo-rinascimentale": {
+      "key": "solomeo-rinascimentale",
+      "source": "assets/original/solomeo-rinascimentale.png",
+      "basePath": "assets/optimized/solomeo-rinascimentale",
+      "format": "webp",
+      "placeholder": "assets/optimized/solomeo-rinascimentale-placeholder.png",
+      "widths": [
+        480,
+        768,
+        1024,
+        1366,
+        1448
+      ],
+      "width": 1448,
+      "height": 1086,
+      "transparent": false
+    },
+    "umbria-che-spacca": {
+      "key": "umbria-che-spacca",
+      "source": "assets/original/umbria-che-spacca.png",
+      "basePath": "assets/optimized/umbria-che-spacca",
+      "format": "webp",
+      "placeholder": "assets/optimized/umbria-che-spacca-placeholder.png",
+      "widths": [
+        480,
+        768,
+        1024,
+        1366,
+        1448
+      ],
+      "width": 1448,
+      "height": 1086,
+      "transparent": false
+    },
+    "umbria-jazz": {
+      "key": "umbria-jazz",
+      "source": "assets/original/umbria-jazz.png",
+      "basePath": "assets/optimized/umbria-jazz",
+      "format": "webp",
+      "placeholder": "assets/optimized/umbria-jazz-placeholder.png",
+      "widths": [
+        480,
+        768,
+        1024,
+        1366,
+        1672
+      ],
+      "width": 1672,
+      "height": 941,
       "transparent": false
     }
   }
