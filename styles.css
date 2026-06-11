@@ -72,8 +72,8 @@ a { color: inherit; }
 }
 
 .topbar {
-  position: fixed;
-  inset: 0 0 auto;
+  position: sticky;
+  top: 0;
   z-index: 1000;
   display: grid;
   grid-template-columns: minmax(0, auto) minmax(0, 1fr);
@@ -216,9 +216,9 @@ a { color: inherit; }
 .hero {
   position: relative;
   display: grid;
-  min-height: 104vh;
-  min-height: 104svh;
-  padding: calc(var(--topbar-height) + 48px) clamp(18px, 5vw, 72px) 56px;
+  min-height: calc(104vh - var(--topbar-height));
+  min-height: calc(104svh - var(--topbar-height));
+  padding: 48px clamp(18px, 5vw, 72px) 56px;
   align-items: end;
   overflow: hidden;
   color: #fffaf0;
@@ -239,7 +239,7 @@ a { color: inherit; }
   position: absolute;
   left: 50%;
   bottom: var(--layer-bottom, 0px);
-  width: 106vw;
+  width: max(112vw, 184svh);
   max-width: none;
   height: 100%;
   object-fit: cover;
@@ -277,13 +277,6 @@ a { color: inherit; }
   transition: opacity 260ms ease;
 }
 
-.parallax-stalls::before,
-.parallax-grifo::before,
-.parallax-table::before {
-  background-size: contain;
-  background-position: center bottom;
-}
-
 .parallax-picture img {
   position: absolute;
   inset: 0;
@@ -293,16 +286,9 @@ a { color: inherit; }
   height: 100%;
   max-width: none;
   object-fit: cover;
-  object-position: center center;
+  object-position: center top;
   opacity: 0;
   transition: opacity 260ms ease;
-}
-
-.parallax-stalls img,
-.parallax-grifo img,
-.parallax-table img {
-  object-fit: contain;
-  object-position: center bottom;
 }
 
 .parallax-bg img {
@@ -664,37 +650,26 @@ h1 {
   .status-filters { justify-content: center; }
   .filter-button { min-height: 36px; padding: 7px 9px; font-size: 0.78rem; }
   .hero {
-    min-height: min(760px, 94vh);
-    min-height: min(760px, 94svh);
-    padding: calc(var(--topbar-height) + 28px) 18px 36px;
+    --mobile-hero-image-width: max(132vw, 498px);
+    --mobile-hero-image-height: max(74.25vw, 280px);
+    min-height: 0;
+    height: var(--mobile-hero-image-height);
+    padding: 18px 18px 28px;
     align-items: end;
   }
   .parallax-layer {
     left: 50%;
-    width: 118vw;
-    height: 100%;
+    width: var(--mobile-hero-image-width);
+    height: var(--mobile-hero-image-height);
     transform: translate3d(
       calc(-50% + (var(--mouse-x, 0px) * var(--mouse-depth, 0))),
       calc(var(--hero-scroll, 0) * var(--scroll-depth, 0px)),
       0
     ) scale(var(--layer-scale, 1.04));
   }
-  .parallax-picture::before {
-    background-size: contain;
-    background-position: center bottom;
-  }
-  .parallax-picture img {
-    object-fit: contain;
-    object-position: center bottom;
-  }
-  .parallax-stalls,
-  .parallax-grifo,
-  .parallax-table {
-    --layer-bottom: clamp(250px, 42svh, 360px);
-  }
   .parallax-bg img {
     object-fit: cover;
-    object-position: center center;
+    object-position: center top;
   }
   .parallax-bg { --scroll-depth: -2px; --layer-scale: 1; }
   .parallax-stalls { --scroll-depth: 18px; --layer-scale: 1; }
