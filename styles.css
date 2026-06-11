@@ -30,7 +30,7 @@ body {
   min-width: 320px;
   margin: 0;
   color: var(--ink);
-  background-image: linear-gradient(rgba(246, 243, 238, 0.84), rgba(246, 243, 238, 0.84)), url("assets/background-sagra-perugia-1024.webp");
+  background-image: linear-gradient(rgba(246, 243, 238, 0.84), rgba(246, 243, 238, 0.84)), url("assets/optimized/background-sagra-perugia-1024.webp");
   background-position: center top;
   background-size: cover;
   background-attachment: fixed;
@@ -41,19 +41,19 @@ body {
 }
 
 @media (max-width: 560px) {
-  body { background-image: linear-gradient(rgba(246, 243, 238, 0.84), rgba(246, 243, 238, 0.84)), url("assets/background-sagra-perugia-480.webp"); }
+  body { background-image: linear-gradient(rgba(246, 243, 238, 0.84), rgba(246, 243, 238, 0.84)), url("assets/optimized/background-sagra-perugia-480.webp"); }
 }
 
 @media (min-width: 561px) and (max-width: 920px) {
-  body { background-image: linear-gradient(rgba(246, 243, 238, 0.84), rgba(246, 243, 238, 0.84)), url("assets/background-sagra-perugia-768.webp"); }
+  body { background-image: linear-gradient(rgba(246, 243, 238, 0.84), rgba(246, 243, 238, 0.84)), url("assets/optimized/background-sagra-perugia-768.webp"); }
 }
 
 @media (min-width: 1200px) and (max-width: 1500px) {
-  body { background-image: linear-gradient(rgba(246, 243, 238, 0.84), rgba(246, 243, 238, 0.84)), url("assets/background-sagra-perugia-1366.webp"); }
+  body { background-image: linear-gradient(rgba(246, 243, 238, 0.84), rgba(246, 243, 238, 0.84)), url("assets/optimized/background-sagra-perugia-1366.webp"); }
 }
 
 @media (min-width: 1501px) {
-  body { background-image: linear-gradient(rgba(246, 243, 238, 0.84), rgba(246, 243, 238, 0.84)), url("assets/background-sagra-perugia-1672.webp"); }
+  body { background-image: linear-gradient(rgba(246, 243, 238, 0.84), rgba(246, 243, 238, 0.84)), url("assets/optimized/background-sagra-perugia-1672.webp"); }
 }
 
 main { max-width: 100%; overflow-x: clip; }

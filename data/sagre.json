@@ -13,9 +13,19 @@
         "start": "2026-01-01",
         "end": "2026-01-01",
         "confirmed": true
+      },
+      {
+        "start": "2026-01-04",
+        "end": "2026-01-04",
+        "confirmed": true
+      },
+      {
+        "start": "2026-01-06",
+        "end": "2026-01-06",
+        "confirmed": true
       }
     ],
-    "originalDate": "2026-01-01 / 2026-01-01",
+    "originalDate": "2026-01-01; 2026-01-04; 2026-01-06",
     "confirmed": true,
     "tags": [
       "tradizione"
@@ -48,30 +58,6 @@
     "subEvents": []
   },
   {
-    "id": "presepe-vivente-marcellano-3",
-    "title": "PRESEPE VIVENTE MARCELLANO",
-    "location": "Marcellano, Gualdo Cattaneo",
-    "description": "Festa popolare nel calendario regionale umbro 2026, organizzata a Marcellano, Gualdo Cattaneo.",
-    "sourceLabel": "Regione Umbria - Calendario regionale Sagre e feste popolari 2026",
-    "sourceUrl": "https://www.regione.umbria.it/documents/18/26285955/Anno%2B2026%2B-%2BCalendario%2Bregionale%2Bdelle%2Bsagre%2Be%2Bfeste%2Bpopolari%2Baggiornato%2Bal%2B30-04-2026/7242d78b-756e-45c3-a7ad-35976acd39a0",
-    "menuUrl": "",
-    "menuComplete": false,
-    "ranges": [
-      {
-        "start": "2026-01-04",
-        "end": "2026-01-04",
-        "confirmed": true
-      }
-    ],
-    "originalDate": "2026-01-04 / 2026-01-04",
-    "confirmed": true,
-    "tags": [
-      "tradizione"
-    ],
-    "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Festa popolare\n- **Comune:** Gualdo Cattaneo\n- **Luogo:** Marcellano\n- **Organizzatore:** ASS. PRESEPE VIVENTE MARCELLANO",
-    "subEvents": []
-  },
-  {
     "id": "natale-a-casteltodino-5",
     "title": "NATALE A CASTELTODINO",
     "location": "Casteltodino, Montecastrilli",
@@ -96,30 +82,6 @@
     "subEvents": []
   },
   {
-    "id": "presepe-vivente-marcellano-4",
-    "title": "PRESEPE VIVENTE MARCELLANO",
-    "location": "Marcellano, Gualdo Cattaneo",
-    "description": "Festa popolare nel calendario regionale umbro 2026, organizzata a Marcellano, Gualdo Cattaneo.",
-    "sourceLabel": "Regione Umbria - Calendario regionale Sagre e feste popolari 2026",
-    "sourceUrl": "https://www.regione.umbria.it/documents/18/26285955/Anno%2B2026%2B-%2BCalendario%2Bregionale%2Bdelle%2Bsagre%2Be%2Bfeste%2Bpopolari%2Baggiornato%2Bal%2B30-04-2026/7242d78b-756e-45c3-a7ad-35976acd39a0",
-    "menuUrl": "",
-    "menuComplete": false,
-    "ranges": [
-      {
-        "start": "2026-01-06",
-        "end": "2026-01-06",
-        "confirmed": true
-      }
-    ],
-    "originalDate": "2026-01-06 / 2026-01-06",
-    "confirmed": true,
-    "tags": [
-      "tradizione"
-    ],
-    "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Festa popolare\n- **Comune:** Gualdo Cattaneo\n- **Luogo:** Marcellano\n- **Organizzatore:** ASS. PRESEPE VIVENTE MARCELLANO",
-    "subEvents": []
-  },
-  {
     "id": "carnevale-dei-bambini-2026-sfilata-carri-allegorici-6",
     "title": "CARNEVALE DEI BAMBINI 2026 (SFILATA CARRI ALLEGORICI)",
     "location": "Acquasparta",
@@ -133,59 +95,19 @@
         "start": "2026-02-01",
         "end": "2026-02-01",
         "confirmed": true
-      }
-    ],
-    "originalDate": "2026-02-01 / 2026-02-01",
-    "confirmed": true,
-    "tags": [
-      "tradizione",
-      "famiglia"
-    ],
-    "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Festa popolare\n- **Comune:** Acquasparta\n- **Luogo:** Acquasparta\n- **Organizzatore:** COMITATO PER IL CARNEVALE DI ACQUASPARTA",
-    "subEvents": []
-  },
-  {
-    "id": "carnevale-dei-bambini-2026-sfilata-carri-allegorici-7",
-    "title": "CARNEVALE DEI BAMBINI 2026 (SFILATA CARRI ALLEGORICI)",
-    "location": "Acquasparta",
-    "description": "Festa popolare nel calendario regionale umbro 2026, organizzata a Acquasparta.",
-    "sourceLabel": "Regione Umbria - Calendario regionale Sagre e feste popolari 2026",
-    "sourceUrl": "https://www.regione.umbria.it/documents/18/26285955/Anno%2B2026%2B-%2BCalendario%2Bregionale%2Bdelle%2Bsagre%2Be%2Bfeste%2Bpopolari%2Baggiornato%2Bal%2B30-04-2026/7242d78b-756e-45c3-a7ad-35976acd39a0",
-    "menuUrl": "",
-    "menuComplete": false,
-    "ranges": [
+      },
       {
         "start": "2026-02-08",
         "end": "2026-02-08",
         "confirmed": true
-      }
-    ],
-    "originalDate": "2026-02-08 / 2026-02-08",
-    "confirmed": true,
-    "tags": [
-      "tradizione",
-      "famiglia"
-    ],
-    "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Festa popolare\n- **Comune:** Acquasparta\n- **Luogo:** Acquasparta\n- **Organizzatore:** COMITATO PER IL CARNEVALE DI ACQUASPARTA",
-    "subEvents": []
-  },
-  {
-    "id": "carnevale-dei-bambini-2026-sfilata-carri-allegorici-8",
-    "title": "CARNEVALE DEI BAMBINI 2026 (SFILATA CARRI ALLEGORICI)",
-    "location": "Acquasparta",
-    "description": "Festa popolare nel calendario regionale umbro 2026, organizzata a Acquasparta.",
-    "sourceLabel": "Regione Umbria - Calendario regionale Sagre e feste popolari 2026",
-    "sourceUrl": "https://www.regione.umbria.it/documents/18/26285955/Anno%2B2026%2B-%2BCalendario%2Bregionale%2Bdelle%2Bsagre%2Be%2Bfeste%2Bpopolari%2Baggiornato%2Bal%2B30-04-2026/7242d78b-756e-45c3-a7ad-35976acd39a0",
-    "menuUrl": "",
-    "menuComplete": false,
-    "ranges": [
+      },
       {
         "start": "2026-02-15",
         "end": "2026-02-15",
         "confirmed": true
       }
     ],
-    "originalDate": "2026-02-15 / 2026-02-15",
+    "originalDate": "2026-02-01; 2026-02-08; 2026-02-15",
     "confirmed": true,
     "tags": [
       "tradizione",
@@ -568,15 +490,7 @@
     "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Festa popolare\n- **Comune:** Avigliano Umbro\n- **Luogo:** Piazza Piave Via Montegrappa AVIGLIANO\n- **Organizzatore:** PRO LOCO AVIGLIANO UMBRO",
     "subEvents": [],
     "revealImage": {
-      "key": "madonna-grazie",
-      "alt": "Festa della Madonna delle Grazie 2026",
-      "widths": [
-        480,
-        768,
-        1024,
-        1366,
-        1672
-      ]
+      "key": "madonna-grazie"
     }
   },
   {
@@ -602,80 +516,6 @@
       "famiglia"
     ],
     "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Festa popolare\n- **Comune:** Montecastrilli\n- **Luogo:** ASS. Cateltodino\n- **Organizzatore:** ASS. PORTAPERTA APS",
-    "subEvents": []
-  },
-  {
-    "id": "festa-di-san-nicolo-22",
-    "title": "FESTA DI SAN NICOLÒ",
-    "location": "Fraz. Collescipoli SANTA, Terni",
-    "description": "Festa popolare nel calendario regionale umbro 2026, organizzata a Fraz. Collescipoli SANTA, Terni.",
-    "sourceLabel": "Regione Umbria - Calendario regionale Sagre e feste popolari 2026",
-    "sourceUrl": "https://www.regione.umbria.it/documents/18/26285955/Anno%2B2026%2B-%2BCalendario%2Bregionale%2Bdelle%2Bsagre%2Be%2Bfeste%2Bpopolari%2Baggiornato%2Bal%2B30-04-2026/7242d78b-756e-45c3-a7ad-35976acd39a0",
-    "menuUrl": "",
-    "menuComplete": false,
-    "ranges": [
-      {
-        "start": "2026-05-08",
-        "end": "2026-05-17",
-        "confirmed": true
-      }
-    ],
-    "originalDate": "2026-05-08 / 2026-05-17",
-    "confirmed": true,
-    "tags": [
-      "tradizione",
-      "famiglia"
-    ],
-    "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Festa popolare\n- **Comune:** Terni\n- **Luogo:** Fraz. Collescipoli SANTA\n- **Organizzatore:** PARROCCHIA DI SANTA MARIA E SAN NICOLA",
-    "subEvents": []
-  },
-  {
-    "id": "da-boe-presenta-sunsetexperience-24",
-    "title": "DA BOE PRESENTA SUNSETEXPERIENCE",
-    "location": "PRO Castel d'Aquila, Montecastrilli",
-    "description": "Festa popolare nel calendario regionale umbro 2026, organizzata a PRO Castel d'Aquila, Montecastrilli.",
-    "sourceLabel": "Regione Umbria - Calendario regionale Sagre e feste popolari 2026",
-    "sourceUrl": "https://www.regione.umbria.it/documents/18/26285955/Anno%2B2026%2B-%2BCalendario%2Bregionale%2Bdelle%2Bsagre%2Be%2Bfeste%2Bpopolari%2Baggiornato%2Bal%2B30-04-2026/7242d78b-756e-45c3-a7ad-35976acd39a0",
-    "menuUrl": "",
-    "menuComplete": false,
-    "ranges": [
-      {
-        "start": "2026-05-09",
-        "end": "2026-05-09",
-        "confirmed": true
-      }
-    ],
-    "originalDate": "2026-05-09 / 2026-05-09",
-    "confirmed": true,
-    "tags": [
-      "tradizione"
-    ],
-    "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Festa popolare\n- **Comune:** Montecastrilli\n- **Luogo:** PRO Castel d'Aquila\n- **Organizzatore:** PRO LOCO CASTEL D'AQUILA",
-    "subEvents": []
-  },
-  {
-    "id": "festa-in-onore-della-madonna-di-ramici-25",
-    "title": "FESTA IN ONORE DELLA MADONNA DI RAMICI",
-    "location": "Voc. Ramici, Lugnano in Teverina",
-    "description": "Festa popolare nel calendario regionale umbro 2026, organizzata a Voc. Ramici, Lugnano in Teverina.",
-    "sourceLabel": "Regione Umbria - Calendario regionale Sagre e feste popolari 2026",
-    "sourceUrl": "https://www.regione.umbria.it/documents/18/26285955/Anno%2B2026%2B-%2BCalendario%2Bregionale%2Bdelle%2Bsagre%2Be%2Bfeste%2Bpopolari%2Baggiornato%2Bal%2B30-04-2026/7242d78b-756e-45c3-a7ad-35976acd39a0",
-    "menuUrl": "",
-    "menuComplete": false,
-    "ranges": [
-      {
-        "start": "2026-05-10",
-        "end": "2026-05-10",
-        "confirmed": true
-      }
-    ],
-    "originalDate": "2026-05-10 / 2026-05-10",
-    "confirmed": true,
-    "tags": [
-      "tradizione",
-      "famiglia"
-    ],
-    "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Festa popolare\n- **Comune:** Lugnano in Teverina\n- **Luogo:** Voc. Ramici\n- **Organizzatore:** APS AMICI MADONNA DI RAMICI",
     "subEvents": []
   },
   {
@@ -729,55 +569,6 @@
     "subEvents": []
   },
   {
-    "id": "festa-in-onore-alla-madonna-n-s-di-fatima-27",
-    "title": "FESTA IN ONORE ALLA MADONNA N.S. DI FATIMA",
-    "location": "Via Gabelletta 145, Terni",
-    "description": "Festa popolare nel calendario regionale umbro 2026, organizzata a Via Gabelletta 145, Terni.",
-    "sourceLabel": "Regione Umbria - Calendario regionale Sagre e feste popolari 2026",
-    "sourceUrl": "https://www.regione.umbria.it/documents/18/26285955/Anno%2B2026%2B-%2BCalendario%2Bregionale%2Bdelle%2Bsagre%2Be%2Bfeste%2Bpopolari%2Baggiornato%2Bal%2B30-04-2026/7242d78b-756e-45c3-a7ad-35976acd39a0",
-    "menuUrl": "",
-    "menuComplete": false,
-    "ranges": [
-      {
-        "start": "2026-05-15",
-        "end": "2026-05-24",
-        "confirmed": true
-      }
-    ],
-    "originalDate": "2026-05-15 / 2026-05-24",
-    "confirmed": true,
-    "tags": [
-      "tradizione",
-      "famiglia"
-    ],
-    "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Festa popolare\n- **Comune:** Terni\n- **Luogo:** Via Gabelletta 145\n- **Organizzatore:** PARROCCHIA MADONNA N.S. DI FATIMA",
-    "subEvents": []
-  },
-  {
-    "id": "festeggiamenti-in-onore-di-san-bernardino-da-siena-28",
-    "title": "FESTEGGIAMENTI IN ONORE DI SAN BERNARDINO DA SIENA",
-    "location": "Montefranco",
-    "description": "Festa popolare nel calendario regionale umbro 2026, organizzata a Montefranco.",
-    "sourceLabel": "Regione Umbria - Calendario regionale Sagre e feste popolari 2026",
-    "sourceUrl": "https://www.regione.umbria.it/documents/18/26285955/Anno%2B2026%2B-%2BCalendario%2Bregionale%2Bdelle%2Bsagre%2Be%2Bfeste%2Bpopolari%2Baggiornato%2Bal%2B30-04-2026/7242d78b-756e-45c3-a7ad-35976acd39a0",
-    "menuUrl": "",
-    "menuComplete": false,
-    "ranges": [
-      {
-        "start": "2026-05-15",
-        "end": "2026-05-24",
-        "confirmed": true
-      }
-    ],
-    "originalDate": "2026-05-15 / 2026-05-24",
-    "confirmed": true,
-    "tags": [
-      "tradizione"
-    ],
-    "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Festa popolare\n- **Comune:** Montefranco\n- **Luogo:** Montefranco\n- **Organizzatore:** PARROCCHIA SANTA MARIA ASSUNTA",
-    "subEvents": []
-  },
-  {
     "id": "san-secondo-in-festa-29",
     "title": "SAN SECONDO IN FESTA",
     "location": "Area Verde loc. San COMITATO Secondo, Città di Castello",
@@ -800,31 +591,6 @@
       "famiglia"
     ],
     "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Festa popolare\n- **Comune:** Città di Castello\n- **Luogo:** Area Verde loc. San COMITATO Secondo\n- **Organizzatore:** ASSOCIAZIONE COMITATO PRO SAN SECONDO",
-    "subEvents": []
-  },
-  {
-    "id": "campomaggiore-in-festa-31",
-    "title": "CAMPOMAGGIORE IN FESTA",
-    "location": "Via delle Terre Arnolfe18, Terni",
-    "description": "Festa popolare nel calendario regionale umbro 2026, organizzata a Via delle Terre Arnolfe18, Terni.",
-    "sourceLabel": "Regione Umbria - Calendario regionale Sagre e feste popolari 2026",
-    "sourceUrl": "https://www.regione.umbria.it/documents/18/26285955/Anno%2B2026%2B-%2BCalendario%2Bregionale%2Bdelle%2Bsagre%2Be%2Bfeste%2Bpopolari%2Baggiornato%2Bal%2B30-04-2026/7242d78b-756e-45c3-a7ad-35976acd39a0",
-    "menuUrl": "",
-    "menuComplete": false,
-    "ranges": [
-      {
-        "start": "2026-05-22",
-        "end": "2026-05-31",
-        "confirmed": true
-      }
-    ],
-    "originalDate": "2026-05-22 / 2026-05-31",
-    "confirmed": true,
-    "tags": [
-      "tradizione",
-      "famiglia"
-    ],
-    "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Festa popolare\n- **Comune:** Terni\n- **Luogo:** Via delle Terre Arnolfe18\n- **Organizzatore:** PARROCCHIA S. GIOVANNI BOSCO",
     "subEvents": []
   },
   {
@@ -854,30 +620,6 @@
     "menuComplete": false
   },
   {
-    "id": "taverna-del-curato-32",
-    "title": "TAVERNA DEL CURATO",
-    "location": "Farnetta, Montecastrilli",
-    "description": "Festa popolare nel calendario regionale umbro 2026, organizzata a Farnetta, Montecastrilli.",
-    "sourceLabel": "Regione Umbria - Calendario regionale Sagre e feste popolari 2026",
-    "sourceUrl": "https://www.regione.umbria.it/documents/18/26285955/Anno%2B2026%2B-%2BCalendario%2Bregionale%2Bdelle%2Bsagre%2Be%2Bfeste%2Bpopolari%2Baggiornato%2Bal%2B30-04-2026/7242d78b-756e-45c3-a7ad-35976acd39a0",
-    "menuUrl": "",
-    "menuComplete": false,
-    "ranges": [
-      {
-        "start": "2026-05-23",
-        "end": "2026-05-23",
-        "confirmed": true
-      }
-    ],
-    "originalDate": "2026-05-23 / 2026-05-23",
-    "confirmed": true,
-    "tags": [
-      "tradizione"
-    ],
-    "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Festa popolare\n- **Comune:** Montecastrilli\n- **Luogo:** Farnetta\n- **Organizzatore:** PRO LOCO FARNETTA",
-    "subEvents": []
-  },
-  {
     "id": "cerbara-in-festa-33",
     "title": "CERBARA IN FESTA",
     "location": "Via Fancelli Via Monti Area Verde loc. Cerbara, Città di Castello",
@@ -900,32 +642,6 @@
       "famiglia"
     ],
     "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Festa popolare\n- **Comune:** Città di Castello\n- **Luogo:** Via Fancelli Via Monti Area Verde loc. Cerbara\n- **Organizzatore:** PRO LOCO CERBARA",
-    "subEvents": []
-  },
-  {
-    "id": "49-sagra-dell-acciaccata-e-la-festa-35",
-    "title": "49° Sagra dell'Acciaccata \"è la Festa\"",
-    "location": "Fornole Piazza degli Artigiani, Amelia",
-    "description": "Sagra nel calendario regionale umbro 2026, organizzata a Fornole Piazza degli Artigiani, Amelia.",
-    "sourceLabel": "Regione Umbria - Calendario regionale Sagre e feste popolari 2026",
-    "sourceUrl": "https://www.regione.umbria.it/documents/18/26285955/Anno%2B2026%2B-%2BCalendario%2Bregionale%2Bdelle%2Bsagre%2Be%2Bfeste%2Bpopolari%2Baggiornato%2Bal%2B30-04-2026/7242d78b-756e-45c3-a7ad-35976acd39a0",
-    "menuUrl": "",
-    "menuComplete": false,
-    "ranges": [
-      {
-        "start": "2026-05-29",
-        "end": "2026-06-07",
-        "confirmed": true
-      }
-    ],
-    "originalDate": "2026-05-29 / 2026-06-07",
-    "confirmed": true,
-    "tags": [
-      "gastronomia",
-      "tradizione",
-      "famiglia"
-    ],
-    "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Sagra\n- **Comune:** Amelia\n- **Luogo:** Fornole Piazza degli Artigiani\n- **Organizzatore:** ASS. TURISTICA PRO LOCO FORNOLE",
     "subEvents": []
   },
   {
@@ -952,31 +668,6 @@
     "detailsMarkdown": "## Dettagli\nEvento gastronomico di inizio estate nel territorio comunale di Perugia, con specialità locali e cucina popolare.",
     "subEvents": [],
     "menuComplete": false
-  },
-  {
-    "id": "festa-delle-rose-37",
-    "title": "FESTA DELLE ROSE",
-    "location": "Via Narni 160, Terni",
-    "description": "Festa popolare nel calendario regionale umbro 2026, organizzata a Via Narni 160, Terni.",
-    "sourceLabel": "Regione Umbria - Calendario regionale Sagre e feste popolari 2026",
-    "sourceUrl": "https://www.regione.umbria.it/documents/18/26285955/Anno%2B2026%2B-%2BCalendario%2Bregionale%2Bdelle%2Bsagre%2Be%2Bfeste%2Bpopolari%2Baggiornato%2Bal%2B30-04-2026/7242d78b-756e-45c3-a7ad-35976acd39a0",
-    "menuUrl": "",
-    "menuComplete": false,
-    "ranges": [
-      {
-        "start": "2026-06-01",
-        "end": "2026-06-18",
-        "confirmed": true
-      }
-    ],
-    "originalDate": "2026-06-01 / 2026-06-18",
-    "confirmed": true,
-    "tags": [
-      "tradizione",
-      "famiglia"
-    ],
-    "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Festa popolare\n- **Comune:** Terni\n- **Luogo:** Via Narni 160\n- **Organizzatore:** PARROCCHIA IMMACOLATA CONCEZIONE",
-    "subEvents": []
   },
   {
     "id": "festa-di-primavera-2-0-36",
@@ -1017,9 +708,14 @@
         "start": "2026-06-04",
         "end": "2026-06-07",
         "confirmed": true
+      },
+      {
+        "start": "2026-06-12",
+        "end": "2026-06-14",
+        "confirmed": true
       }
     ],
-    "originalDate": "2026-06-04 / 2026-06-07",
+    "originalDate": "2026-06-04 / 2026-06-07; 2026-06-12 / 2026-06-14",
     "confirmed": true,
     "tags": [
       "gastronomia",
@@ -1601,32 +1297,10 @@
         "note": "serata danzante"
       }
     ],
+    "revealImage": {
+      "key": "piccione-in-carrozza"
+    },
     "menuComplete": true
-  },
-  {
-    "id": "sagra-del-porchetto-e-dei-prodotti-tipici-locali-49",
-    "title": "SAGRA DEL PORCHETTO E DEI PRODOTTI TIPICI LOCALI",
-    "location": "Centro Civico San Libwerato - via Ortana Vecchia, Narni",
-    "description": "Sagra nel calendario regionale umbro 2026, organizzata a Centro Civico San Libwerato - via Ortana Vecchia, Narni.",
-    "sourceLabel": "Regione Umbria - Calendario regionale Sagre e feste popolari 2026",
-    "sourceUrl": "https://www.regione.umbria.it/documents/18/26285955/Anno%2B2026%2B-%2BCalendario%2Bregionale%2Bdelle%2Bsagre%2Be%2Bfeste%2Bpopolari%2Baggiornato%2Bal%2B30-04-2026/7242d78b-756e-45c3-a7ad-35976acd39a0",
-    "menuUrl": "",
-    "menuComplete": false,
-    "ranges": [
-      {
-        "start": "2026-06-12",
-        "end": "2026-06-21",
-        "confirmed": true
-      }
-    ],
-    "originalDate": "2026-06-12 / 2026-06-21",
-    "confirmed": true,
-    "tags": [
-      "gastronomia",
-      "tradizione"
-    ],
-    "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Sagra\n- **Comune:** Narni\n- **Luogo:** Centro Civico San Libwerato - via Ortana Vecchia\n- **Organizzatore:** PROLOCO SAN LIBERATO",
-    "subEvents": []
   },
   {
     "id": "sagra-ortolano-balanzano-2026",
@@ -1988,55 +1662,6 @@
     "subEvents": []
   },
   {
-    "id": "sagra-delle-manfregole-44",
-    "title": "SAGRA DELLE MANFREGOLE",
-    "location": "Giardini Pubblici. Loc. Colonnetta, Fabro",
-    "description": "Sagra nel calendario regionale umbro 2026, organizzata a Giardini Pubblici. Loc. Colonnetta, Fabro.",
-    "sourceLabel": "Regione Umbria - Calendario regionale Sagre e feste popolari 2026",
-    "sourceUrl": "https://www.regione.umbria.it/documents/18/26285955/Anno%2B2026%2B-%2BCalendario%2Bregionale%2Bdelle%2Bsagre%2Be%2Bfeste%2Bpopolari%2Baggiornato%2Bal%2B30-04-2026/7242d78b-756e-45c3-a7ad-35976acd39a0",
-    "menuUrl": "",
-    "menuComplete": false,
-    "ranges": [
-      {
-        "start": "2026-06-12",
-        "end": "2026-06-14",
-        "confirmed": true
-      }
-    ],
-    "originalDate": "2026-06-12 / 2026-06-14",
-    "confirmed": true,
-    "tags": [
-      "gastronomia",
-      "tradizione"
-    ],
-    "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Sagra\n- **Comune:** Fabro\n- **Luogo:** Giardini Pubblici. Loc. Colonnetta\n- **Organizzatore:** PRO LOCO FABRO",
-    "subEvents": []
-  },
-  {
-    "id": "esposizione-e-raduno-di-mezzi-agricoli-ed-industriali-52",
-    "title": "ESPOSIZIONE E RADUNO DI MEZZI AGRICOLI ED INDUSTRIALI",
-    "location": "P.zza XXI Settembre, ASS. Giardini e Campo Sportivo, Amelia",
-    "description": "Festa popolare nel calendario regionale umbro 2026, organizzata a P.zza XXI Settembre, ASS. Giardini e Campo Sportivo, Amelia.",
-    "sourceLabel": "Regione Umbria - Calendario regionale Sagre e feste popolari 2026",
-    "sourceUrl": "https://www.regione.umbria.it/documents/18/26285955/Anno%2B2026%2B-%2BCalendario%2Bregionale%2Bdelle%2Bsagre%2Be%2Bfeste%2Bpopolari%2Baggiornato%2Bal%2B30-04-2026/7242d78b-756e-45c3-a7ad-35976acd39a0",
-    "menuUrl": "",
-    "menuComplete": false,
-    "ranges": [
-      {
-        "start": "2026-06-13",
-        "end": "2026-06-14",
-        "confirmed": true
-      }
-    ],
-    "originalDate": "2026-06-13 / 2026-06-14",
-    "confirmed": true,
-    "tags": [
-      "tradizione"
-    ],
-    "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Festa popolare\n- **Comune:** Amelia\n- **Luogo:** P.zza XXI Settembre, ASS. Giardini e Campo Sportivo\n- **Organizzatore:** ASS. COLT.LAVORO E MOTORI",
-    "subEvents": []
-  },
-  {
     "id": "funtastica-2026-pila-perugia-2026",
     "title": "FUNTASTICA 2026",
     "location": "Pila, Perugia",
@@ -2082,31 +1707,6 @@
       "tradizione"
     ],
     "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Festa popolare\n- **Comune:** Montecastrilli\n- **Luogo:** Quadrelli\n- **Organizzatore:** PRO LOCO QUADRELLI",
-    "subEvents": []
-  },
-  {
-    "id": "festa-patronale-san-nicola-54",
-    "title": "FESTA PATRONALE SAN NICOLA",
-    "location": "Frazione I Tieli, Narni",
-    "description": "Festa popolare nel calendario regionale umbro 2026, organizzata a Frazione I Tieli, Narni.",
-    "sourceLabel": "Regione Umbria - Calendario regionale Sagre e feste popolari 2026",
-    "sourceUrl": "https://www.regione.umbria.it/documents/18/26285955/Anno%2B2026%2B-%2BCalendario%2Bregionale%2Bdelle%2Bsagre%2Be%2Bfeste%2Bpopolari%2Baggiornato%2Bal%2B30-04-2026/7242d78b-756e-45c3-a7ad-35976acd39a0",
-    "menuUrl": "",
-    "menuComplete": false,
-    "ranges": [
-      {
-        "start": "2026-06-15",
-        "end": "2026-05-17",
-        "confirmed": true
-      }
-    ],
-    "originalDate": "2026-06-15 / 2026-05-17",
-    "confirmed": true,
-    "tags": [
-      "tradizione",
-      "famiglia"
-    ],
-    "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Festa popolare\n- **Comune:** Narni\n- **Luogo:** Frazione I Tieli\n- **Organizzatore:** PARROCCHIA DI SAN NICOLA",
     "subEvents": []
   },
   {
@@ -2162,31 +1762,6 @@
     "subEvents": []
   },
   {
-    "id": "festa-del-maialino-55",
-    "title": "FESTA DEL MAIALINO",
-    "location": "Amelia Via Santa Maria n.16, Amelia",
-    "description": "Festa popolare nel calendario regionale umbro 2026, organizzata a Amelia Via Santa Maria n.16, Amelia.",
-    "sourceLabel": "Regione Umbria - Calendario regionale Sagre e feste popolari 2026",
-    "sourceUrl": "https://www.regione.umbria.it/documents/18/26285955/Anno%2B2026%2B-%2BCalendario%2Bregionale%2Bdelle%2Bsagre%2Be%2Bfeste%2Bpopolari%2Baggiornato%2Bal%2B30-04-2026/7242d78b-756e-45c3-a7ad-35976acd39a0",
-    "menuUrl": "",
-    "menuComplete": false,
-    "ranges": [
-      {
-        "start": "2026-06-17",
-        "end": "2026-06-21",
-        "confirmed": true
-      }
-    ],
-    "originalDate": "2026-06-17 / 2026-06-21",
-    "confirmed": true,
-    "tags": [
-      "tradizione",
-      "famiglia"
-    ],
-    "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Festa popolare\n- **Comune:** Amelia\n- **Luogo:** Amelia Via Santa Maria n.16\n- **Organizzatore:** ASSOCIAZIONE SANTA MARIA",
-    "subEvents": []
-  },
-  {
     "id": "mercato-delle-gaite-bevagna-2026",
     "title": "MERCATO DELLE GAITE",
     "location": "Bevagna",
@@ -2212,31 +1787,6 @@
     "menuComplete": false
   },
   {
-    "id": "sagra-dello-stinco-e-patate-al-forno-56",
-    "title": "SAGRA DELLO STINCO E PATATE AL FORNO",
-    "location": "BAR Montefranco, Montefranco",
-    "description": "Sagra nel calendario regionale umbro 2026, organizzata a BAR Montefranco, Montefranco.",
-    "sourceLabel": "Regione Umbria - Calendario regionale Sagre e feste popolari 2026",
-    "sourceUrl": "https://www.regione.umbria.it/documents/18/26285955/Anno%2B2026%2B-%2BCalendario%2Bregionale%2Bdelle%2Bsagre%2Be%2Bfeste%2Bpopolari%2Baggiornato%2Bal%2B30-04-2026/7242d78b-756e-45c3-a7ad-35976acd39a0",
-    "menuUrl": "",
-    "menuComplete": false,
-    "ranges": [
-      {
-        "start": "2026-06-18",
-        "end": "2026-06-21",
-        "confirmed": true
-      }
-    ],
-    "originalDate": "2026-06-18 / 2026-06-21",
-    "confirmed": true,
-    "tags": [
-      "gastronomia",
-      "tradizione"
-    ],
-    "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Sagra\n- **Comune:** Montefranco\n- **Luogo:** BAR Montefranco\n- **Organizzatore:** BAR DELLO SPORT DI MONTEFRANCO",
-    "subEvents": []
-  },
-  {
     "id": "festa-del-fuoco-58",
     "title": "FESTA DEL FUOCO",
     "location": "Frazione Grello, Gualdo Tadino",
@@ -2259,31 +1809,6 @@
       "famiglia"
     ],
     "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Festa popolare\n- **Comune:** Gualdo Tadino\n- **Luogo:** Frazione Grello\n- **Organizzatore:** PRO GRELLO",
-    "subEvents": []
-  },
-  {
-    "id": "festa-san-giovanni-battista-57",
-    "title": "FESTA SAN GIOVANNI BATTISTA",
-    "location": "Impianti Sportivi \"Terzo Pimpolari\", Giove",
-    "description": "Festa popolare nel calendario regionale umbro 2026, organizzata a Impianti Sportivi \"Terzo Pimpolari\", Giove.",
-    "sourceLabel": "Regione Umbria - Calendario regionale Sagre e feste popolari 2026",
-    "sourceUrl": "https://www.regione.umbria.it/documents/18/26285955/Anno%2B2026%2B-%2BCalendario%2Bregionale%2Bdelle%2Bsagre%2Be%2Bfeste%2Bpopolari%2Baggiornato%2Bal%2B30-04-2026/7242d78b-756e-45c3-a7ad-35976acd39a0",
-    "menuUrl": "",
-    "menuComplete": false,
-    "ranges": [
-      {
-        "start": "2026-06-19",
-        "end": "2026-06-24",
-        "confirmed": true
-      }
-    ],
-    "originalDate": "2026-06-19 / 2026-06-24",
-    "confirmed": true,
-    "tags": [
-      "tradizione",
-      "famiglia"
-    ],
-    "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Festa popolare\n- **Comune:** Giove\n- **Luogo:** Impianti Sportivi \"Terzo Pimpolari\"\n- **Organizzatore:** COMITATO FESTEGGIAMENTI SAN GIOVANNI",
     "subEvents": []
   },
   {
@@ -2430,30 +1955,6 @@
     "menuComplete": true
   },
   {
-    "id": "s-sabina-in-61",
-    "title": "S. SABINA…IN",
-    "location": "S.Sabina, Perugia",
-    "description": "Festa popolare nel calendario regionale umbro 2026, organizzata a S.Sabina, Perugia.",
-    "sourceLabel": "Regione Umbria - Calendario regionale Sagre e feste popolari 2026",
-    "sourceUrl": "https://www.regione.umbria.it/documents/18/26285955/Anno%2B2026%2B-%2BCalendario%2Bregionale%2Bdelle%2Bsagre%2Be%2Bfeste%2Bpopolari%2Baggiornato%2Bal%2B30-04-2026/7242d78b-756e-45c3-a7ad-35976acd39a0",
-    "menuUrl": "",
-    "menuComplete": false,
-    "ranges": [
-      {
-        "start": "2026-06-19",
-        "end": "2026-06-28",
-        "confirmed": true
-      }
-    ],
-    "originalDate": "2026-06-19 / 2026-06-28",
-    "confirmed": true,
-    "tags": [
-      "tradizione"
-    ],
-    "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Festa popolare\n- **Comune:** Perugia\n- **Luogo:** S.Sabina\n- **Organizzatore:** ASSOCIAZIONE RICREATIVA CULTURALE S. SABINA ...IN",
-    "subEvents": []
-  },
-  {
     "id": "sagra-gnocchi-casenuove-2026",
     "title": "SAGRA DEGLI GNOCCHI E DEI PRODOTTI TIPICI DELL'UMBRIA",
     "location": "Casenuove di Ponte della Pietra, Perugia",
@@ -2503,30 +2004,6 @@
       "famiglia"
     ],
     "detailsMarkdown": "## Dettagli\nFesta molto attesa nell’estate perugina, ambientata nel verde del parco di Santa Sabina, con prodotti tipici, birre artigianali e gelati preparati con ingredienti di qualità.",
-    "subEvents": [],
-    "menuComplete": false
-  },
-  {
-    "id": "torneo-dei-rioni-e-delle-taverne-todi-2026",
-    "title": "TORNEO DEI RIONI E DELLE TAVERNE",
-    "location": "Todi",
-    "description": "Festa popolare con rioni, taverne e iniziative di comunità.",
-    "sourceLabel": "Fonte generale Regione Umbria",
-    "sourceUrl": "",
-    "menuUrl": "",
-    "ranges": [
-      {
-        "start": "2026-06-19",
-        "end": "2026-06-28",
-        "confirmed": true
-      }
-    ],
-    "originalDate": "19/28 giugno",
-    "confirmed": true,
-    "tags": [
-      "tradizione"
-    ],
-    "detailsMarkdown": "## Dettagli\nFesta popolare con rioni, taverne e iniziative di comunità.\n\nFonte: Fonte generale Regione Umbria.",
     "subEvents": [],
     "menuComplete": false
   },
@@ -2678,31 +2155,6 @@
     "menuComplete": false
   },
   {
-    "id": "arrosticini-a-tutta-birra-69",
-    "title": "ARROSTICINI A TUTTA BIRRA",
-    "location": "Montefranco",
-    "description": "Sagra nel calendario regionale umbro 2026, organizzata a Montefranco.",
-    "sourceLabel": "Regione Umbria - Calendario regionale Sagre e feste popolari 2026",
-    "sourceUrl": "https://www.regione.umbria.it/documents/18/26285955/Anno%2B2026%2B-%2BCalendario%2Bregionale%2Bdelle%2Bsagre%2Be%2Bfeste%2Bpopolari%2Baggiornato%2Bal%2B30-04-2026/7242d78b-756e-45c3-a7ad-35976acd39a0",
-    "menuUrl": "",
-    "menuComplete": false,
-    "ranges": [
-      {
-        "start": "2026-06-26",
-        "end": "2026-07-05",
-        "confirmed": true
-      }
-    ],
-    "originalDate": "2026-06-26 / 2026-07-05",
-    "confirmed": true,
-    "tags": [
-      "gastronomia",
-      "tradizione"
-    ],
-    "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Sagra\n- **Comune:** Montefranco\n- **Luogo:** Montefranco\n- **Organizzatore:** PROLOCO DI MONTEFRANCO",
-    "subEvents": []
-  },
-  {
     "id": "chiugiana-ti-aspetta-71",
     "title": "CHIUGIANA TI ASPETTA",
     "location": "Chiugiana CHIUGIANA-ELLERA, Corciano",
@@ -2724,131 +2176,6 @@
       "tradizione"
     ],
     "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Festa popolare\n- **Comune:** Corciano\n- **Luogo:** Chiugiana CHIUGIANA-ELLERA\n- **Organizzatore:** PRO LOCO CHIUGIANA-ELLERA",
-    "subEvents": []
-  },
-  {
-    "id": "estate-borghigiana-65",
-    "title": "ESTATE BORGHIGIANA",
-    "location": "Frazione di Borgo ASSOCIAZIONE Cerreto (Area Parcheggio Pubblico), Cerreto di Spoleto",
-    "description": "Festa popolare nel calendario regionale umbro 2026, organizzata a Frazione di Borgo ASSOCIAZIONE Cerreto (Area Parcheggio Pubblico), Cerreto di Spoleto.",
-    "sourceLabel": "Regione Umbria - Calendario regionale Sagre e feste popolari 2026",
-    "sourceUrl": "https://www.regione.umbria.it/documents/18/26285955/Anno%2B2026%2B-%2BCalendario%2Bregionale%2Bdelle%2Bsagre%2Be%2Bfeste%2Bpopolari%2Baggiornato%2Bal%2B30-04-2026/7242d78b-756e-45c3-a7ad-35976acd39a0",
-    "menuUrl": "",
-    "menuComplete": false,
-    "ranges": [
-      {
-        "start": "2026-06-26",
-        "end": "2026-06-28",
-        "confirmed": true
-      }
-    ],
-    "originalDate": "2026-06-26 / 2026-06-28",
-    "confirmed": true,
-    "tags": [
-      "tradizione"
-    ],
-    "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Festa popolare\n- **Comune:** Cerreto di Spoleto\n- **Luogo:** Frazione di Borgo ASSOCIAZIONE Cerreto (Area Parcheggio Pubblico)\n- **Organizzatore:** ASSOCIAZIONE PRO LOCO BORGO CERRETO APS",
-    "subEvents": []
-  },
-  {
-    "id": "festa-della-birra-67",
-    "title": "FESTA DELLA BIRRA",
-    "location": "Guardea Piazza P.Panfili, Guardea",
-    "description": "Festa popolare nel calendario regionale umbro 2026, organizzata a Guardea Piazza P.Panfili, Guardea.",
-    "sourceLabel": "Regione Umbria - Calendario regionale Sagre e feste popolari 2026",
-    "sourceUrl": "https://www.regione.umbria.it/documents/18/26285955/Anno%2B2026%2B-%2BCalendario%2Bregionale%2Bdelle%2Bsagre%2Be%2Bfeste%2Bpopolari%2Baggiornato%2Bal%2B30-04-2026/7242d78b-756e-45c3-a7ad-35976acd39a0",
-    "menuUrl": "",
-    "menuComplete": false,
-    "ranges": [
-      {
-        "start": "2026-06-26",
-        "end": "2026-06-28",
-        "confirmed": true
-      }
-    ],
-    "originalDate": "2026-06-26 / 2026-06-28",
-    "confirmed": true,
-    "tags": [
-      "tradizione",
-      "famiglia"
-    ],
-    "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Festa popolare\n- **Comune:** Guardea\n- **Luogo:** Guardea Piazza P.Panfili\n- **Organizzatore:** A.S.D. GUARDEA",
-    "subEvents": []
-  },
-  {
-    "id": "festa-torta-testo-pila-2026",
-    "title": "FESTA DELLA TORTA AL TESTO E DEI VINI DOC DEI COLLI PERUGINI",
-    "location": "Pila, Perugia",
-    "description": "47ª edizione dedicata alla torta al testo e ai vini DOC dei Colli Perugini.",
-    "sourceLabel": "Comune di Perugia - Feste popolari e Sagre 2026",
-    "sourceUrl": "https://www.umbriaeventi.com/festa-della-torta-al-testo-e-vini-doc-dei-colli-perugini-pila-5796.htm",
-    "menuUrl": "",
-    "ranges": [
-      {
-        "start": "2026-06-26",
-        "end": "2026-07-05",
-        "confirmed": true
-      }
-    ],
-    "originalDate": "2026-06-26 / 2026-07-05",
-    "confirmed": true,
-    "tags": [
-      "gastronomia",
-      "torta-al-testo",
-      "tradizione"
-    ],
-    "detailsMarkdown": "## Dettagli\nEvento longevo dedicato alla **torta al testo**, focaccia umbra cotta su lastra di pietra sopra le braci, e ai vini DOC dei Colli Perugini.",
-    "subEvents": [],
-    "menuComplete": false
-  },
-  {
-    "id": "festa-di-inizio-estate-68",
-    "title": "FESTA DI INIZIO ESTATE",
-    "location": "Resina, Perugia",
-    "description": "Festa popolare nel calendario regionale umbro 2026, organizzata a Resina, Perugia.",
-    "sourceLabel": "Regione Umbria - Calendario regionale Sagre e feste popolari 2026",
-    "sourceUrl": "https://www.regione.umbria.it/documents/18/26285955/Anno%2B2026%2B-%2BCalendario%2Bregionale%2Bdelle%2Bsagre%2Be%2Bfeste%2Bpopolari%2Baggiornato%2Bal%2B30-04-2026/7242d78b-756e-45c3-a7ad-35976acd39a0",
-    "menuUrl": "",
-    "menuComplete": false,
-    "ranges": [
-      {
-        "start": "2026-06-26",
-        "end": "2026-07-05",
-        "confirmed": true
-      }
-    ],
-    "originalDate": "2026-06-26 / 2026-07-05",
-    "confirmed": true,
-    "tags": [
-      "tradizione",
-      "famiglia"
-    ],
-    "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Festa popolare\n- **Comune:** Perugia\n- **Luogo:** Resina\n- **Organizzatore:** ACR DE LA RESINA",
-    "subEvents": []
-  },
-  {
-    "id": "festa-di-san-pietro-e-paolo-di-pozzuolo-66",
-    "title": "FESTA DI SAN PIETRO E PAOLO DI POZZUOLO",
-    "location": "Pozzuolo - via della Chiesa (Area adiacente chiesa parrocchiale), Castiglione del Lago",
-    "description": "Festa popolare nel calendario regionale umbro 2026, organizzata a Pozzuolo - via della Chiesa (Area adiacente chiesa parrocchiale), Castiglione del Lago.",
-    "sourceLabel": "Regione Umbria - Calendario regionale Sagre e feste popolari 2026",
-    "sourceUrl": "https://www.regione.umbria.it/documents/18/26285955/Anno%2B2026%2B-%2BCalendario%2Bregionale%2Bdelle%2Bsagre%2Be%2Bfeste%2Bpopolari%2Baggiornato%2Bal%2B30-04-2026/7242d78b-756e-45c3-a7ad-35976acd39a0",
-    "menuUrl": "",
-    "menuComplete": false,
-    "ranges": [
-      {
-        "start": "2026-06-26",
-        "end": "2026-06-29",
-        "confirmed": true
-      }
-    ],
-    "originalDate": "2026-06-26 / 2026-06-29",
-    "confirmed": true,
-    "tags": [
-      "tradizione",
-      "famiglia"
-    ],
-    "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Festa popolare\n- **Comune:** Castiglione del Lago\n- **Luogo:** Pozzuolo - via della Chiesa (Area adiacente chiesa parrocchiale)\n- **Organizzatore:** ASSOCIAZIONE PARROCCHIA SS. PIETRO PAOLO E MARIA DELLE GRAZIE",
     "subEvents": []
   },
   {
@@ -2877,6 +2204,57 @@
     "detailsMarkdown": "## Dettagli\nFesta popolare di inizio estate con cucina e intrattenimento.\n\nFonte: Comune di Perugia - Feste popolari e Sagre 2026.",
     "subEvents": [],
     "menuComplete": false
+  },
+  {
+    "id": "festa-torta-testo-pila-2026",
+    "title": "FESTA DELLA TORTA AL TESTO E DEI VINI DOC DEI COLLI PERUGINI",
+    "location": "Pila, Perugia",
+    "description": "47ª edizione dedicata alla torta al testo e ai vini DOC dei Colli Perugini.",
+    "sourceLabel": "Comune di Perugia - Feste popolari e Sagre 2026",
+    "sourceUrl": "https://www.umbriaeventi.com/festa-della-torta-al-testo-e-vini-doc-dei-colli-perugini-pila-5796.htm",
+    "menuUrl": "",
+    "ranges": [
+      {
+        "start": "2026-06-26",
+        "end": "2026-07-05",
+        "confirmed": true
+      }
+    ],
+    "originalDate": "2026-06-26 / 2026-07-05",
+    "confirmed": true,
+    "tags": [
+      "gastronomia",
+      "torta-al-testo",
+      "tradizione"
+    ],
+    "detailsMarkdown": "## Dettagli\nEvento longevo dedicato alla **torta al testo**, focaccia umbra cotta su lastra di pietra sopra le braci, e ai vini DOC dei Colli Perugini.",
+    "subEvents": [],
+    "menuComplete": false
+  },
+  {
+    "id": "festa-di-san-pietro-e-paolo-di-pozzuolo-66",
+    "title": "FESTA DI SAN PIETRO E PAOLO DI POZZUOLO",
+    "location": "Pozzuolo - via della Chiesa (Area adiacente chiesa parrocchiale), Castiglione del Lago",
+    "description": "Festa popolare nel calendario regionale umbro 2026, organizzata a Pozzuolo - via della Chiesa (Area adiacente chiesa parrocchiale), Castiglione del Lago.",
+    "sourceLabel": "Regione Umbria - Calendario regionale Sagre e feste popolari 2026",
+    "sourceUrl": "https://www.regione.umbria.it/documents/18/26285955/Anno%2B2026%2B-%2BCalendario%2Bregionale%2Bdelle%2Bsagre%2Be%2Bfeste%2Bpopolari%2Baggiornato%2Bal%2B30-04-2026/7242d78b-756e-45c3-a7ad-35976acd39a0",
+    "menuUrl": "",
+    "menuComplete": false,
+    "ranges": [
+      {
+        "start": "2026-06-26",
+        "end": "2026-06-29",
+        "confirmed": true
+      }
+    ],
+    "originalDate": "2026-06-26 / 2026-06-29",
+    "confirmed": true,
+    "tags": [
+      "tradizione",
+      "famiglia"
+    ],
+    "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Festa popolare\n- **Comune:** Castiglione del Lago\n- **Luogo:** Pozzuolo - via della Chiesa (Area adiacente chiesa parrocchiale)\n- **Organizzatore:** ASSOCIAZIONE PARROCCHIA SS. PIETRO PAOLO E MARIA DELLE GRAZIE",
+    "subEvents": []
   },
   {
     "id": "festival-dei-due-mondi-spoleto-2026",
@@ -3413,31 +2791,6 @@
     "menuComplete": false
   },
   {
-    "id": "arrosticini-tra-amici-81",
-    "title": "ARROSTICINI TRA AMICI",
-    "location": "Montefranco",
-    "description": "Sagra nel calendario regionale umbro 2026, organizzata a Montefranco.",
-    "sourceLabel": "Regione Umbria - Calendario regionale Sagre e feste popolari 2026",
-    "sourceUrl": "https://www.regione.umbria.it/documents/18/26285955/Anno%2B2026%2B-%2BCalendario%2Bregionale%2Bdelle%2Bsagre%2Be%2Bfeste%2Bpopolari%2Baggiornato%2Bal%2B30-04-2026/7242d78b-756e-45c3-a7ad-35976acd39a0",
-    "menuUrl": "",
-    "menuComplete": false,
-    "ranges": [
-      {
-        "start": "2026-07-06",
-        "end": "2026-07-12",
-        "confirmed": true
-      }
-    ],
-    "originalDate": "2026-07-06 / 2026-07-12",
-    "confirmed": true,
-    "tags": [
-      "gastronomia",
-      "tradizione"
-    ],
-    "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Sagra\n- **Comune:** Montefranco\n- **Luogo:** Montefranco\n- **Organizzatore:** GLI AMICI DI LUCIA ODV",
-    "subEvents": []
-  },
-  {
     "id": "festa-del-biancospino-83",
     "title": "FESTA DEL BIANCOSPINO",
     "location": "Gualdo Tadino via Biancospino, Gualdo Tadino",
@@ -3460,31 +2813,6 @@
       "famiglia"
     ],
     "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Festa popolare\n- **Comune:** Gualdo Tadino\n- **Luogo:** Gualdo Tadino via Biancospino\n- **Organizzatore:** PRO LOCO BIANCOSPINO",
-    "subEvents": []
-  },
-  {
-    "id": "xxiii-sagra-della-tortuccia-2026-82",
-    "title": "XXIII SAGRA DELLA TORTUCCIA 2026",
-    "location": "Piazza Anne Frank, DELLA Castel Giorgio, Castel Giorgio",
-    "description": "Sagra nel calendario regionale umbro 2026, organizzata a Piazza Anne Frank, DELLA Castel Giorgio, Castel Giorgio.",
-    "sourceLabel": "Regione Umbria - Calendario regionale Sagre e feste popolari 2026",
-    "sourceUrl": "https://www.regione.umbria.it/documents/18/26285955/Anno%2B2026%2B-%2BCalendario%2Bregionale%2Bdelle%2Bsagre%2Be%2Bfeste%2Bpopolari%2Baggiornato%2Bal%2B30-04-2026/7242d78b-756e-45c3-a7ad-35976acd39a0",
-    "menuUrl": "",
-    "menuComplete": false,
-    "ranges": [
-      {
-        "start": "2026-07-08",
-        "end": "2026-07-12",
-        "confirmed": true
-      }
-    ],
-    "originalDate": "2026-07-08 / 2026-07-12",
-    "confirmed": true,
-    "tags": [
-      "gastronomia",
-      "tradizione"
-    ],
-    "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Sagra\n- **Comune:** Castel Giorgio\n- **Luogo:** Piazza Anne Frank, DELLA Castel Giorgio\n- **Organizzatore:** COMITATO SAGRA DELLA TORTUCCIA ODV",
     "subEvents": []
   },
   {
@@ -3563,17 +2891,7 @@
     "detailsMarkdown": "## Dettagli\nSagra gastronomica a Migliano, frazione di Marsciano, dedicata al cinghiale a spezzatino e all'arvoltolo.\n\nFonte: UmbriaEventi.",
     "subEvents": [],
     "revealImage": {
-      "key": "cinghiale",
-      "alt": "Sagra del Cinghiale a Spezzatino e dell'Arvoltolo",
-      "widths": [
-        480,
-        768,
-        1024,
-        1366,
-        1448
-      ],
-      "width": 1448,
-      "height": 1086
+      "key": "cinghiale"
     }
   },
   {
@@ -3807,28 +3125,32 @@
   },
   {
     "id": "festa-popolare-di-casa-del-diavolo-casa-del-diavolo-perugia-2026",
-    "title": "FESTA POPOLARE DI CASA DEL DIAVOLO",
+    "title": "DIAVOLI IN FESTA",
     "location": "Casa del Diavolo, Perugia",
-    "description": "Evento indicato tra i luoghi del calendario comunale 2026; dettagli di programma da confermare.",
-    "sourceLabel": "Comune di Perugia - Feste popolari e Sagre 2026",
-    "sourceUrl": "https://www.comune.perugia.it/evento/feste-popolari-e-sagre-2026/",
-    "menuUrl": "",
+    "description": "Manifestazione con ristoranti, cucina d'autore, concerti, serate danzanti, Devil Pub, eventi sportivi e spazi per famiglie.",
+    "sourceLabel": "Diavoli in Festa - sito ufficiale",
+    "sourceUrl": "https://diavoliinfesta.it/",
+    "menuUrl": "https://diavoliinfesta.it/menu/",
     "ranges": [
       {
-        "start": "2026-07-17",
-        "end": "2026-07-26",
-        "confirmed": false
+        "start": "2026-07-23",
+        "end": "2026-08-01",
+        "confirmed": true
       }
     ],
-    "originalDate": "date 2026 da confermare",
-    "confirmed": false,
+    "revealImage": {
+      "key": "diavoli-festa"
+    },
+    "originalDate": "23 luglio - 1 agosto 2026",
+    "confirmed": true,
     "tags": [
-      "tradizione",
+      "gastronomia",
+      "musica",
       "famiglia"
     ],
-    "detailsMarkdown": "## Dettagli\nEvento indicato tra i luoghi del calendario comunale 2026; dettagli di programma da confermare.\n\nFonte: Comune di Perugia - Feste popolari e Sagre 2026.",
+    "detailsMarkdown": "## Dettagli\n15ª edizione di **Diavoli in Festa** a Casa del Diavolo, con ristoranti, cucina d'autore, concerti, spettacoli, serate danzanti, Devil Pub, iniziative ricreative e sportive.\n\nFonte: Diavoli in Festa - sito ufficiale.",
     "subEvents": [],
-    "menuComplete": false
+    "menuComplete": true
   },
   {
     "id": "fontignano-a-tavola-2026",
@@ -3908,56 +3230,6 @@
     "menuComplete": false
   },
   {
-    "id": "pizza-sotto-lu-focu-96",
-    "title": "PIZZA SOTTO LU FOCU",
-    "location": "Montefranco",
-    "description": "Sagra nel calendario regionale umbro 2026, organizzata a Montefranco.",
-    "sourceLabel": "Regione Umbria - Calendario regionale Sagre e feste popolari 2026",
-    "sourceUrl": "https://www.regione.umbria.it/documents/18/26285955/Anno%2B2026%2B-%2BCalendario%2Bregionale%2Bdelle%2Bsagre%2Be%2Bfeste%2Bpopolari%2Baggiornato%2Bal%2B30-04-2026/7242d78b-756e-45c3-a7ad-35976acd39a0",
-    "menuUrl": "",
-    "menuComplete": false,
-    "ranges": [
-      {
-        "start": "2026-07-17",
-        "end": "2026-07-26",
-        "confirmed": true
-      }
-    ],
-    "originalDate": "2026-07-17 / 2026-07-26",
-    "confirmed": true,
-    "tags": [
-      "gastronomia",
-      "tradizione"
-    ],
-    "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Sagra\n- **Comune:** Montefranco\n- **Luogo:** Montefranco\n- **Organizzatore:** ASD MONTEFRANCO",
-    "subEvents": []
-  },
-  {
-    "id": "sagra-degli-arrosticini-93",
-    "title": "SAGRA DEGLI ARROSTICINI",
-    "location": "Guardea Piazza P.Panfili, Guardea",
-    "description": "Sagra nel calendario regionale umbro 2026, organizzata a Guardea Piazza P.Panfili, Guardea.",
-    "sourceLabel": "Regione Umbria - Calendario regionale Sagre e feste popolari 2026",
-    "sourceUrl": "https://www.regione.umbria.it/documents/18/26285955/Anno%2B2026%2B-%2BCalendario%2Bregionale%2Bdelle%2Bsagre%2Be%2Bfeste%2Bpopolari%2Baggiornato%2Bal%2B30-04-2026/7242d78b-756e-45c3-a7ad-35976acd39a0",
-    "menuUrl": "",
-    "menuComplete": false,
-    "ranges": [
-      {
-        "start": "2026-07-17",
-        "end": "2026-07-26",
-        "confirmed": true
-      }
-    ],
-    "originalDate": "2026-07-17 / 2026-07-26",
-    "confirmed": true,
-    "tags": [
-      "gastronomia",
-      "tradizione"
-    ],
-    "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Sagra\n- **Comune:** Guardea\n- **Luogo:** Guardea Piazza P.Panfili\n- **Organizzatore:** A.S.D.GMT 2005",
-    "subEvents": []
-  },
-  {
     "id": "sagra-spaghetto-carbonai-2026",
     "title": "SAGRA DELLO SPAGHETTO DEI CARBONAI",
     "location": "Fratticiola Selvatica, Perugia",
@@ -3984,14 +3256,7 @@
     "subEvents": [],
     "menuComplete": false,
     "revealImage": {
-      "key": "fratticciola",
-      "alt": "Sagra dello Spaghetto dei Carbonai a Fratticiola Selvatica",
-      "widths": [
-        480,
-        768,
-        1024,
-        1366
-      ]
+      "key": "fratticciola"
     }
   },
   {
@@ -4169,15 +3434,7 @@
     "subEvents": [],
     "menuComplete": false,
     "revealImage": {
-      "key": "corsa-gallo",
-      "alt": "Sagra del Crostone e Corsa del Gallo a Strozzacapponi",
-      "widths": [
-        480,
-        768,
-        1024,
-        1366,
-        1402
-      ]
+      "key": "corsa-gallo"
     }
   },
   {
@@ -4230,42 +3487,8 @@
     "detailsMarkdown": "## Dettagli\nRievocazione storica di epoca barbarica a Castel Rigone, con cene barbare, cortei storici, simulazioni, accampamenti e spettacoli.\n\nFonte: UmbriaEventi.",
     "subEvents": [],
     "revealImage": {
-      "key": "barbari",
-      "alt": "Festa dei Barbari a Castel Rigone",
-      "widths": [
-        480,
-        768,
-        1024,
-        1366,
-        1448
-      ],
-      "width": 1448,
-      "height": 1086
+      "key": "barbari"
     }
-  },
-  {
-    "id": "il-novecento-a-montefranco-104",
-    "title": "IL NOVECENTO A MONTEFRANCO",
-    "location": "Montefranco",
-    "description": "Festa popolare nel calendario regionale umbro 2026, organizzata a Montefranco.",
-    "sourceLabel": "Regione Umbria - Calendario regionale Sagre e feste popolari 2026",
-    "sourceUrl": "https://www.regione.umbria.it/documents/18/26285955/Anno%2B2026%2B-%2BCalendario%2Bregionale%2Bdelle%2Bsagre%2Be%2Bfeste%2Bpopolari%2Baggiornato%2Bal%2B30-04-2026/7242d78b-756e-45c3-a7ad-35976acd39a0",
-    "menuUrl": "",
-    "menuComplete": false,
-    "ranges": [
-      {
-        "start": "2026-07-30",
-        "end": "2026-08-04",
-        "confirmed": true
-      }
-    ],
-    "originalDate": "2026-07-30 / 2026-08-04",
-    "confirmed": true,
-    "tags": [
-      "tradizione"
-    ],
-    "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Festa popolare\n- **Comune:** Montefranco\n- **Luogo:** Montefranco\n- **Organizzatore:** ASD MONTEFRANCO",
-    "subEvents": []
   },
   {
     "id": "borgo-in-festa-105",
@@ -4319,32 +3542,6 @@
     "menuComplete": false
   },
   {
-    "id": "sagra-degli-gnocchi-106",
-    "title": "SAGRA DEGLI GNOCCHI",
-    "location": "Guardea Piazza P.Panfili, Guardea",
-    "description": "Sagra nel calendario regionale umbro 2026, organizzata a Guardea Piazza P.Panfili, Guardea.",
-    "sourceLabel": "Regione Umbria - Calendario regionale Sagre e feste popolari 2026",
-    "sourceUrl": "https://www.regione.umbria.it/documents/18/26285955/Anno%2B2026%2B-%2BCalendario%2Bregionale%2Bdelle%2Bsagre%2Be%2Bfeste%2Bpopolari%2Baggiornato%2Bal%2B30-04-2026/7242d78b-756e-45c3-a7ad-35976acd39a0",
-    "menuUrl": "",
-    "menuComplete": false,
-    "ranges": [
-      {
-        "start": "2026-07-31",
-        "end": "2026-08-09",
-        "confirmed": true
-      }
-    ],
-    "originalDate": "2026-07-31 / 2026-08-09",
-    "confirmed": true,
-    "tags": [
-      "gastronomia",
-      "tradizione",
-      "gnocchi"
-    ],
-    "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Sagra\n- **Comune:** Guardea\n- **Luogo:** Guardea Piazza P.Panfili\n- **Organizzatore:** A.S.D. GUARDEA",
-    "subEvents": []
-  },
-  {
     "id": "sagra-dell-oca-arrosto-108",
     "title": "SAGRA DELL'OCA ARROSTO",
     "location": "fraz. Torchiagina Piazza Domenico Siena, Assisi",
@@ -4392,31 +3589,6 @@
       "tradizione"
     ],
     "detailsMarkdown": "## Dettagli\nSagra dedicata alla torta al testo cotta sotto la cenere, con prodotti tipici umbri.\n\nFonte: Comune di Perugia - Feste popolari e Sagre 2026.",
-    "subEvents": [],
-    "menuComplete": false
-  },
-  {
-    "id": "festa-popolare-di-strozzacapponi-strozzacapponi-perugia-2026",
-    "title": "FESTA POPOLARE DI STROZZACAPPONI",
-    "location": "Strozzacapponi, Perugia",
-    "description": "Evento/festa popolare indicato tra i luoghi del calendario comunale 2026; date e programma specifico da confermare. Inserito per non perdere la località segnalata.",
-    "sourceLabel": "Comune di Perugia - Feste popolari e Sagre 2026",
-    "sourceUrl": "https://www.comune.perugia.it/evento/feste-popolari-e-sagre-2026/",
-    "menuUrl": "",
-    "ranges": [
-      {
-        "start": "2026-08-01",
-        "end": "2026-08-10",
-        "confirmed": false
-      }
-    ],
-    "originalDate": "date 2026 da confermare",
-    "confirmed": false,
-    "tags": [
-      "tradizione",
-      "famiglia"
-    ],
-    "detailsMarkdown": "## Dettagli\nEvento/festa popolare indicato tra i luoghi del calendario comunale 2026; date e programma specifico da confermare. Inserito per non perdere la località segnalata.\n\nFonte: Comune di Perugia - Feste popolari e Sagre 2026.",
     "subEvents": [],
     "menuComplete": false
   },
@@ -4521,32 +3693,6 @@
     "subEvents": []
   },
   {
-    "id": "sagra-del-tartufo-della-valnerina-112",
-    "title": "SAGRA DEL TARTUFO DELLA VALNERINA",
-    "location": "Via Piè d'Arrone c/o Impianti Sportivi, Arrone",
-    "description": "Sagra nel calendario regionale umbro 2026, organizzata a Via Piè d'Arrone c/o Impianti Sportivi, Arrone.",
-    "sourceLabel": "Regione Umbria - Calendario regionale Sagre e feste popolari 2026",
-    "sourceUrl": "https://www.regione.umbria.it/documents/18/26285955/Anno%2B2026%2B-%2BCalendario%2Bregionale%2Bdelle%2Bsagre%2Be%2Bfeste%2Bpopolari%2Baggiornato%2Bal%2B30-04-2026/7242d78b-756e-45c3-a7ad-35976acd39a0",
-    "menuUrl": "",
-    "menuComplete": false,
-    "ranges": [
-      {
-        "start": "2026-08-08",
-        "end": "2026-08-14",
-        "confirmed": true
-      }
-    ],
-    "originalDate": "2026-08-08 / 2026-08-14",
-    "confirmed": true,
-    "tags": [
-      "gastronomia",
-      "tradizione",
-      "tartufo"
-    ],
-    "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Sagra\n- **Comune:** Arrone\n- **Luogo:** Via Piè d'Arrone c/o Impianti Sportivi\n- **Organizzatore:** ASSOCIAZIONE CULTURALE IL TARTUFO DELLA VALNERINA",
-    "subEvents": []
-  },
-  {
     "id": "vinarelli-113",
     "title": "VINARELLI",
     "location": "piazza Matteotti, via Mazzini, viale della ASSOCIAZIONE Rimembranza, piazzetta Malizia, piazza Baglioni, Torgiano",
@@ -4593,31 +3739,6 @@
       "famiglia"
     ],
     "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Festa popolare\n- **Comune:** Spoleto\n- **Luogo:** Area Comunità di ASSOCIAZIONE Protte\n- **Organizzatore:** ASSOCIAZIONE PRO LOCO DI PROTTE",
-    "subEvents": []
-  },
-  {
-    "id": "sagra-del-fungo-e-della-trota-del-nera-115",
-    "title": "SAGRA DEL FUNGO E DELLA TROTA DEL NERA",
-    "location": "Frazione di Borgo ASSOCIAZIONE Cerreto (Area Parcheggio Pubblico), Cerreto di Spoleto",
-    "description": "Sagra nel calendario regionale umbro 2026, organizzata a Frazione di Borgo ASSOCIAZIONE Cerreto (Area Parcheggio Pubblico), Cerreto di Spoleto.",
-    "sourceLabel": "Regione Umbria - Calendario regionale Sagre e feste popolari 2026",
-    "sourceUrl": "https://www.regione.umbria.it/documents/18/26285955/Anno%2B2026%2B-%2BCalendario%2Bregionale%2Bdelle%2Bsagre%2Be%2Bfeste%2Bpopolari%2Baggiornato%2Bal%2B30-04-2026/7242d78b-756e-45c3-a7ad-35976acd39a0",
-    "menuUrl": "",
-    "menuComplete": false,
-    "ranges": [
-      {
-        "start": "2026-08-12",
-        "end": "2026-08-15",
-        "confirmed": true
-      }
-    ],
-    "originalDate": "2026-08-12 / 2026-08-15",
-    "confirmed": true,
-    "tags": [
-      "gastronomia",
-      "tradizione"
-    ],
-    "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Sagra\n- **Comune:** Cerreto di Spoleto\n- **Luogo:** Frazione di Borgo ASSOCIAZIONE Cerreto (Area Parcheggio Pubblico)\n- **Organizzatore:** ASSOCIAZIONE PRO LOCO BORGO CERRETO APS",
     "subEvents": []
   },
   {
@@ -4799,31 +3920,6 @@
     "menuComplete": false
   },
   {
-    "id": "festa-del-boscaiolo-119",
-    "title": "FESTA DEL BOSCAIOLO",
-    "location": "Macchie di Amelia, Amelia",
-    "description": "Festa popolare nel calendario regionale umbro 2026, organizzata a Macchie di Amelia, Amelia.",
-    "sourceLabel": "Regione Umbria - Calendario regionale Sagre e feste popolari 2026",
-    "sourceUrl": "https://www.regione.umbria.it/documents/18/26285955/Anno%2B2026%2B-%2BCalendario%2Bregionale%2Bdelle%2Bsagre%2Be%2Bfeste%2Bpopolari%2Baggiornato%2Bal%2B30-04-2026/7242d78b-756e-45c3-a7ad-35976acd39a0",
-    "menuUrl": "",
-    "menuComplete": false,
-    "ranges": [
-      {
-        "start": "2026-08-23",
-        "end": "2026-08-29",
-        "confirmed": true
-      }
-    ],
-    "originalDate": "2026-08-23 / 2026-08-29",
-    "confirmed": true,
-    "tags": [
-      "tradizione",
-      "famiglia"
-    ],
-    "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Festa popolare\n- **Comune:** Amelia\n- **Luogo:** Macchie di Amelia\n- **Organizzatore:** PRO LOCO MACCHIE APS",
-    "subEvents": []
-  },
-  {
     "id": "festa-partito-democratico-vaiano-villastrada-2026-120",
     "title": "FESTA PARTITO DEMOCRATICO VAIANO VILLASTRADA 2026",
     "location": "Villastrada - Area impianto sportivo), Castiglione del Lago",
@@ -4873,17 +3969,7 @@
     "detailsMarkdown": "## Dettagli\nFesta gastronomica dedicata alla cipolla di Cannara, con stand e piatti a base di cipolla.\n\nLe fonti disponibili indicano l'edizione 2026 a settembre, ma non confermano ancora il calendario giornaliero definitivo.",
     "subEvents": [],
     "revealImage": {
-      "key": "cipolla",
-      "alt": "Festa della Cipolla di Cannara",
-      "widths": [
-        480,
-        768,
-        1024,
-        1366,
-        1448
-      ],
-      "width": 1448,
-      "height": 1086
+      "key": "cipolla"
     }
   },
   {
@@ -4908,30 +3994,6 @@
       "tradizione"
     ],
     "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Festa popolare\n- **Comune:** Città di Castello\n- **Luogo:** Via Frescobaldi - ASSOCIAZIONE Area Verde San Pio X\n- **Organizzatore:** ASSOCIAZIONE PRO LOCO SAN PIO X",
-    "subEvents": []
-  },
-  {
-    "id": "borgomuse-121",
-    "title": "BORGOMUSE",
-    "location": "Centro Storico Collescipoli, Terni",
-    "description": "Festa popolare nel calendario regionale umbro 2026, organizzata a Centro Storico Collescipoli, Terni.",
-    "sourceLabel": "Regione Umbria - Calendario regionale Sagre e feste popolari 2026",
-    "sourceUrl": "https://www.regione.umbria.it/documents/18/26285955/Anno%2B2026%2B-%2BCalendario%2Bregionale%2Bdelle%2Bsagre%2Be%2Bfeste%2Bpopolari%2Baggiornato%2Bal%2B30-04-2026/7242d78b-756e-45c3-a7ad-35976acd39a0",
-    "menuUrl": "",
-    "menuComplete": false,
-    "ranges": [
-      {
-        "start": "2026-09-04",
-        "end": "2026-09-13",
-        "confirmed": true
-      }
-    ],
-    "originalDate": "2026-09-04 / 2026-09-13",
-    "confirmed": true,
-    "tags": [
-      "tradizione"
-    ],
-    "detailsMarkdown": "## Dettagli\nEvento inserito nel **Calendario regionale delle Sagre e delle feste popolari 2026** della Regione Umbria.\n\n- **Tipologia:** Festa popolare\n- **Comune:** Terni\n- **Luogo:** Centro Storico Collescipoli\n- **Organizzatore:** ASSOCIAZIONE THYRUS",
     "subEvents": []
   },
   {

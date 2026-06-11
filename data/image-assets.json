@@ -1,0 +1,260 @@
+{
+  "version": 1,
+  "assets": {
+    "background-sagra-perugia": {
+      "key": "background-sagra-perugia",
+      "source": "assets/original/background-sagra-perugia.png",
+      "basePath": "assets/optimized/background-sagra-perugia",
+      "format": "webp",
+      "placeholder": "assets/optimized/background-sagra-perugia-placeholder.png",
+      "widths": [
+        480,
+        768,
+        1024,
+        1366,
+        1672
+      ],
+      "width": 1672,
+      "height": 941,
+      "transparent": false
+    },
+    "barbari": {
+      "key": "barbari",
+      "source": "assets/original/barbari.png",
+      "basePath": "assets/optimized/barbari",
+      "format": "webp",
+      "placeholder": "assets/optimized/barbari-placeholder.png",
+      "widths": [
+        480,
+        768,
+        1024,
+        1366,
+        1448
+      ],
+      "width": 1448,
+      "height": 1086,
+      "transparent": false
+    },
+    "cinghiale": {
+      "key": "cinghiale",
+      "source": "assets/original/cinghiale.png",
+      "basePath": "assets/optimized/cinghiale",
+      "format": "webp",
+      "placeholder": "assets/optimized/cinghiale-placeholder.png",
+      "widths": [
+        480,
+        768,
+        1024,
+        1366,
+        1448
+      ],
+      "width": 1448,
+      "height": 1086,
+      "transparent": false
+    },
+    "cipolla": {
+      "key": "cipolla",
+      "source": "assets/original/cipolla.png",
+      "basePath": "assets/optimized/cipolla",
+      "format": "webp",
+      "placeholder": "assets/optimized/cipolla-placeholder.png",
+      "widths": [
+        480,
+        768,
+        1024,
+        1366,
+        1448
+      ],
+      "width": 1448,
+      "height": 1086,
+      "transparent": false
+    },
+    "corsa-gallo": {
+      "key": "corsa-gallo",
+      "source": "assets/original/corsa-gallo.png",
+      "basePath": "assets/optimized/corsa-gallo",
+      "format": "webp",
+      "placeholder": "assets/optimized/corsa-gallo-placeholder.png",
+      "widths": [
+        480,
+        768,
+        1024,
+        1366,
+        1402
+      ],
+      "width": 1402,
+      "height": 1122,
+      "transparent": false
+    },
+    "diavoli-festa": {
+      "key": "diavoli-festa",
+      "source": "assets/original/diavoli-festa.png",
+      "basePath": "assets/optimized/diavoli-festa",
+      "format": "webp",
+      "placeholder": "assets/optimized/diavoli-festa-placeholder.png",
+      "widths": [
+        480,
+        768,
+        1024,
+        1366,
+        1448
+      ],
+      "width": 1448,
+      "height": 1086,
+      "transparent": false
+    },
+    "fratticciola": {
+      "key": "fratticciola",
+      "source": "assets/original/fratticciola.png",
+      "basePath": "assets/optimized/fratticciola",
+      "format": "webp",
+      "placeholder": "assets/optimized/fratticciola-placeholder.png",
+      "widths": [
+        480,
+        768,
+        1024,
+        1366,
+        1448
+      ],
+      "width": 1448,
+      "height": 1086,
+      "transparent": false
+    },
+    "madonna-grazie": {
+      "key": "madonna-grazie",
+      "source": "assets/original/madonna-grazie.png",
+      "basePath": "assets/optimized/madonna-grazie",
+      "format": "webp",
+      "placeholder": "assets/optimized/madonna-grazie-placeholder.png",
+      "widths": [
+        480,
+        768,
+        1024,
+        1366,
+        1448
+      ],
+      "width": 1448,
+      "height": 1086,
+      "transparent": false
+    },
+    "parallax_bg": {
+      "key": "parallax_bg",
+      "source": "assets/original/parallax_bg.png",
+      "basePath": "assets/optimized/parallax_bg",
+      "format": "webp",
+      "placeholder": "assets/optimized/parallax_bg-placeholder.png",
+      "widths": [
+        480,
+        768,
+        1024,
+        1366,
+        1672
+      ],
+      "width": 1672,
+      "height": 941,
+      "transparent": false
+    },
+    "parallax_grifo": {
+      "key": "parallax_grifo",
+      "source": "assets/original/parallax_grifo.png",
+      "basePath": "assets/optimized/parallax_grifo",
+      "format": "webp",
+      "placeholder": "assets/optimized/parallax_grifo-placeholder.png",
+      "widths": [
+        480,
+        768,
+        1024,
+        1366,
+        1672
+      ],
+      "width": 1672,
+      "height": 941,
+      "transparent": true
+    },
+    "parallax_stalls": {
+      "key": "parallax_stalls",
+      "source": "assets/original/parallax_stalls.png",
+      "basePath": "assets/optimized/parallax_stalls",
+      "format": "webp",
+      "placeholder": "assets/optimized/parallax_stalls-placeholder.png",
+      "widths": [
+        480,
+        768,
+        1024,
+        1366,
+        1672
+      ],
+      "width": 1672,
+      "height": 941,
+      "transparent": true
+    },
+    "parallax_table": {
+      "key": "parallax_table",
+      "source": "assets/original/parallax_table.png",
+      "basePath": "assets/optimized/parallax_table",
+      "format": "webp",
+      "placeholder": "assets/optimized/parallax_table-placeholder.png",
+      "widths": [
+        480,
+        768,
+        1024,
+        1366,
+        1672
+      ],
+      "width": 1672,
+      "height": 941,
+      "transparent": true
+    },
+    "piccione": {
+      "key": "piccione",
+      "source": "assets/original/piccione.png",
+      "basePath": "assets/optimized/piccione",
+      "format": "webp",
+      "placeholder": "assets/optimized/piccione-placeholder.png",
+      "widths": [
+        480,
+        768,
+        1024,
+        1366,
+        1448
+      ],
+      "width": 1448,
+      "height": 1086,
+      "transparent": false
+    },
+    "piccione-in-carrozza": {
+      "key": "piccione-in-carrozza",
+      "source": "assets/original/piccione-in-carrozza.png",
+      "basePath": "assets/optimized/piccione-in-carrozza",
+      "format": "webp",
+      "placeholder": "assets/optimized/piccione-in-carrozza-placeholder.png",
+      "widths": [
+        480,
+        768,
+        1024,
+        1366,
+        1448
+      ],
+      "width": 1448,
+      "height": 1086,
+      "transparent": false
+    },
+    "sagra-perugia": {
+      "key": "sagra-perugia",
+      "source": "assets/original/sagra-perugia.png",
+      "basePath": "assets/optimized/sagra-perugia",
+      "format": "webp",
+      "placeholder": "assets/optimized/sagra-perugia-placeholder.png",
+      "widths": [
+        480,
+        768,
+        1024,
+        1366,
+        1448
+      ],
+      "width": 1448,
+      "height": 1086,
+      "transparent": false
+    }
+  }
+}

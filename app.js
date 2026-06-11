@@ -9,6 +9,7 @@ const topbar = document.querySelector(".topbar");
 const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
 
 let allEvents = [];
+let imageAssetManifest = {};
 const enabledStatuses = new Set(["active", "future"]);
 
 const tagMeta = {
@@ -28,6 +29,16 @@ const tagMeta = {
 
 const DEFAULT_REVEAL_IMAGE_WIDTHS = [480, 768, 1024, 1366, 1448];
 
+function normalizeImageKey(value) {
+  return String(value || "")
+    .replace(/\\/g, "/")
+    .replace(/^assets\/(?:original|optimized)\//, "")
+    .replace(/^assets\//, "")
+    .replace(/\.(png|jpe?g|webp)$/i, "")
+    .toLocaleLowerCase("it-IT")
+    .trim();
+}
+
 function revealImageFromData(event) {
   const raw = event.revealImage || event.image || null;
   if (!raw) return null;
@@ -35,38 +46,36 @@ function revealImageFromData(event) {
   const config = typeof raw === "string" ? { key: raw } : raw;
   if (!config || typeof config !== "object") return null;
 
-  const key = String(config.key || config.name || config.baseName || "")
-    .replace(/^assets\//, "")
-    .replace(/\.(png|jpe?g|webp)$/i, "")
-    .toLocaleLowerCase("it-IT")
-    .trim();
+  const key = normalizeImageKey(config.key || config.name || config.baseName);
 
   if (!key) return null;
 
-  const widths = Array.isArray(config.widths) && config.widths.length
-    ? config.widths.map(Number).filter(Number.isFinite).sort((a, b) => a - b)
+  const manifestConfig = imageAssetManifest[key] || {};
+  const merged = { ...manifestConfig, ...config, key };
+  const widths = Array.isArray(merged.widths) && merged.widths.length
+    ? merged.widths.map(Number).filter(Number.isFinite).sort((a, b) => a - b)
     : DEFAULT_REVEAL_IMAGE_WIDTHS;
 
   if (!widths.length) return null;
 
-  const basePath = String(config.basePath || `assets/${key}`).replace(/\.(png|jpe?g|webp)$/i, "");
-  const format = String(config.format || "webp").replace(/^\./, "");
-  const placeholder = String(config.placeholder || `${basePath}-placeholder.png`);
-  const fallbackWidth = Number(config.fallbackWidth) || (widths.includes(1024) ? 1024 : widths.at(-1));
+  const basePath = String(merged.basePath || `assets/optimized/${key}`).replace(/\.(png|jpe?g|webp)$/i, "");
+  const format = String(merged.format || "webp").replace(/^\./, "");
+  const placeholder = String(merged.placeholder || `${basePath}-placeholder.png`);
+  const fallbackWidth = Number(merged.fallbackWidth) || (widths.includes(1024) ? 1024 : widths.at(-1));
 
   return {
     key,
-    alt: String(config.alt || ""),
-    label: String(config.label || config.alt || `Immagine ${event.title || key}`),
+    alt: String(merged.alt || event.title || ""),
+    label: String(merged.label || merged.alt || event.title || `Immagine ${key}`),
     basePath,
     format,
     placeholder,
     widths,
     fallbackWidth,
-    intrinsicWidth: Number(config.width) || widths.at(-1),
-    intrinsicHeight: Number(config.height) || Math.round(widths.at(-1) * 0.75),
-    revealStartVh: Number(config.revealStartVh),
-    revealEndVh: Number(config.revealEndVh),
+    intrinsicWidth: Number(merged.width) || widths.at(-1),
+    intrinsicHeight: Number(merged.height) || Math.round(widths.at(-1) * 0.75),
+    revealStartVh: Number(merged.revealStartVh),
+    revealEndVh: Number(merged.revealEndVh),
   };
 }
 
@@ -489,10 +498,34 @@ function handlePanelToggle(event) {
   if (!isOpen) ensureMapIframe(panel);
 }
 
+async function loadImageAssetManifest() {
+  try {
+    const response = await fetch("data/image-assets.json?v=20260611-image-assets");
+    if (!response.ok) return {};
+    const payload = await response.json();
+    const assets = payload && typeof payload === "object" && payload.assets && typeof payload.assets === "object"
+      ? payload.assets
+      : payload;
+    if (!assets || typeof assets !== "object") return {};
+    return Object.entries(assets).reduce((acc, [key, value]) => {
+      const normalizedKey = normalizeImageKey(key);
+      if (normalizedKey && value && typeof value === "object") acc[normalizedKey] = value;
+      return acc;
+    }, {});
+  } catch (error) {
+    console.warn("Impossibile caricare data/image-assets.json.", error);
+    return {};
+  }
+}
+
 async function init() {
   try {
-    const response = await fetch("data/sagre.json?v=20260610-alpha-scroll-fix");
+    const [response, assets] = await Promise.all([
+      fetch("data/sagre.json?v=20260611-image-assets"),
+      loadImageAssetManifest(),
+    ]);
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    imageAssetManifest = assets;
     allEvents = (await response.json()).sort((a, b) => firstStartDate(a) - firstStartDate(b));
     render();
   } catch (error) {
