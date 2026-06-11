@@ -216,7 +216,8 @@ a { color: inherit; }
 .hero {
   position: relative;
   display: grid;
-  min-height: min(820px, 82vh);
+  min-height: 104vh;
+  min-height: 104svh;
   padding: calc(var(--topbar-height) + 48px) clamp(18px, 5vw, 72px) 56px;
   align-items: end;
   overflow: hidden;
@@ -237,17 +238,17 @@ a { color: inherit; }
 .parallax-layer {
   position: absolute;
   left: 50%;
-  bottom: 0;
-  width: 112%;
+  bottom: var(--layer-bottom, 0px);
+  width: 106vw;
   max-width: none;
-  height: 112%;
+  height: 100%;
   object-fit: cover;
   object-position: center top;
-  transform-origin: center top;
+  transform-origin: center bottom;
   will-change: transform;
   transform: translate3d(
     calc(-50% + (var(--mouse-x, 0px) * var(--mouse-depth, 0))),
-    calc((var(--hero-scroll, 0) * var(--scroll-depth, 0px)) + (var(--mouse-y, 0px) * var(--mouse-depth, 0))),
+    calc(var(--layer-y-offset, 0px) + (var(--hero-scroll, 0) * var(--scroll-depth, 0px)) + (var(--mouse-y, 0px) * var(--mouse-depth, 0))),
     0
   ) scale(var(--layer-scale, 1.04));
 }
@@ -276,6 +277,13 @@ a { color: inherit; }
   transition: opacity 260ms ease;
 }
 
+.parallax-stalls::before,
+.parallax-grifo::before,
+.parallax-table::before {
+  background-size: contain;
+  background-position: center bottom;
+}
+
 .parallax-picture img {
   position: absolute;
   inset: 0;
@@ -285,9 +293,21 @@ a { color: inherit; }
   height: 100%;
   max-width: none;
   object-fit: cover;
-  object-position: center top;
+  object-position: center center;
   opacity: 0;
   transition: opacity 260ms ease;
+}
+
+.parallax-stalls img,
+.parallax-grifo img,
+.parallax-table img {
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+.parallax-bg img {
+  object-fit: cover;
+  object-position: center top;
 }
 
 .parallax-picture.is-loaded::before {
@@ -298,10 +318,10 @@ a { color: inherit; }
   opacity: 1;
 }
 
-.parallax-bg { --scroll-depth: -8px; --mouse-depth: 0.12; --layer-scale: 1.03; z-index: 1; }
-.parallax-stalls { --scroll-depth: 54px; --mouse-depth: 1.15; --layer-scale: 1.045; z-index: 2; }
-.parallax-grifo { --scroll-depth: 88px; --mouse-depth: 0.82; --layer-scale: 1.055; z-index: 3; }
-.parallax-table { --scroll-depth: 124px; --mouse-depth: 0.46; --layer-scale: 1.065; z-index: 4; }
+.parallax-bg { --scroll-depth: -6px; --mouse-depth: 0.1; --layer-scale: 1.005; z-index: 1; }
+.parallax-stalls { --scroll-depth: 36px; --mouse-depth: 0.82; --layer-scale: 1; z-index: 2; }
+.parallax-grifo { --scroll-depth: 52px; --mouse-depth: 0.64; --layer-scale: 1; z-index: 3; }
+.parallax-table { --scroll-depth: 68px; --mouse-depth: 0.36; --layer-scale: 1; z-index: 4; }
 
 .hero-shade {
   position: absolute;
@@ -643,22 +663,43 @@ h1 {
   .search-form input { min-height: 38px; }
   .status-filters { justify-content: center; }
   .filter-button { min-height: 36px; padding: 7px 9px; font-size: 0.78rem; }
-  .hero { min-height: 580px; padding: calc(var(--topbar-height) + 28px) 18px 36px; align-items: end; }
+  .hero {
+    min-height: min(760px, 94vh);
+    min-height: min(760px, 94svh);
+    padding: calc(var(--topbar-height) + 28px) 18px 36px;
+    align-items: end;
+  }
   .parallax-layer {
     left: 50%;
-    width: 132%;
-    height: 116%;
+    width: 118vw;
+    height: 100%;
     transform: translate3d(
       calc(-50% + (var(--mouse-x, 0px) * var(--mouse-depth, 0))),
       calc(var(--hero-scroll, 0) * var(--scroll-depth, 0px)),
       0
     ) scale(var(--layer-scale, 1.04));
   }
-  .parallax-picture img { object-position: center center; }
-  .parallax-bg { --scroll-depth: -4px; --layer-scale: 1.04; }
-  .parallax-stalls { --scroll-depth: 42px; --layer-scale: 1.06; }
-  .parallax-grifo { --scroll-depth: 70px; --layer-scale: 1.075; }
-  .parallax-table { --scroll-depth: 96px; --layer-scale: 1.09; }
+  .parallax-picture::before {
+    background-size: contain;
+    background-position: center bottom;
+  }
+  .parallax-picture img {
+    object-fit: contain;
+    object-position: center bottom;
+  }
+  .parallax-stalls,
+  .parallax-grifo,
+  .parallax-table {
+    --layer-bottom: clamp(250px, 42svh, 360px);
+  }
+  .parallax-bg img {
+    object-fit: cover;
+    object-position: center center;
+  }
+  .parallax-bg { --scroll-depth: -2px; --layer-scale: 1; }
+  .parallax-stalls { --scroll-depth: 18px; --layer-scale: 1; }
+  .parallax-grifo { --scroll-depth: 28px; --layer-scale: 1; }
+  .parallax-table { --scroll-depth: 38px; --layer-scale: 1; }
   .hero-shade { background: linear-gradient(90deg, rgba(22, 13, 9, 0.84), rgba(22, 13, 9, 0.36) 72%), linear-gradient(0deg, rgba(22, 13, 9, 0.82), rgba(22, 13, 9, 0.02) 56%); }
   .hero-content { max-width: 300px; }
   .content { width: min(358px, calc(100vw - 32px)); }
